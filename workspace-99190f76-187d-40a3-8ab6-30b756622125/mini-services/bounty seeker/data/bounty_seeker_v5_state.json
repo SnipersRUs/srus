@@ -1,0 +1,134 @@
+{
+  "_preview_last": {
+    "mexc::ZEC/USDT:USDT::LONG": 1770197231.480391,
+    "mexc::BCH/USDT:USDT::LONG": 1769954374.28055,
+    "mexc::TAO/USDT:USDT::LONG": 1769929049.30705,
+    "mexc::AAVE/USDT:USDT::LONG": 1769428845.9828532,
+    "mexc::ICP/USDT:USDT::LONG": 1769650472.346653,
+    "mexc::YFI/USDT:USDT::LONG": 1769693904.929255,
+    "mexc::FILECOIN/USDT:USDT::LONG": 1769661331.998601,
+    "mexc::XMR/USDT:USDT::LONG": 1769646272.169333,
+    "mexc::DASH/USDT:USDT::LONG": 1769943519.7009048,
+    "mexc::ULTIMA/USDT:USDT::LONG": 1769654092.188257,
+    "mexc::QNT/USDT:USDT::LONG": 1769499169.403342,
+    "mexc::TRUMPOFFICIAL/USDT:USDT::LONG": 1769631772.149164,
+    "mexc::SUI/USDT:USDT::LONG": 1769573272.068588,
+    "mexc::ILV/USDT:USDT::LONG": 1769521385.0284731,
+    "mexc::FLUID/USDT:USDT::LONG": 1769532506.9031858,
+    "mexc::ZEN/USDT:USDT::LONG": 1769532506.903188,
+    "mexc::EUL/USDT:USDT::LONG": 1769554719.3765812,
+    "mexc::GSSTOCK/USDT:USDT::LONG": 1769613139.694369,
+    "mexc::LINK/USDT:USDT::LONG": 1769654092.188257,
+    "mexc::DOT/USDT:USDT::LONG": 1769620904.301445,
+    "mexc::SOL/USDT:USDT::LONG": 1770197231.480394,
+    "mexc::LTC/USDT:USDT::LONG": 1769929049.307049,
+    "mexc::BTC/USDT:USDT::LONG": 1770313571.0447328,
+    "mexc::BTC/USD:BTC::LONG": 1770193614.207468,
+    "mexc::ETH/USDT:USDT::LONG": 1770313571.044738,
+    "mexc::BNB/USDT:USDT::LONG": 1769943519.700906,
+    "mexc::NAS100/USDT:USDT::LONG": 1770313571.044739
+  },
+  "scanned_count": 27339,
+  "paper_balance": 903.4935021286458,
+  "last_daily_pnl": "2026-02-05",
+  "signals_sent_this_hour": 1,
+  "last_signal_hour": "2026-02-05-17",
+  "last_4hourly_block": "2026-2-5-4",
+  "_last_signal_levels": {
+    "LINK/USDT:USDT": {
+      "entry": 11.736,
+      "stop": 11.639392857142857,
+      "ts": 1769617285.303301
+    },
+    "ULTIMA/USDT:USDT": {
+      "entry": 5432.0,
+      "stop": 5331.5,
+      "ts": 1769617285.303304
+    },
+    "DOT/USDT:USDT": {
+      "entry": 1.843,
+      "stop": 1.825107142857143,
+      "ts": 1769620904.3017988
+    },
+    "XMR/USDT:USDT": {
+      "entry": 471.71,
+      "stop": 464.34250000000003,
+      "ts": 1769631772.149643
+    },
+    "TRUMPOFFICIAL/USDT:USDT": {
+      "entry": 4.764,
+      "stop": 4.697678571428572,
+      "ts": 1769631772.1496441
+    },
+    "YFI/USDT:USDT": {
+      "entry": 3285.0,
+      "stop": 3251.5714285714284,
+      "ts": 1769635419.009252
+    },
+    "ICP/USDT:USDT": {
+      "entry": 3.166,
+      "stop": 3.128821428571429,
+      "ts": 1769650472.3467991
+    },
+    "TAO/USDT:USDT": {
+      "entry": 196.4,
+      "stop": 193.04285714285714,
+      "ts": 1769929049.307153
+    },
+    "SOL/USDT:USDT": {
+      "entry": 96.88,
+      "stop": 95.39357142857143,
+      "ts": 1770197231.480715
+    },
+    "FILECOIN/USDT:USDT": {
+      "entry": 1.237,
+      "stop": 1.2192857142857143,
+      "ts": 1769661331.998793
+    },
+    "DASH/USDT:USDT": {
+      "entry": 44.28,
+      "stop": 43.47107142857143,
+      "ts": 1769943519.701002
+    },
+    "BCH/USDT:USDT": {
+      "entry": 526.98,
+      "stop": 515.297142857143,
+      "ts": 1769943519.701002
+    },
+    "LTC/USDT:USDT": {
+      "entry": 59.25,
+      "stop": 58.40535714285714,
+      "ts": 1769929049.3071518
+    },
+    "BTC/USDT:USDT": {
+      "entry": 69406.6,
+      "stop": 68636.075,
+      "ts": 1770299103.5625741
+    },
+    "ETH/USDT:USDT": {
+      "entry": 1975.22,
+      "stop": 1898.6382142857144,
+      "ts": 1770313571.044996
+    },
+    "BTC/USD:BTC": {
+      "entry": 77512.0,
+      "stop": 76650.8,
+      "ts": 1770132119.608276
+    },
+    "BNB/USDT:USDT": {
+      "entry": 770.3,
+      "stop": 765.6571428571428,
+      "ts": 1769943519.701003
+    },
+    "ZEC/USDT:USDT": {
+      "entry": 279.27,
+      "stop": 266.4067857142857,
+      "ts": 1770179144.58567
+    },
+    "NAS100/USDT:USDT": {
+      "entry": 24930.19,
+      "stop": 24859.791785714286,
+      "ts": 1770291864.432003
+    }
+  }
+}

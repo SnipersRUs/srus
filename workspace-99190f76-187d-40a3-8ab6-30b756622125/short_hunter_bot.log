@@ -1,0 +1,162 @@
+2026-02-06 23:06:07 - INFO - 📊 Loaded 256 OKX perps
+2026-02-06 23:06:07 - INFO - 📂 Loaded 3 active trades from disk
+2026-02-06 23:06:07 - INFO - 📂 Loaded 3 active trades from disk
+2026-02-06 23:06:07 - INFO - 🚀 Short Hunter Bot initialized
+2026-02-06 23:06:07 - INFO - 🎯 Short Hunter Bot started!
+2026-02-06 23:06:07 - INFO - 📅 Scan schedule: Every 45 minutes
+2026-02-06 23:06:07 - INFO - 📊 Monitoring 256 OKX perps (sample: 0GUSDT, 1INCHUSDT, 2ZUSDT, AAVEUSDT, ACEUSDT, ACHUSDT, ACTUSDT, ACUUSDT, ADAUSDT, AEROUSDT, AEVOUSDT, AGLDUSDT, AIXBTUSDT, ALGOUSDT, ALLOUSDT)
+2026-02-06 23:06:07 - INFO - 🔔 Discord webhook: Configured
+2026-02-06 23:06:07 - INFO - 🐦 Twitter alerts: Configured (@_sniperguru)
+2026-02-06 23:06:07 - INFO - 📝 Max active trades: 3 | Trade persistence: /Users/bishop/Desktop/output/workspace-99190f76-187d-40a3-8ab6-30b756622125/public/data/active_trades.json
+2026-02-06 23:06:07 - INFO - ⏰ Scan time reached: 23:06:07
+2026-02-06 23:06:07 - INFO - 🔍 Scanning for short opportunities at 23:06:07 (Interval: 45m)...
+2026-02-06 23:06:30 - INFO - 🛑 Trade #17: HUSDT CLOSED AT SL (0.14)
+2026-02-06 23:06:34 - INFO - 🛑 Trade #17: LAUSDT CLOSED AT SL (0.29)
+2026-02-06 23:06:54 - INFO - 🎯 Trade #17: SOPHUSDT CLOSED AT TP (0.01)
+2026-02-06 23:07:07 - INFO - 📈 Market data updated for 256 pairs
+2026-02-06 23:07:07 - INFO - ✓ No short signals detected (Active: 3/3, Trades/hour: 0/2)
+2026-02-06 23:10:00 - INFO - ⏳ Heartbeat: Next scan in 41.1 min | Active: 3/3
+2026-02-06 23:15:00 - INFO - ⏳ Heartbeat: Next scan in 36.1 min | Active: 3/3
+2026-02-06 23:20:00 - INFO - ⏳ Heartbeat: Next scan in 31.1 min | Active: 3/3
+2026-02-06 23:25:00 - INFO - ⏳ Heartbeat: Next scan in 26.1 min | Active: 3/3
+2026-02-06 23:30:00 - INFO - ⏳ Heartbeat: Next scan in 21.1 min | Active: 3/3
+2026-02-06 23:35:00 - INFO - ⏳ Heartbeat: Next scan in 16.1 min | Active: 3/3
+2026-02-06 23:40:00 - INFO - ⏳ Heartbeat: Next scan in 11.1 min | Active: 3/3
+2026-02-06 23:45:00 - INFO - ⏳ Heartbeat: Next scan in 6.1 min | Active: 3/3
+2026-02-06 23:50:00 - INFO - ⏳ Heartbeat: Next scan in 1.1 min | Active: 3/3
+2026-02-06 23:51:07 - INFO - ⏰ Scan time reached: 23:51:07
+2026-02-06 23:51:07 - INFO - 🔍 Scanning for short opportunities at 23:51:07 (Interval: 45m)...
+2026-02-06 23:52:12 - INFO - 📈 Market data updated for 256 pairs
+2026-02-06 23:52:12 - INFO - 📊 Found 1 potential signal(s)!
+2026-02-06 23:52:12 - WARNING - ⚠️  Max active trades (3) reached. Cannot add RESOLVUSDT
+2026-02-06 23:52:12 - WARNING - ⚠️  Could not add trade RESOLVUSDT (max active: 3)
+2026-02-06 23:52:12 - INFO - ✓ No new trades added (limit reached or already active). Watchlist: ['BARDUSDT', 'NEOUSDT', 'ZENUSDT']
+2026-02-06 23:55:00 - INFO - ⏳ Heartbeat: Next scan in 41.1 min | Active: 3/3
+2026-02-07 00:00:00 - INFO - ⏰ Hour 00 started. Trade limit reset (0/2)
+2026-02-07 00:00:00 - INFO - ⏳ Heartbeat: Next scan in 36.1 min | Active: 3/3
+2026-02-07 00:05:00 - INFO - ⏳ Heartbeat: Next scan in 31.1 min | Active: 3/3
+2026-02-07 00:10:00 - INFO - ⏳ Heartbeat: Next scan in 26.1 min | Active: 3/3
+2026-02-07 00:15:00 - INFO - ⏳ Heartbeat: Next scan in 21.1 min | Active: 3/3
+2026-02-07 00:20:00 - INFO - ⏳ Heartbeat: Next scan in 16.1 min | Active: 3/3
+2026-02-07 00:25:00 - INFO - ⏳ Heartbeat: Next scan in 11.1 min | Active: 3/3
+2026-02-07 00:30:00 - INFO - ⏳ Heartbeat: Next scan in 6.1 min | Active: 3/3
+2026-02-07 00:35:00 - INFO - ⏳ Heartbeat: Next scan in 1.1 min | Active: 3/3
+2026-02-07 00:36:08 - INFO - ⏰ Scan time reached: 00:36:08
+2026-02-07 00:36:08 - INFO - 🔍 Scanning for short opportunities at 00:36:08 (Interval: 45m)...
+2026-02-07 00:37:07 - INFO - 📈 Market data updated for 256 pairs
+2026-02-07 00:37:07 - INFO - 📊 Found 1 potential signal(s)!
+2026-02-07 00:37:07 - WARNING - ⚠️  Max active trades (3) reached. Cannot add RESOLVUSDT
+2026-02-07 00:37:07 - WARNING - ⚠️  Could not add trade RESOLVUSDT (max active: 3)
+2026-02-07 00:37:07 - INFO - ✓ No new trades added (limit reached or already active). Watchlist: ['ZENUSDT', 'ONEUSDT', 'BICOUSDT']
+2026-02-07 00:40:00 - INFO - ⏳ Heartbeat: Next scan in 41.1 min | Active: 3/3
+2026-02-07 00:45:00 - INFO - ⏳ Heartbeat: Next scan in 36.1 min | Active: 3/3
+2026-02-07 00:50:00 - INFO - ⏳ Heartbeat: Next scan in 31.1 min | Active: 3/3
+2026-02-07 00:55:00 - INFO - ⏳ Heartbeat: Next scan in 26.1 min | Active: 3/3
+2026-02-07 01:00:00 - INFO - ⏰ Hour 01 started. Trade limit reset (0/2)
+2026-02-07 01:00:00 - INFO - ⏳ Heartbeat: Next scan in 21.1 min | Active: 3/3
+2026-02-07 01:05:00 - INFO - ⏳ Heartbeat: Next scan in 16.1 min | Active: 3/3
+2026-02-07 01:10:00 - INFO - ⏳ Heartbeat: Next scan in 11.1 min | Active: 3/3
+2026-02-07 01:15:00 - INFO - ⏳ Heartbeat: Next scan in 6.1 min | Active: 3/3
+2026-02-07 01:20:00 - INFO - ⏳ Heartbeat: Next scan in 1.1 min | Active: 3/3
+2026-02-07 01:21:08 - INFO - ⏰ Scan time reached: 01:21:08
+2026-02-07 01:21:08 - INFO - 🔍 Scanning for short opportunities at 01:21:08 (Interval: 45m)...
+2026-02-07 01:22:10 - INFO - 📈 Market data updated for 256 pairs
+2026-02-07 01:22:10 - INFO - 📊 Found 1 potential signal(s)!
+2026-02-07 01:22:10 - WARNING - ⚠️  Max active trades (3) reached. Cannot add RESOLVUSDT
+2026-02-07 01:22:10 - WARNING - ⚠️  Could not add trade RESOLVUSDT (max active: 3)
+2026-02-07 01:22:10 - INFO - ✓ No new trades added (limit reached or already active). Watchlist: ['EIGENUSDT', 'SHELLUSDT', 'KSMUSDT']
+2026-02-07 01:25:00 - INFO - ⏳ Heartbeat: Next scan in 41.1 min | Active: 3/3
+2026-02-07 01:30:00 - INFO - ⏳ Heartbeat: Next scan in 36.1 min | Active: 3/3
+2026-02-07 01:35:00 - INFO - ⏳ Heartbeat: Next scan in 31.1 min | Active: 3/3
+2026-02-07 01:45:00 - INFO - ⏳ Heartbeat: Next scan in 21.1 min | Active: 3/3
+2026-02-07 01:50:00 - INFO - ⏳ Heartbeat: Next scan in 16.1 min | Active: 3/3
+2026-02-07 01:55:00 - INFO - ⏳ Heartbeat: Next scan in 11.1 min | Active: 3/3
+2026-02-07 02:00:00 - INFO - ⏰ Hour 02 started. Trade limit reset (0/2)
+2026-02-07 02:00:00 - INFO - ⏳ Heartbeat: Next scan in 6.1 min | Active: 3/3
+2026-02-07 02:05:00 - INFO - ⏳ Heartbeat: Next scan in 1.1 min | Active: 3/3
+2026-02-07 02:06:09 - INFO - ⏰ Scan time reached: 02:06:09
+2026-02-07 02:06:09 - INFO - 🔍 Scanning for short opportunities at 02:06:09 (Interval: 45m)...
+2026-02-07 02:07:17 - INFO - 📈 Market data updated for 256 pairs
+2026-02-07 02:07:17 - INFO - 📊 Found 1 potential signal(s)!
+2026-02-07 02:07:17 - WARNING - ⚠️  Max active trades (3) reached. Cannot add RESOLVUSDT
+2026-02-07 02:07:17 - WARNING - ⚠️  Could not add trade RESOLVUSDT (max active: 3)
+2026-02-07 02:07:17 - INFO - ✓ No new trades added (limit reached or already active). Watchlist: ['ACEUSDT', 'YFIUSDT', 'BIGTIMEUSDT']
+2026-02-07 02:10:00 - INFO - ⏳ Heartbeat: Next scan in 41.1 min | Active: 3/3
+2026-02-07 02:15:00 - INFO - ⏳ Heartbeat: Next scan in 36.1 min | Active: 3/3
+2026-02-07 02:20:00 - INFO - ⏳ Heartbeat: Next scan in 31.1 min | Active: 3/3
+2026-02-07 02:25:00 - INFO - ⏳ Heartbeat: Next scan in 26.2 min | Active: 3/3
+2026-02-07 02:30:00 - INFO - ⏳ Heartbeat: Next scan in 21.1 min | Active: 3/3
+2026-02-07 02:35:00 - INFO - ⏳ Heartbeat: Next scan in 16.1 min | Active: 3/3
+2026-02-07 02:40:00 - INFO - ⏳ Heartbeat: Next scan in 11.1 min | Active: 3/3
+2026-02-07 02:45:00 - INFO - ⏳ Heartbeat: Next scan in 6.2 min | Active: 3/3
+2026-02-07 02:50:00 - INFO - ⏳ Heartbeat: Next scan in 1.1 min | Active: 3/3
+2026-02-07 02:51:09 - INFO - ⏰ Scan time reached: 02:51:09
+2026-02-07 02:51:09 - INFO - 🔍 Scanning for short opportunities at 02:51:09 (Interval: 45m)...
+2026-02-07 02:52:10 - INFO - 📈 Market data updated for 256 pairs
+2026-02-07 02:52:10 - INFO - 📊 Found 1 potential signal(s)!
+2026-02-07 02:52:10 - WARNING - ⚠️  Max active trades (3) reached. Cannot add RESOLVUSDT
+2026-02-07 02:52:10 - WARNING - ⚠️  Could not add trade RESOLVUSDT (max active: 3)
+2026-02-07 02:52:10 - INFO - ✓ No new trades added (limit reached or already active). Watchlist: ['ARBUSDT', 'LITUSDT', 'ETHUSDT']
+2026-02-07 02:55:00 - INFO - ⏳ Heartbeat: Next scan in 41.2 min | Active: 3/3
+2026-02-07 03:00:00 - INFO - ⏰ Hour 03 started. Trade limit reset (0/2)
+2026-02-07 03:00:00 - INFO - ⏳ Heartbeat: Next scan in 36.2 min | Active: 3/3
+2026-02-07 03:05:00 - INFO - ⏳ Heartbeat: Next scan in 31.2 min | Active: 3/3
+2026-02-07 03:10:00 - INFO - ⏳ Heartbeat: Next scan in 26.2 min | Active: 3/3
+2026-02-07 03:15:00 - INFO - ⏳ Heartbeat: Next scan in 21.2 min | Active: 3/3
+2026-02-07 03:20:00 - INFO - ⏳ Heartbeat: Next scan in 16.2 min | Active: 3/3
+2026-02-07 03:25:00 - INFO - ⏳ Heartbeat: Next scan in 11.2 min | Active: 3/3
+2026-02-07 03:30:00 - INFO - ⏳ Heartbeat: Next scan in 6.2 min | Active: 3/3
+2026-02-07 03:35:00 - INFO - ⏳ Heartbeat: Next scan in 1.1 min | Active: 3/3
+2026-02-07 03:36:09 - INFO - ⏰ Scan time reached: 03:36:09
+2026-02-07 03:36:09 - INFO - 🔍 Scanning for short opportunities at 03:36:09 (Interval: 45m)...
+2026-02-07 03:37:10 - INFO - 📈 Market data updated for 256 pairs
+2026-02-07 03:37:10 - INFO - 📊 Found 1 potential signal(s)!
+2026-02-07 03:37:10 - WARNING - ⚠️  Max active trades (3) reached. Cannot add JELLYJELLYUSDT
+2026-02-07 03:37:10 - WARNING - ⚠️  Could not add trade JELLYJELLYUSDT (max active: 3)
+2026-02-07 03:37:10 - INFO - ✓ No new trades added (limit reached or already active). Watchlist: ['LDOUSDT', 'LPTUSDT', 'ZRXUSDT']
+2026-02-07 03:40:00 - INFO - ⏳ Heartbeat: Next scan in 41.2 min | Active: 3/3
+2026-02-07 03:45:00 - INFO - ⏳ Heartbeat: Next scan in 36.1 min | Active: 3/3
+2026-02-07 03:50:00 - INFO - ⏳ Heartbeat: Next scan in 31.1 min | Active: 3/3
+2026-02-07 03:55:00 - INFO - ⏳ Heartbeat: Next scan in 26.2 min | Active: 3/3
+2026-02-07 04:00:00 - INFO - ⏰ Hour 04 started. Trade limit reset (0/2)
+2026-02-07 04:00:00 - INFO - ⏳ Heartbeat: Next scan in 21.2 min | Active: 3/3
+2026-02-07 04:05:00 - INFO - ⏳ Heartbeat: Next scan in 16.2 min | Active: 3/3
+2026-02-07 04:10:00 - INFO - ⏳ Heartbeat: Next scan in 11.2 min | Active: 3/3
+2026-02-07 04:15:00 - INFO - ⏳ Heartbeat: Next scan in 6.1 min | Active: 3/3
+2026-02-07 04:21:10 - INFO - ⏰ Scan time reached: 04:21:10
+2026-02-07 04:21:10 - INFO - 🔍 Scanning for short opportunities at 04:21:10 (Interval: 45m)...
+2026-02-07 04:22:11 - INFO - 📈 Market data updated for 256 pairs
+2026-02-07 04:22:11 - INFO - 📊 Found 1 potential signal(s)!
+2026-02-07 04:22:11 - WARNING - ⚠️  Max active trades (3) reached. Cannot add RIVERUSDT
+2026-02-07 04:22:11 - WARNING - ⚠️  Could not add trade RIVERUSDT (max active: 3)
+2026-02-07 04:22:11 - INFO - ✓ No new trades added (limit reached or already active). Watchlist: ['SYRUPUSDT', 'BABYUSDT', 'UNIUSDT']
+2026-02-07 04:25:00 - INFO - ⏳ Heartbeat: Next scan in 41.2 min | Active: 3/3
+2026-02-07 04:30:00 - INFO - ⏳ Heartbeat: Next scan in 36.2 min | Active: 3/3
+2026-02-07 04:35:00 - INFO - ⏳ Heartbeat: Next scan in 31.2 min | Active: 3/3
+2026-02-07 04:40:00 - INFO - ⏳ Heartbeat: Next scan in 26.2 min | Active: 3/3
+2026-02-07 04:45:00 - INFO - ⏳ Heartbeat: Next scan in 21.2 min | Active: 3/3
+2026-02-07 04:50:00 - INFO - ⏳ Heartbeat: Next scan in 16.2 min | Active: 3/3
+2026-02-07 04:55:00 - INFO - ⏳ Heartbeat: Next scan in 11.2 min | Active: 3/3
+2026-02-07 05:00:00 - INFO - ⏰ Hour 05 started. Trade limit reset (0/2)
+2026-02-07 05:00:00 - INFO - ⏳ Heartbeat: Next scan in 6.2 min | Active: 3/3
+2026-02-07 05:05:00 - INFO - ⏳ Heartbeat: Next scan in 1.2 min | Active: 3/3
+2026-02-07 05:06:10 - INFO - ⏰ Scan time reached: 05:06:10
+2026-02-07 05:06:10 - INFO - 🔍 Scanning for short opportunities at 05:06:10 (Interval: 45m)...
+2026-02-07 05:07:10 - INFO - 📈 Market data updated for 256 pairs
+2026-02-07 05:07:10 - INFO - 📊 Found 1 potential signal(s)!
+2026-02-07 05:07:10 - WARNING - ⚠️  Max active trades (3) reached. Cannot add RIVERUSDT
+2026-02-07 05:07:10 - WARNING - ⚠️  Could not add trade RIVERUSDT (max active: 3)
+2026-02-07 05:07:10 - INFO - ✓ No new trades added (limit reached or already active). Watchlist: ['LITUSDT', 'SKYUSDT', 'CRVUSDT']
+2026-02-07 05:10:00 - INFO - ⏳ Heartbeat: Next scan in 41.2 min | Active: 3/3
+2026-02-07 05:15:00 - INFO - ⏳ Heartbeat: Next scan in 36.2 min | Active: 3/3
+2026-02-07 05:20:00 - INFO - ⏳ Heartbeat: Next scan in 31.2 min | Active: 3/3
+2026-02-07 05:25:00 - INFO - ⏳ Heartbeat: Next scan in 26.2 min | Active: 3/3
+2026-02-07 05:30:00 - INFO - ⏳ Heartbeat: Next scan in 21.2 min | Active: 3/3
+2026-02-07 05:35:00 - INFO - ⏳ Heartbeat: Next scan in 16.2 min | Active: 3/3
+2026-02-07 05:40:00 - INFO - ⏳ Heartbeat: Next scan in 11.2 min | Active: 3/3
+2026-02-07 05:45:00 - INFO - ⏳ Heartbeat: Next scan in 6.2 min | Active: 3/3
+2026-02-07 05:47:58 - INFO - 🛑 Received signal 15. Shutting down gracefully...
+2026-02-07 05:47:58 - INFO - 👋 Bot shutdown complete
+2-07 05:45:00 - INFO - ⏳ Heartbeat: Next scan in 6.2 min | Active: 3/3
+2026-02-07 05:47:58 - INFO - 🛑 Received signal 15. Shutting down gracefully...
+2026-02-07 05:47:58 - INFO - 👋 Bot shutdown complete
