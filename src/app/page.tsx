@@ -309,6 +309,11 @@ function ZoidApp() {
   const [discordModalOpen, setDiscordModalOpen] = useState(false)
   const [purchasedPlan, setPurchasedPlan] = useState<any>(null)
 
+  // Discord username collection state
+  const [discordUsername, setDiscordUsername] = useState<string>('')
+  const [discordInputModalOpen, setDiscordInputModalOpen] = useState(false)
+  const [isVerifyingDiscord, setIsVerifyingDiscord] = useState(false)
+
   // Tip modal state
   const [tipModalOpen, setTipModalOpen] = useState(false)
 
@@ -364,29 +369,59 @@ function ZoidApp() {
       durationHours,
       duration: plan.id === 'lifetime' ? 'Lifetime' :
         plan.id === 'monthly' ? '30 days' :
-          plan.id === 'weekly' ? '7 days' : '24 hours'
+          plan.id === 'weekly' ? '7 days' : '24 hours',
+      txHash,
+      walletAddress: address
     }
     
     setPurchasedPlan(planData)
     
-    // Verify the payment on the server
-    if (txHash && address) {
-      try {
-        await fetch('/api/verify-discord', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            walletAddress: address,
-            txHash: txHash,
-          }),
-        })
-      } catch (error) {
-        console.error('Failed to verify payment:', error)
-      }
-    }
-    
+    // Show Discord username input modal
     setPaymentModalOpen(false)
-    setDiscordModalOpen(true)
+    setDiscordInputModalOpen(true)
+  }
+
+  const handleDiscordUsernameSubmit = async () => {
+    if (!discordUsername.trim() || !purchasedPlan?.txHash) return
+    
+    setIsVerifyingDiscord(true)
+    
+    try {
+      // Send Discord username + txHash to API
+      const response = await fetch('/api/verify-discord', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          walletAddress: address,
+          txHash: purchasedPlan.txHash,
+          discordUsername: discordUsername.trim(),
+        }),
+      })
+      
+      const data = await response.json()
+      
+      if (data.success) {
+        // Store Discord username with plan
+        const updatedPlan = {
+          ...purchasedPlan,
+          discordUsername: discordUsername.trim(),
+          verified: true
+        }
+        setPurchasedPlan(updatedPlan)
+        localStorage.setItem('zoid_purchased_plan', JSON.stringify(updatedPlan))
+        
+        // Close input modal and show Discord invite
+        setDiscordInputModalOpen(false)
+        setDiscordModalOpen(true)
+      } else {
+        alert('Verification failed: ' + (data.error || 'Unknown error'))
+      }
+    } catch (error) {
+      console.error('Discord verification error:', error)
+      alert('Failed to link Discord. Please try again.')
+    } finally {
+      setIsVerifyingDiscord(false)
+    }
   }
 
   // Render content based on active tab
@@ -602,6 +637,52 @@ function ZoidApp() {
         onSuccess={handlePaymentSuccess}
         walletAddress={address || null}
       />
+
+      {/* Discord Username Input Modal */}
+      {discordInputModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+          <div className="relative w-full max-w-md rounded-3xl bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] border border-purple-500/30 p-8 text-center overflow-hidden">
+            <div className="absolute inset-0 bg-purple-500/5 blur-3xl" />
+            <div className="relative">
+              <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-[#5865F2] to-[#4752C4] flex items-center justify-center mb-6 shadow-lg shadow-[#5865F2]/25">
+                <MessageCircle className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-black tracking-tighter mb-3">
+                Link Your Discord
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Enter your Discord username to get automatic role assignment
+              </p>
+              <div className="space-y-4">
+                <input
+                  type="text"
+                  value={discordUsername}
+                  onChange={(e) => setDiscordUsername(e.target.value)}
+                  placeholder="username#1234 or username"
+                  className="w-full p-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:border-purple-500 focus:outline-none"
+                />
+                <p className="text-xs text-gray-500">
+                  This links your payment to your Discord account for automatic role assignment
+                </p>
+                <Button
+                  onClick={handleDiscordUsernameSubmit}
+                  disabled={!discordUsername.trim() || isVerifyingDiscord}
+                  className="w-full bg-gradient-to-r from-[#5865F2] to-[#4752C4] text-white font-bold h-12"
+                >
+                  {isVerifyingDiscord ? (
+                    <span className="flex items-center gap-2">
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      Linking...
+                    </span>
+                  ) : (
+                    'Continue to Discord'
+                  )}
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <DiscordRedirectModal
         isOpen={discordModalOpen}

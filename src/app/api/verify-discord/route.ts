@@ -4,20 +4,26 @@ import { base } from 'viem/chains'
 
 const TREASURY_ADDRESS = '0x9c23d0f34606204202a9b88b2cd8dbba24192ae5'
 
-// In-memory store for verified payments (in production, use Redis/DB)
-const verifiedPayments = new Map<string, {
+// Store paid Discord users (in production, use Redis/DB)
+// Map: discordUsername -> {wallet, plan, expiresAt}
+const paidDiscordUsers = new Map<string, {
+  wallet: string
   plan: string
+  planId: string
   timestamp: number
   expiresAt: number
-  wallet: string
-}[]>()
+  txHash: string
+}>()
+
+// Also store by wallet for lookups
+const walletToDiscord = new Map<string, string>()
 
 // ERC20 Transfer event signature
 const TRANSFER_EVENT = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'
 
 export async function POST(request: NextRequest) {
   try {
-    const { walletAddress, txHash } = await request.json()
+    const { walletAddress, txHash, discordUsername } = await request.json()
 
     if (!walletAddress || !txHash) {
       return NextResponse.json(
@@ -68,39 +74,77 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if this transaction has already been used
-    const existingPayments = verifiedPayments.get(walletAddress.toLowerCase()) || []
-    const alreadyUsed = existingPayments.some(p => p.timestamp === Number(receipt.blockNumber))
-    
-    if (alreadyUsed) {
-      return NextResponse.json(
-        { error: 'Transaction already used for verification' },
-        { status: 400 }
-      )
+    for (const [username, data] of paidDiscordUsers) {
+      if (data.txHash === txHash) {
+        return NextResponse.json(
+          { error: 'Transaction already used for verification' },
+          { status: 400 }
+        )
+      }
     }
 
-    // Determine plan based on amount (simplified - in production, decode the transfer amount)
-    // For now, we'll accept any successful transfer to treasury
-    const plan = 'verified'
+    // Determine plan based on amount
+    // USDC has 6 decimals, so:
+    // $3 = 3000000, $15 = 15000000, $50 = 50000000, $300 = 300000000
+    let plan = 'Daily Pass'
+    let planId = 'daily'
+    let durationHours = 24
+
+    // Get transfer amount from logs
+    const transferLog = receipt.logs.find((log: any) => 
+      log.topics[0] === TRANSFER_EVENT &&
+      log.address.toLowerCase() === '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913'.toLowerCase() // USDC on Base
+    )
+
+    if (transferLog) {
+      const amount = parseInt(transferLog.data, 16)
+      if (amount >= 300000000) { // $300
+        plan = 'Lifetime Pass'
+        planId = 'lifetime'
+        durationHours = 876000 // 100 years
+      } else if (amount >= 50000000) { // $50
+        plan = 'Monthly Pass'
+        planId = 'monthly'
+        durationHours = 720 // 30 days
+      } else if (amount >= 15000000) { // $15
+        plan = 'Weekly Pass'
+        planId = 'weekly'
+        durationHours = 168 // 7 days
+      } else {
+        plan = 'Daily Pass'
+        planId = 'daily'
+        durationHours = 24
+      }
+    }
+
     const timestamp = Date.now()
-    const expiresAt = timestamp + (24 * 60 * 60 * 1000) // 24 hours default
+    const expiresAt = timestamp + (durationHours * 60 * 60 * 1000)
 
-    // Store verification
-    const paymentRecord = {
-      plan,
-      timestamp,
-      expiresAt,
-      wallet: walletAddress.toLowerCase(),
+    // Store by Discord username if provided
+    if (discordUsername) {
+      const normalizedUsername = discordUsername.toLowerCase().trim()
+      paidDiscordUsers.set(normalizedUsername, {
+        wallet: walletAddress.toLowerCase(),
+        plan,
+        planId,
+        timestamp,
+        expiresAt,
+        txHash,
+      })
+      walletToDiscord.set(walletAddress.toLowerCase(), normalizedUsername)
     }
 
-    existingPayments.push(paymentRecord)
-    verifiedPayments.set(walletAddress.toLowerCase(), existingPayments)
+    // Store by wallet (for backward compatibility)
+    walletToDiscord.set(walletAddress.toLowerCase(), discordUsername?.toLowerCase().trim() || '')
 
     return NextResponse.json({
       success: true,
       verified: true,
       plan,
+      planId,
+      durationHours,
       expiresAt,
-      discordInviteUrl: process.env.DISCORD_INVITE_URL || 'https://discord.gg/2AsntmM93d',
+      discordUsername: discordUsername || null,
     })
 
   } catch (error) {
@@ -117,36 +161,79 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
     const walletAddress = searchParams.get('wallet')
+    const discordUsername = searchParams.get('discord')
 
-    if (!walletAddress) {
-      return NextResponse.json(
-        { error: 'Missing wallet address' },
-        { status: 400 }
-      )
+    // Check by Discord username
+    if (discordUsername) {
+      const normalizedUsername = discordUsername.toLowerCase().trim()
+      const userData = paidDiscordUsers.get(normalizedUsername)
+      
+      if (userData) {
+        const now = Date.now()
+        if (userData.expiresAt > now) {
+          return NextResponse.json({
+            verified: true,
+            plan: userData.plan,
+            planId: userData.planId,
+            expiresAt: userData.expiresAt,
+            wallet: userData.wallet,
+            discordInviteUrl: process.env.DISCORD_INVITE_URL || 'https://discord.gg/8v3zw8829K',
+          })
+        } else {
+          // Expired - remove from map
+          paidDiscordUsers.delete(normalizedUsername)
+        }
+      }
+      
+      return NextResponse.json({
+        verified: false,
+        discordInviteUrl: null,
+      })
     }
 
-    const payments = verifiedPayments.get(walletAddress.toLowerCase()) || []
+    // Check by wallet (backward compatibility)
+    if (walletAddress) {
+      const discordUser = walletToDiscord.get(walletAddress.toLowerCase())
+      if (discordUser) {
+        const userData = paidDiscordUsers.get(discordUser)
+        if (userData && userData.expiresAt > Date.now()) {
+          return NextResponse.json({
+            verified: true,
+            plan: userData.plan,
+            planId: userData.planId,
+            expiresAt: userData.expiresAt,
+            discordUsername: discordUser,
+            discordInviteUrl: process.env.DISCORD_INVITE_URL || 'https://discord.gg/8v3zw8829K',
+          })
+        }
+      }
+      
+      return NextResponse.json({
+        verified: false,
+        discordInviteUrl: null,
+      })
+    }
+
+    // Return all paid users (for bot to sync)
+    const allPaidUsers: Record<string, any> = {}
     const now = Date.now()
     
-    // Filter out expired payments
-    const validPayments = payments.filter(p => p.expiresAt > now)
-    
-    // Update stored payments
-    if (validPayments.length !== payments.length) {
-      verifiedPayments.set(walletAddress.toLowerCase(), validPayments)
+    for (const [username, data] of paidDiscordUsers) {
+      if (data.expiresAt > now) {
+        allPaidUsers[username] = {
+          plan: data.plan,
+          planId: data.planId,
+          expiresAt: data.expiresAt,
+          wallet: data.wallet,
+        }
+      } else {
+        paidDiscordUsers.delete(username)
+      }
     }
 
-    const hasValidPayment = validPayments.length > 0
-
     return NextResponse.json({
-      verified: hasValidPayment,
-      payments: validPayments.map(p => ({
-        plan: p.plan,
-        expiresAt: p.expiresAt,
-      })),
-      discordInviteUrl: hasValidPayment 
-        ? (process.env.DISCORD_INVITE_URL || 'https://discord.gg/2AsntmM93d')
-        : null,
+      paidUsers: allPaidUsers,
+      count: Object.keys(allPaidUsers).length,
     })
 
   } catch (error) {
