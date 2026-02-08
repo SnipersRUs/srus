@@ -22,6 +22,8 @@ const config = getDefaultConfig({
     projectId: '3fcc6b446fe38351502476b70f074213', // Public project ID for Zoid development
     chains: [base, baseSepolia],
     ssr: true,
+    // Disable auto-connect for security - users must manually connect
+    storage: undefined,
 })
 
 const queryClient = new QueryClient()
