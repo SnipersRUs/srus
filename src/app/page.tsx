@@ -38,6 +38,10 @@ function DiscordRedirectModal({ isOpen, onClose, plan }: { isOpen: boolean; onCl
   if (!isOpen) return null
 
   const discordInviteUrl = "https://discord.gg/8v3zw8829K" // SRUS Discord - Instant Access
+  
+  // Fallback values if plan is null/undefined
+  const planName = plan?.name || 'Pass'
+  const planDuration = plan?.duration || '24 hours'
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
@@ -61,10 +65,10 @@ function DiscordRedirectModal({ isOpen, onClose, plan }: { isOpen: boolean; onCl
 
           <div className="p-4 rounded-2xl bg-purple-500/10 border border-purple-500/20 mb-6">
             <p className="text-sm text-gray-300 mb-2">
-              <span className="text-emerald-400 font-bold">✓</span> {plan.name} Pass Activated
+              <span className="text-emerald-400 font-bold">✓</span> {planName} Pass Activated
             </p>
             <p className="text-xs text-gray-500">
-              Duration: {plan.duration}
+              Duration: {planDuration}
             </p>
           </div>
 
@@ -87,7 +91,7 @@ function DiscordRedirectModal({ isOpen, onClose, plan }: { isOpen: boolean; onCl
             <div className="text-xs text-gray-500 space-y-1">
               <p>• Auto-assigned trial role on join</p>
               <p>• Access to Bounty Seeker & Short Hunter</p>
-              <p>• Role expires after {plan.duration}</p>
+              <p>• Role expires after {planDuration}</p>
             </div>
 
             <p className="text-[10px] text-gray-600 mt-4">
@@ -382,8 +386,29 @@ function ZoidApp() {
   }
 
   const handleDiscordUsernameSubmit = async () => {
-    if (!discordUsername.trim() || !purchasedPlan?.txHash) {
-      console.log('Missing username or txHash')
+    if (!discordUsername.trim()) {
+      console.log('Missing username')
+      return
+    }
+    
+    if (!purchasedPlan || !purchasedPlan.txHash) {
+      console.log('Missing purchasedPlan or txHash:', purchasedPlan)
+      // Still allow user to continue to Discord even without verification
+      const fallbackPlan = purchasedPlan || {
+        name: 'Pass',
+        duration: '24 hours',
+        purchaseTime: Date.now(),
+        durationHours: 24
+      }
+      const updatedPlan = {
+        ...fallbackPlan,
+        discordUsername: discordUsername.trim(),
+        verified: false
+      }
+      setPurchasedPlan(updatedPlan)
+      localStorage.setItem('zoid_purchased_plan', JSON.stringify(updatedPlan))
+      setDiscordInputModalOpen(false)
+      setDiscordModalOpen(true)
       return
     }
     
