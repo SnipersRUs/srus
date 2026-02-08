@@ -37,7 +37,7 @@ function NavButton({ active, onClick, icon, label }: { active: boolean; onClick:
 function DiscordRedirectModal({ isOpen, onClose, plan }: { isOpen: boolean; onClose: () => void; plan: any }) {
   if (!isOpen) return null
 
-  const discordInviteUrl = "https://discord.gg/2AsntmM93d" // SRUS Discord
+  const discordInviteUrl = "https://discord.gg/8v3zw8829K" // SRUS Discord - Instant Access
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
@@ -302,7 +302,7 @@ function AccountView({ plan, onExtend, walletAddress }: { plan: any; onExtend: (
 function ZoidApp() {
   const { address, isConnected } = useAccount()
 
-  const [activeTab, setActiveTab] = useState<'analysis' | 'signals' | 'account' | 'public-signals'>('signals')
+  const [activeTab, setActiveTab] = useState<'analysis' | 'signals' | 'account' | 'public-signals'>('account')
 
   // Payment modal state
   const [packetModalOpen, setPaymentModalOpen] = useState(false)
@@ -311,6 +311,37 @@ function ZoidApp() {
 
   // Tip modal state
   const [tipModalOpen, setTipModalOpen] = useState(false)
+
+  // Load purchased plan from localStorage on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedPlan = localStorage.getItem('zoid_purchased_plan')
+      if (savedPlan) {
+        try {
+          const planData = JSON.parse(savedPlan)
+          // Check if plan is still valid (not expired)
+          const expiryTime = planData.purchaseTime + (planData.durationHours * 60 * 60 * 1000)
+          if (Date.now() < expiryTime) {
+            setPurchasedPlan(planData)
+            console.log('✅ Restored plan from storage:', planData.name)
+          } else {
+            console.log('⏰ Plan expired, clearing storage')
+            localStorage.removeItem('zoid_purchased_plan')
+          }
+        } catch (e) {
+          console.error('Failed to parse saved plan:', e)
+          localStorage.removeItem('zoid_purchased_plan')
+        }
+      }
+    }
+  }, [])
+
+  // Save purchased plan to localStorage whenever it changes
+  useEffect(() => {
+    if (purchasedPlan && typeof window !== 'undefined') {
+      localStorage.setItem('zoid_purchased_plan', JSON.stringify(purchasedPlan))
+    }
+  }, [purchasedPlan])
 
   const handlePaymentSuccess = async (plan: any, txHash?: string) => {
     // Map plan IDs to durations in hours
@@ -697,14 +728,19 @@ function ZoidApp() {
             </p>
           </div>
         </main>
+      ) : !purchasedPlan ? (
+        /* CONNECTED BUT NO PLAN - Show paywall */
+        <main className="flex-1 container mx-auto w-full px-4 py-6">
+          {renderPaywall()}
+        </main>
       ) : (
-        /* CONNECTED - Show tabs and content (Signals always available) */
+        /* CONNECTED WITH PLAN - Show tabs and content */
         <>
           <main className="flex-1 container mx-auto w-full px-4 py-6">
             {renderContent()}
           </main>
 
-          {/* Tab Navigation - ALWAYS SHOW WHEN CONNECTED */}
+          {/* Tab Navigation - ONLY SHOW WHEN PAID */}
           <nav className="fixed bottom-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-xl border-t border-white/[0.08] px-6 pb-safe pt-2">
             <div className="container mx-auto max-w-md flex items-center justify-center gap-6 py-2">
               <NavButton
@@ -715,7 +751,7 @@ function ZoidApp() {
               />
               <NavButton
                 active={activeTab === 'analysis'}
-                onClick={() => purchasedPlan ? setActiveTab('analysis') : setPaymentModalOpen(true)}
+                onClick={() => setActiveTab('analysis')}
                 icon={<BrainCircuit className="w-5 h-5" />}
                 label="Strategies"
               />
