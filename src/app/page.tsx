@@ -382,7 +382,10 @@ function ZoidApp() {
   }
 
   const handleDiscordUsernameSubmit = async () => {
-    if (!discordUsername.trim() || !purchasedPlan?.txHash) return
+    if (!discordUsername.trim() || !purchasedPlan?.txHash) {
+      console.log('Missing username or txHash')
+      return
+    }
     
     setIsVerifyingDiscord(true)
     
@@ -399,26 +402,36 @@ function ZoidApp() {
       })
       
       const data = await response.json()
+      console.log('API response:', data)
       
-      if (data.success) {
-        // Store Discord username with plan
-        const updatedPlan = {
-          ...purchasedPlan,
-          discordUsername: discordUsername.trim(),
-          verified: true
-        }
-        setPurchasedPlan(updatedPlan)
-        localStorage.setItem('zoid_purchased_plan', JSON.stringify(updatedPlan))
-        
-        // Close input modal and show Discord invite
-        setDiscordInputModalOpen(false)
-        setDiscordModalOpen(true)
-      } else {
-        alert('Verification failed: ' + (data.error || 'Unknown error'))
+      // Store Discord username with plan regardless of API response
+      const updatedPlan = {
+        ...purchasedPlan,
+        discordUsername: discordUsername.trim(),
+        verified: data.success || false
+      }
+      setPurchasedPlan(updatedPlan)
+      localStorage.setItem('zoid_purchased_plan', JSON.stringify(updatedPlan))
+      
+      // Close input modal and show Discord invite
+      setDiscordInputModalOpen(false)
+      setDiscordModalOpen(true)
+      
+      if (!data.success) {
+        console.log('API verification warning:', data.error)
       }
     } catch (error) {
       console.error('Discord verification error:', error)
-      alert('Failed to link Discord. Please try again.')
+      // Still show Discord modal even if API fails
+      const updatedPlan = {
+        ...purchasedPlan,
+        discordUsername: discordUsername.trim(),
+        verified: false
+      }
+      setPurchasedPlan(updatedPlan)
+      localStorage.setItem('zoid_purchased_plan', JSON.stringify(updatedPlan))
+      setDiscordInputModalOpen(false)
+      setDiscordModalOpen(true)
     } finally {
       setIsVerifyingDiscord(false)
     }
@@ -665,9 +678,12 @@ function ZoidApp() {
                   This links your payment to your Discord account for automatic role assignment
                 </p>
                 <Button
-                  onClick={handleDiscordUsernameSubmit}
+                  onClick={() => {
+                    console.log('Continue to Discord clicked')
+                    handleDiscordUsernameSubmit()
+                  }}
                   disabled={!discordUsername.trim() || isVerifyingDiscord}
-                  className="w-full bg-gradient-to-r from-[#5865F2] to-[#4752C4] text-white font-bold h-12"
+                  className="w-full bg-gradient-to-r from-[#5865F2] to-[#4752C4] text-white font-bold h-12 hover:from-[#4752C4] hover:to-[#3a45a0] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isVerifyingDiscord ? (
                     <span className="flex items-center gap-2">
