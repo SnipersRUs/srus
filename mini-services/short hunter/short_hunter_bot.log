@@ -4008,3 +4008,4 @@ NameError: name 'MIN_NOTIFICATION_INTERVAL' is not defined
 2026-02-08 04:00:00 - INFO - ⏳ Heartbeat: Next scan in 26.1 min | Active: 3/3
 2026-02-08 04:10:00 - INFO - ⏳ Heartbeat: Next scan in 16.1 min | Active: 3/3
 2026-02-08 04:15:00 - INFO - ⏳ Heartbeat: Next scan in 11.1 min | Active: 3/3
+2026-02-08 04:20:00 - INFO - ⏳ Heartbeat: Next scan in 6.1 min | Active: 3/3
