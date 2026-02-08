@@ -1,0 +1,21 @@
+{
+    "version": "1",
+    "name": "Zoid",
+    "subtitle": "AI Market Structure Intelligence",
+    "description": "Probability-weighted market structure forecasts for Base traders.",
+    "iconUrl": "https://srus.life/logo.svg",
+    "screenshots": [],
+    "homeUrl": "https://srus.life",
+    "webhookUrl": "https://srus.life/api/webhook",
+    "primaryCategory": "social",
+    "tags": [
+        "trading",
+        "ai",
+        "base"
+    ],
+    "accountAssociation": {
+        "header": "",
+        "payload": "",
+        "signature": ""
+    }
+}

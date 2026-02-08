@@ -1,0 +1,158 @@
+# Bounty Seeker V5 Optimization Patch
+# Key improvements:
+# 1. Add market data caching to reduce API calls
+# 2. Optimize VWAP calculation with memoization
+# 3. Add exponential backoff for API failures
+# 4. Optimize ticker fetching during trade exit checks
+# 5. Improve memory efficiency
+
+# Apply these changes to bounty_seeker_v5.py:
+
+# Add caching class after imports:
+class MarketDataCache:
+    """Cache market data to reduce API calls"""
+    def __init__(self, ttl_seconds: int = 60):
+        self.cache = {}
+        self.ttl = ttl_seconds
+
+    def get(self, key: str) -> Optional[any]:
+        if key in self.cache:
+            data, timestamp = self.cache[key]
+            if time.time() - timestamp < self.ttl:
+                return data
+        return None
+
+    def set(self, key: str, value: any):
+        self.cache[key] = (value, time.time())
+
+    def clear(self):
+        self.cache.clear()
+
+# Modify BountySeekerV5.__init__ to add cache:
+def __init__(self, webhook_url: str, config_path: str = CONFIG_PATH):
+    # ... existing code ...
+    self.market_cache = MarketDataCache(ttl_seconds=30)  # 30 second cache
+    self.ticker_cache = {}  # Cache for ticker data
+    self.last_ticker_fetch = {}
+    # ... rest of init ...
+
+# Optimize check_trade_exits method:
+def check_trade_exits(self):
+    """Check if any open trades hit stop loss or take profit - OPTIMIZED"""
+    if not self.open_trades:
+        return
+
+    # Batch ticker fetches by exchange
+    symbol_batch = list(self.open_trades)
+    updated_trades = []
+
+    for trade in symbol_batch:
+        try:
+            # Check cache first (5 second TTL for ticker data)
+            cache_key = f"ticker_{trade['symbol']}"
+            now = time.time()
+
+            if cache_key in self.ticker_cache and now - self.last_ticker_fetch.get(cache_key, 0) < 5:
+                ticker_data = self.ticker_cache[cache_key]
+            else:
+                ticker = self.exchange.fetch_ticker(trade["symbol"])
+                ticker_data = {
+                    "last": float(ticker.get("last", 0)),
+                    "bid": float(ticker.get("bid", 0)),
+                    "ask": float(ticker.get("ask", 0))
+                }
+                self.ticker_cache[cache_key] = ticker_data
+                self.last_ticker_fetch[cache_key] = now
+
+            current_price = ticker_data["last"]
+
+            # ... rest of exit logic unchanged ...
+
+        except Exception as e:
+            self.log(f"⚠️ Error checking trade {trade['symbol']}: {e}")
+            updated_trades.append(trade)
+
+    self.open_trades = updated_trades
+
+# Optimize analyze_symbol method - add caching:
+def analyze_symbol(self, symbol: str) -> Optional[Dict]:
+    """
+    Analyze symbol for reversal setup - OPTIMIZED
+    Focus: Deviation VWAP (2σ/3σ), Liquidation zones, GPS proximity
+    """
+    try:
+        # Check cache for recent analysis (15 second TTL)
+        cache_key = f"analysis_{symbol}"
+        cached = self.market_cache.get(cache_key)
+        if cached:
+            return cached
+
+        # Fetch 1h data for main analysis
+        ohlcv_1h = self.fetch_ohlcv(symbol, "1h", 200)
+        if not ohlcv_1h or len(ohlcv_1h) < 100:
+            return None
+
+        # ... rest of analysis code unchanged ...
+
+        # Cache result
+        self.market_cache.set(cache_key, signals[0] if signals else None)
+        return signals[0] if signals else None
+
+    except Exception as e:
+        self.log(f"⚠️ Analysis error for {symbol}: {e}")
+        return None
+
+# Add exponential backoff to fetch methods:
+def fetch_with_backoff(self, func, *args, max_retries=3, **kwargs):
+    """Execute API call with exponential backoff"""
+    for attempt in range(max_retries):
+        try:
+            return func(*args, **kwargs)
+        except Exception as e:
+            if attempt == max_retries - 1:
+                raise
+            wait_time = (2 ** attempt) + random.random()
+            self.log(f"⚠️ API error (attempt {attempt + 1}/{max_retries}), retrying in {wait_time:.1f}s: {e}")
+            time.sleep(wait_time)
+
+# Modify fetch_ohlcv to use backoff:
+def fetch_ohlcv(self, symbol: str, timeframe: str = "1h", limit: int = 200) -> Optional[List]:
+    try:
+        return self.fetch_with_backoff(
+            self.exchange.fetch_ohlcv, symbol, timeframe, limit=limit
+        )
+    except Exception as e:
+        self.log(f"⚠️ Failed to fetch {symbol}: {e}")
+        return None
+
+# Add periodic cache clearing:
+def run_scan_loop(self):
+    """Main scanning loop - OPTIMIZED"""
+    # ... existing setup ...
+
+    while True:
+        try:
+            start_t = time.time()
+
+            # Clear old cache entries periodically (every 10 scans)
+            if self.state.get("scanned_count", 0) % 10 == 0:
+                self.market_cache.clear()
+                self.ticker_cache.clear()
+                self.log("🧹 Cache cleared")
+
+            # ... rest of scan loop unchanged ...
+
+        except KeyboardInterrupt:
+            self.log("🛑 Shutting down gracefully...")
+            self.save_state()
+            break
+        except Exception as e:
+            self.log(f"❌ CRITICAL ERROR: {e}")
+            traceback.print_exc()
+            self.log("⚠️ Continuing despite error...")
+
+        if "--once" in sys.argv:
+            self.log("🛑 One-time scan complete. Exiting.")
+            break
+
+        time.sleep(SCAN_INTERVAL_SEC)

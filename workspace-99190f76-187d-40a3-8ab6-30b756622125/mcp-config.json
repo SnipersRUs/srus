@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "clawnch": {
+      "command": "npx",
+      "args": ["clawnch-mcp-server"]
+    }
+  }
+}
