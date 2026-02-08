@@ -1,0 +1,7 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/signals/route": "/api/signals",
+  "/api/verify-discord/route": "/api/verify-discord",
+  "/page": "/"
+}

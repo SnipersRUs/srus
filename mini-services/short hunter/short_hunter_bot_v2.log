@@ -1,0 +1,655 @@
+2026-01-26 05:49:40 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-01-26 05:49:40 - INFO - 📅 Scan schedule: Every hour at :45 (15 min before top of hour)
+2026-01-26 05:49:40 - INFO - 📊 Monitoring 8 assets (sample: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'ARBUSDT', 'OPUSDT'])
+2026-01-26 05:49:40 - INFO - 🔔 Discord webhook: Configured
+2026-01-26 05:49:40 - INFO - ⚙️  Mode: ALERTS ONLY - No trade tracking, no limits
+🔔 Discord webhook: Configured
+2026-01-26 05:49:40 - INFO - ⚙️  Mode: ALERTS ONLY - No trade tracking, no limits
+2026-01-26 05:49:48 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-01-26 05:49:48 - INFO - 📅 Scan schedule: Every hour at :45 (15 min before top of hour)
+2026-01-26 05:49:48 - INFO - 📊 Monitoring 8 assets (sample: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'ARBUSDT', 'OPUSDT'])
+2026-01-26 05:49:48 - INFO - 🔔 Discord webhook: Configured
+2026-01-26 05:49:48 - INFO - ⚙️  Mode: ALERTS ONLY - No trade tracking, no limits
+2026-01-26 05:50:38 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-01-26 05:50:38 - INFO - 📅 Scan schedule: Every hour at :45 (15 min before top of hour)
+2026-01-26 05:50:38 - INFO - 📊 Monitoring 8 assets (sample: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'ARBUSDT', 'OPUSDT'])
+2026-01-26 05:50:38 - INFO - 🔔 Discord webhook: Configured
+2026-01-26 05:50:38 - INFO - ⚙️  Mode: ALERTS ONLY - No trade tracking, no limits
+2026-01-26 05:51:41 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-01-26 05:51:41 - INFO - 📅 Scan schedule: Every hour at :45 (15 min before top of hour)
+2026-01-26 05:51:41 - INFO - 📊 Monitoring 8 assets (sample: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'ARBUSDT', 'OPUSDT'])
+2026-01-26 05:51:41 - INFO - 🔔 Discord webhook: Configured
+2026-01-26 05:51:41 - INFO - ⚙️  Mode: ALERTS ONLY - No trade tracking, no limits
+2026-01-26 05:51:45 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-01-26 05:51:45 - INFO - 📅 Scan schedule: Every hour at :45 (15 min before top of hour)
+2026-01-26 05:51:45 - INFO - 📊 Monitoring 8 assets (sample: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'ARBUSDT', 'OPUSDT'])
+2026-01-26 05:51:45 - INFO - 🔔 Discord webhook: Configured
+2026-01-26 05:51:45 - INFO - ⚙️  Mode: ALERTS ONLY - No trade tracking, no limits
+2026-01-26 06:45:45 - INFO - ⏰ Scan time reached: 06:45:45
+2026-01-26 06:45:45 - INFO - 🔍 Scanning for short opportunities...
+2026-01-26 06:45:46 - INFO - 📈 Market data updated for 1 pairs
+2026-01-26 06:45:46 - INFO - ✓ No short signals detected
+2026-01-26 07:07:10 - INFO - 🛑 Received shutdown signal. Shutting down gracefully...
+2026-01-26 07:07:12 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-01-26 07:07:12 - INFO - 📅 Scan schedule: Every hour at :45 (15 min before top of hour)
+2026-01-26 07:07:12 - INFO - 📊 Monitoring 8 assets (sample: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'ARBUSDT', 'OPUSDT'])
+2026-01-26 07:07:12 - INFO - 🔔 Discord webhook: Configured
+2026-01-26 07:07:12 - INFO - ⚙️  Mode: ALERTS ONLY - No trade tracking, no limits
+2026-01-26 07:17:45 - INFO - 🛑 Received shutdown signal. Shutting down gracefully...
+2026-01-26 07:18:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-01-26 07:18:55 - INFO - 📅 Scan schedule: Every hour at :45 (15 min before top of hour)
+2026-01-26 07:18:55 - INFO - 📊 Monitoring 8 assets (sample: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'ARBUSDT', 'OPUSDT'])
+2026-01-26 07:18:55 - INFO - 🔔 Discord webhook: Configured
+2026-01-26 07:18:55 - INFO - ⚙️  Mode: ALERTS ONLY - No trade tracking, no limits
+2026-01-26 07:20:23 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-01-26 07:20:23 - INFO - 📅 Scan schedule: Every hour at :45 (15 min before top of hour)
+2026-01-26 07:20:23 - INFO - 📊 Monitoring 8 assets (sample: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'ARBUSDT', 'OPUSDT'])
+2026-01-26 07:20:23 - INFO - 🔔 Discord webhook: Configured
+2026-01-26 07:20:23 - INFO - ⚙️  Mode: ALERTS ONLY - No trade tracking, no limits
+2026-01-26 07:27:01 - INFO - 🛑 Received shutdown signal. Shutting down gracefully...
+2026-02-01 00:20:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:21:08 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:22:09 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:23:09 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:24:10 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:25:10 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:26:11 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:27:11 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:28:11 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:29:11 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:30:12 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:31:12 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:32:13 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:33:14 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:34:15 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:35:16 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:36:16 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:37:16 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:37:49 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:38:17 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:38:53 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:39:18 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:39:53 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:40:19 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:40:53 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:41:20 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:41:54 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:42:20 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:42:54 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:43:20 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:43:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:44:21 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:44:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:45:21 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:45:56 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:46:22 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:46:56 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:47:22 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:47:56 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:48:23 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:48:56 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:49:23 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:49:57 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:50:23 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:50:58 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:51:23 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:51:58 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:52:24 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:52:59 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:53:24 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:53:59 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:54:24 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:54:59 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:55:25 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:55:59 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:56:26 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:57:00 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:57:26 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:58:01 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:58:26 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:59:02 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 00:59:27 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:00:02 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:00:28 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:01:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:01:28 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:02:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:02:29 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:03:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:03:29 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:04:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:04:30 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:05:04 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:05:30 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:06:04 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:06:30 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:07:04 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:07:30 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:08:04 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:08:31 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:09:04 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:09:31 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:10:04 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:10:32 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:11:05 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:11:33 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:12:06 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:12:34 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:13:06 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:13:34 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:14:07 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:14:34 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:15:07 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:15:34 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:16:08 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:16:34 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:17:08 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:17:36 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:18:08 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:18:37 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:19:09 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:19:38 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:20:10 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:20:38 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:21:11 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:21:38 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:22:11 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:22:39 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:23:13 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:23:39 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:24:14 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:24:40 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:25:14 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:25:41 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:26:15 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:26:42 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:27:15 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:27:42 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:28:16 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:28:43 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:29:17 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:29:44 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:30:18 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:30:44 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:31:19 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:31:44 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:32:19 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:32:45 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:33:20 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:33:45 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:34:20 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:34:45 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:35:21 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:35:45 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:36:21 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:36:46 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:37:21 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:37:46 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:38:22 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:38:46 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:39:23 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:39:47 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:40:23 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:40:48 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:41:24 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:41:49 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:42:25 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:42:50 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:43:26 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:43:50 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:44:26 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:44:51 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:45:26 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:45:51 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:46:27 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:46:52 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:47:28 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:47:53 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:48:29 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:48:54 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:49:29 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:49:54 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:50:30 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:50:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:51:31 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:51:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:52:32 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:52:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:53:33 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:53:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:54:33 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:54:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:55:33 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:55:56 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:56:34 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:56:57 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:57:34 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:57:54 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 01:59:00 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:00:00 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:01:02 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:02:02 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:03:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:04:04 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:05:04 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:06:04 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:07:05 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:08:06 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:09:06 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:10:07 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:11:08 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:12:09 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:13:10 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:14:11 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:15:12 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:16:12 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:17:13 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:18:13 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:19:14 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:20:14 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:21:15 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:22:15 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:23:16 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:24:16 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:25:16 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:26:18 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:27:17 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:28:18 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:29:19 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:30:20 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:31:20 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:32:20 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:33:21 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:34:22 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:35:22 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:36:22 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:37:22 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:38:23 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:39:23 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:40:23 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:41:24 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:42:25 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:43:25 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:44:26 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:45:27 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:46:27 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:47:28 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:48:29 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:49:29 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:50:30 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:51:30 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:52:31 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:53:31 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:54:32 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:55:33 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:56:34 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:57:34 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:57:40 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:58:34 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:58:44 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:59:35 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 02:59:45 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:00:35 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:00:45 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:01:36 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:01:46 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:02:37 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:02:47 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:03:38 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:03:47 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:04:38 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:04:48 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:05:39 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:05:48 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:06:40 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:06:49 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:07:40 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:07:50 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:08:41 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:08:50 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:09:42 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:09:50 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:10:42 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:10:51 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:11:43 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:11:51 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:12:43 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:12:52 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:13:44 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:13:52 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:14:45 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:14:52 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:15:46 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:15:53 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:16:47 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:16:53 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:17:47 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:17:54 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:18:47 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:18:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:19:48 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:19:57 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:20:49 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:20:58 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:21:50 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:21:58 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:22:50 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:22:59 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:23:51 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:23:59 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:24:51 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:25:00 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:25:52 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:26:01 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:26:52 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:27:02 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:27:53 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:28:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:28:53 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:29:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:29:53 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:30:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:30:54 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:31:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:31:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:32:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:32:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:33:04 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:33:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:34:04 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:34:55 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:35:05 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:35:56 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:36:06 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:36:56 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:37:07 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:37:56 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:38:07 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:38:56 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:39:08 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:39:57 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:40:08 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:40:58 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:41:09 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:41:59 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:42:10 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:42:59 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:43:10 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:44:00 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:44:11 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:45:00 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:45:12 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:46:00 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:46:12 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:47:01 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:47:13 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:48:01 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:48:14 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:49:02 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:49:15 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:50:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:50:16 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:51:03 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:51:17 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:52:04 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:52:18 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:53:05 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:53:19 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:54:05 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:54:20 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:55:06 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:55:20 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:56:06 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:56:20 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:57:07 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:57:21 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:58:07 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:58:22 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:58:53 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 03:59:58 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 04:00:59 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 04:01:59 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 04:03:00 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 04:03:00 - INFO - 📅 Scan schedule: Every 25 minutes
+2026-02-01 04:03:00 - INFO - 📊 Monitoring 8 assets (sample: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'ARBUSDT', 'OPUSDT'])
+2026-02-01 04:03:00 - INFO - 🔔 Discord webhook: Configured
+2026-02-01 04:03:00 - INFO - ⚙️  Mode: ALERTS ONLY - No trade tracking, no limits
+2026-02-01 04:03:40 - INFO - 🛑 Received shutdown signal. Shutting down gracefully...
+2026-02-01 04:03:53 - INFO - 🚀 Short Hunter Bot V2 started!
+2026-02-01 04:03:53 - INFO - 📅 Scan schedule: Every 25 minutes
+2026-02-01 04:03:53 - INFO - 📊 Monitoring 8 assets (sample: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'ARBUSDT', 'OPUSDT'])
+2026-02-01 04:03:53 - INFO - 🔔 Discord webhook: Configured
+2026-02-01 04:03:53 - INFO - ⚙️  Mode: ALERTS ONLY - No trade tracking, no limits
+2026-02-01 04:25:56 - INFO - ⏰ Scan time reached: 04:25:56
+2026-02-01 04:25:56 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 04:25:58 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 04:25:58 - INFO - ✓ No short signals detected
+2026-02-01 04:50:00 - INFO - ⏰ Scan time reached: 04:50:00
+2026-02-01 04:50:00 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 04:50:02 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 04:50:02 - INFO - ✓ No short signals detected
+2026-02-01 05:00:03 - INFO - ⏰ Scan time reached: 05:00:03
+2026-02-01 05:00:03 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 05:00:05 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 05:00:05 - INFO - ✓ No short signals detected
+2026-02-01 05:25:07 - INFO - ⏰ Scan time reached: 05:25:07
+2026-02-01 05:25:07 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 05:25:10 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 05:25:10 - INFO - ✓ No short signals detected
+2026-02-01 05:50:14 - INFO - ⏰ Scan time reached: 05:50:14
+2026-02-01 05:50:14 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 05:50:17 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 05:50:17 - INFO - ✓ No short signals detected
+2026-02-01 06:00:18 - INFO - ⏰ Scan time reached: 06:00:18
+2026-02-01 06:00:18 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 06:00:21 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 06:00:21 - INFO - ✓ No short signals detected
+2026-02-01 06:25:23 - INFO - ⏰ Scan time reached: 06:25:23
+2026-02-01 06:25:23 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 06:25:27 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 06:25:27 - INFO - ✓ No short signals detected
+2026-02-01 06:50:30 - INFO - ⏰ Scan time reached: 06:50:30
+2026-02-01 06:50:30 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 06:50:33 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 06:50:33 - INFO - ✓ No short signals detected
+2026-02-01 07:00:35 - INFO - ⏰ Scan time reached: 07:00:35
+2026-02-01 07:00:35 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 07:00:37 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 07:00:37 - INFO - ✓ No short signals detected
+2026-02-01 07:25:41 - INFO - ⏰ Scan time reached: 07:25:41
+2026-02-01 07:25:41 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 07:25:44 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 07:25:44 - INFO - ✓ No short signals detected
+2026-02-01 07:50:47 - INFO - ⏰ Scan time reached: 07:50:47
+2026-02-01 07:50:47 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 07:50:50 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 07:50:50 - INFO - ✓ No short signals detected
+2026-02-01 08:00:51 - INFO - ⏰ Scan time reached: 08:00:51
+2026-02-01 08:00:51 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 08:00:54 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 08:00:54 - INFO - ✓ No short signals detected
+2026-02-01 08:25:57 - INFO - ⏰ Scan time reached: 08:25:57
+2026-02-01 08:25:57 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 08:26:00 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 08:26:00 - INFO - ✓ No short signals detected
+2026-02-01 08:50:04 - INFO - ⏰ Scan time reached: 08:50:04
+2026-02-01 08:50:04 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 08:50:06 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 08:50:06 - INFO - ✓ No short signals detected
+2026-02-01 09:00:08 - INFO - ⏰ Scan time reached: 09:00:08
+2026-02-01 09:00:08 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 09:00:10 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 09:00:10 - INFO - ✓ No short signals detected
+2026-02-01 09:25:14 - INFO - ⏰ Scan time reached: 09:25:14
+2026-02-01 09:25:14 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 09:25:17 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 09:25:17 - INFO - ✓ No short signals detected
+2026-02-01 09:50:20 - INFO - ⏰ Scan time reached: 09:50:20
+2026-02-01 09:50:20 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 09:50:23 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 09:50:23 - INFO - ✓ No short signals detected
+2026-02-01 10:00:24 - INFO - ⏰ Scan time reached: 10:00:24
+2026-02-01 10:00:24 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 10:00:26 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 10:00:26 - INFO - ✓ No short signals detected
+2026-02-01 10:25:30 - INFO - ⏰ Scan time reached: 10:25:30
+2026-02-01 10:25:30 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 10:25:33 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 10:25:33 - INFO - ✓ No short signals detected
+2026-02-01 10:50:36 - INFO - ⏰ Scan time reached: 10:50:36
+2026-02-01 10:50:36 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 10:50:39 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 10:50:39 - INFO - ✓ No short signals detected
+2026-02-01 11:00:40 - INFO - ⏰ Scan time reached: 11:00:40
+2026-02-01 11:00:40 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 11:00:43 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 11:00:43 - INFO - ✓ No short signals detected
+2026-02-01 11:25:46 - INFO - ⏰ Scan time reached: 11:25:46
+2026-02-01 11:25:46 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 11:25:49 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 11:25:49 - INFO - ✓ No short signals detected
+2026-02-01 11:50:51 - INFO - ⏰ Scan time reached: 11:50:51
+2026-02-01 11:50:51 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 11:50:54 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 11:50:54 - INFO - ✓ No short signals detected
+2026-02-01 12:00:55 - INFO - ⏰ Scan time reached: 12:00:55
+2026-02-01 12:00:55 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 12:00:57 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 12:00:57 - INFO - ✓ No short signals detected
+2026-02-01 12:25:01 - INFO - ⏰ Scan time reached: 12:25:01
+2026-02-01 12:25:01 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 12:25:03 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 12:25:03 - INFO - ✓ No short signals detected
+2026-02-01 12:50:07 - INFO - ⏰ Scan time reached: 12:50:07
+2026-02-01 12:50:07 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 12:50:10 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 12:50:10 - INFO - ✓ No short signals detected
+2026-02-01 13:00:11 - INFO - ⏰ Scan time reached: 13:00:11
+2026-02-01 13:00:11 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 13:00:14 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 13:00:14 - INFO - ✓ No short signals detected
+2026-02-01 13:25:17 - INFO - ⏰ Scan time reached: 13:25:17
+2026-02-01 13:25:17 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 13:25:20 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 13:25:20 - INFO - ✓ No short signals detected
+2026-02-01 13:50:24 - INFO - ⏰ Scan time reached: 13:50:24
+2026-02-01 13:50:24 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 13:50:26 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 13:50:26 - INFO - ✓ No short signals detected
+2026-02-01 14:00:28 - INFO - ⏰ Scan time reached: 14:00:28
+2026-02-01 14:00:28 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 14:00:30 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 14:00:30 - INFO - ✓ No short signals detected
+2026-02-01 14:25:34 - INFO - ⏰ Scan time reached: 14:25:34
+2026-02-01 14:25:34 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 14:25:37 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 14:25:37 - INFO - ✓ No short signals detected
+2026-02-01 14:50:40 - INFO - ⏰ Scan time reached: 14:50:40
+2026-02-01 14:50:40 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 14:50:43 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 14:50:43 - INFO - ✓ No short signals detected
+2026-02-01 15:00:44 - INFO - ⏰ Scan time reached: 15:00:44
+2026-02-01 15:00:44 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 15:00:47 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 15:00:47 - INFO - ✓ No short signals detected
+2026-02-01 15:25:50 - INFO - ⏰ Scan time reached: 15:25:50
+2026-02-01 15:25:50 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 15:25:53 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 15:25:53 - INFO - ✓ No short signals detected
+2026-02-01 15:50:56 - INFO - ⏰ Scan time reached: 15:50:56
+2026-02-01 15:50:56 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 15:50:59 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 15:50:59 - INFO - ✓ No short signals detected
+2026-02-01 16:00:00 - INFO - ⏰ Scan time reached: 16:00:00
+2026-02-01 16:00:00 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 16:00:03 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 16:00:03 - INFO - ✓ No short signals detected
+2026-02-01 16:25:06 - INFO - ⏰ Scan time reached: 16:25:06
+2026-02-01 16:25:06 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 16:25:09 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 16:25:09 - INFO - ✓ No short signals detected
+2026-02-01 16:50:12 - INFO - ⏰ Scan time reached: 16:50:12
+2026-02-01 16:50:12 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 16:50:15 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 16:50:15 - INFO - ✓ No short signals detected
+2026-02-01 17:00:17 - INFO - ⏰ Scan time reached: 17:00:17
+2026-02-01 17:00:17 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 17:00:19 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 17:00:19 - INFO - ✓ No short signals detected
+2026-02-01 17:25:23 - INFO - ⏰ Scan time reached: 17:25:23
+2026-02-01 17:25:23 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 17:25:26 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 17:25:26 - INFO - ✓ No short signals detected
+2026-02-01 17:50:29 - INFO - ⏰ Scan time reached: 17:50:29
+2026-02-01 17:50:29 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 17:50:32 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 17:50:32 - INFO - ✓ No short signals detected
+2026-02-01 18:00:34 - INFO - ⏰ Scan time reached: 18:00:34
+2026-02-01 18:00:34 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 18:00:37 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 18:00:37 - INFO - ✓ No short signals detected
+2026-02-01 18:25:40 - INFO - ⏰ Scan time reached: 18:25:40
+2026-02-01 18:25:40 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 18:25:43 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 18:25:43 - INFO - ✓ No short signals detected
+2026-02-01 18:50:47 - INFO - ⏰ Scan time reached: 18:50:47
+2026-02-01 18:50:47 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 18:50:49 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 18:50:49 - INFO - ✓ No short signals detected
+2026-02-01 19:00:51 - INFO - ⏰ Scan time reached: 19:00:51
+2026-02-01 19:00:51 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 19:00:53 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 19:00:53 - INFO - ✓ No short signals detected
+2026-02-01 19:25:57 - INFO - ⏰ Scan time reached: 19:25:57
+2026-02-01 19:25:57 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 19:25:59 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 19:25:59 - INFO - ✓ No short signals detected
+2026-02-01 19:50:01 - INFO - ⏰ Scan time reached: 19:50:01
+2026-02-01 19:50:01 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 19:50:03 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 19:50:03 - INFO - ✓ No short signals detected
+2026-02-01 20:00:04 - INFO - ⏰ Scan time reached: 20:00:04
+2026-02-01 20:00:04 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 20:00:06 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 20:00:06 - INFO - ✓ No short signals detected
+2026-02-01 20:25:08 - INFO - ⏰ Scan time reached: 20:25:08
+2026-02-01 20:25:08 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 20:25:10 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 20:25:10 - INFO - ✓ No short signals detected
+2026-02-01 20:50:12 - INFO - ⏰ Scan time reached: 20:50:12
+2026-02-01 20:50:12 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 20:50:15 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 20:50:15 - INFO - ✓ No short signals detected
+2026-02-01 21:00:15 - INFO - ⏰ Scan time reached: 21:00:15
+2026-02-01 21:00:15 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 21:00:18 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 21:00:18 - INFO - ✓ No short signals detected
+2026-02-01 21:25:20 - INFO - ⏰ Scan time reached: 21:25:20
+2026-02-01 21:25:20 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 21:25:22 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 21:25:22 - INFO - ✓ No short signals detected
+2026-02-01 21:50:24 - INFO - ⏰ Scan time reached: 21:50:24
+2026-02-01 21:50:24 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 21:50:26 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 21:50:26 - INFO - ✓ No short signals detected
+2026-02-01 22:00:27 - INFO - ⏰ Scan time reached: 22:00:27
+2026-02-01 22:00:27 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 22:00:29 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 22:00:29 - INFO - ✓ No short signals detected
+2026-02-01 22:25:31 - INFO - ⏰ Scan time reached: 22:25:31
+2026-02-01 22:25:31 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 22:25:33 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 22:25:33 - INFO - ✓ No short signals detected
+2026-02-01 22:50:35 - INFO - ⏰ Scan time reached: 22:50:35
+2026-02-01 22:50:35 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 22:50:38 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 22:50:38 - INFO - ✓ No short signals detected
+2026-02-01 23:00:39 - INFO - ⏰ Scan time reached: 23:00:39
+2026-02-01 23:00:39 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 23:00:41 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 23:00:41 - INFO - ✓ No short signals detected
+2026-02-01 23:25:43 - INFO - ⏰ Scan time reached: 23:25:43
+2026-02-01 23:25:43 - INFO - 🔍 Scanning for short opportunities...
+2026-02-01 23:25:46 - INFO - 📈 Market data updated for 7 pairs
+2026-02-01 23:25:46 - INFO - ✓ No short signals detected
+2026-02-01 23:48:40 - INFO - 🛑 Received shutdown signal. Shutting down gracefully...

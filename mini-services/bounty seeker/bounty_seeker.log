@@ -1,0 +1,850 @@
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:428: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  ts = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+[2026-01-28 15:20:51] 🚀 BountySeekerV5 initialized
+[2026-01-28 15:20:51] 💰 Paper Trading Balance: $1236.84
+[2026-01-28 15:20:51] 📊 Open Trades: 3/3
+[2026-01-28 15:20:51] 📋 Loading MEXC perpetual futures (Top 30 by volume)...
+[2026-01-28 15:20:52] 📊 Fetching all tickers...
+[2026-01-28 15:20:53] 📊 Selected Top 30 pairs by volume:
+[2026-01-28 15:20:53]   #1: BTC/USDT:USDT ($12,281,430,659,373)
+[2026-01-28 15:20:53]   #2: ETH/USDT:USDT ($69,141,891,736)
+[2026-01-28 15:20:53]   #3: BTC/USD:BTC ($32,209,189,391)
+[2026-01-28 15:20:53]   #4: BCH/USDT:USDT ($16,947,657,918)
+[2026-01-28 15:20:53]   #5: ZEC/USDT:USDT ($16,445,697,380)
+[2026-01-28 15:20:53]   #6: LTC/USDT:USDT ($15,537,104,550)
+[2026-01-28 15:20:53]   #7: AAVE/USDT:USDT ($12,885,820,525)
+[2026-01-28 15:20:53]   #8: TAO/USDT:USDT ($12,695,950,380)
+[2026-01-28 15:20:53]   #9: ETH/USD:ETH ($9,910,908,615)
+[2026-01-28 15:20:53]   #10: HYPE/USDT:USDT ($7,525,372,092)
+[2026-01-28 15:20:53] 🎯 Starting Bounty Seeker V5...
+[2026-01-28 15:20:53] 📌 Strategy: Long reversals at bottoms (Deviation VWAP + Liquidation zones + GPS)
+[2026-01-28 15:20:53] 📌 Only A and A+ grade setups
+[2026-01-28 15:20:53] 📌 Paper Trading: $1,000 starting capital
+[2026-01-28 15:20:53] ============================================================
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1513: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  self.log(f"🌍 SCAN - {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} UTC")
+[2026-01-28 15:20:53] 🌍 SCAN - 2026-01-28 15:20:53 UTC
+[2026-01-28 15:20:53] ============================================================
+[2026-01-28 15:20:54] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-01-28 15:21:08] 🚫 Filtered 2 signals for symbols already in trades: DASH/USDT:USDT, ICP/USDT:USDT
+[2026-01-28 15:21:08] 📊 Results: 6 total signals
+[2026-01-28 15:21:08]   🎯 A/A+ Trade Signals: 4
+[2026-01-28 15:21:08]   👀 Watchlist Candidates: 0
+[2026-01-28 15:21:08]   💰 Open Trades: 3/3
+[2026-01-28 15:21:08]   💵 Paper Balance: $1236.84
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1550: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  current_hour = datetime.utcnow().strftime("%Y-%m-%d-%H")
+[2026-01-28 15:21:08] ⚠️ Rate limit reached: 3 signals already sent this hour
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1631: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat(),
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1363: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  today = datetime.utcnow().date().isoformat()
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1412: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow()
+[2026-01-28 15:21:09] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-01-28 16:21:09] ============================================================
+[2026-01-28 16:21:09] 🌍 SCAN - 2026-01-28 16:21:09 UTC
+[2026-01-28 16:21:09] ============================================================
+[2026-01-28 16:21:10] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-01-28 16:21:25] 🚫 Filtered 3 signals for symbols already in trades: DASH/USDT:USDT, FILECOIN/USDT:USDT, ICP/USDT:USDT
+[2026-01-28 16:21:25] 📊 Results: 8 total signals
+[2026-01-28 16:21:25]   🎯 A/A+ Trade Signals: 5
+[2026-01-28 16:21:25]   👀 Watchlist Candidates: 0
+[2026-01-28 16:21:25]   💰 Open Trades: 3/3
+[2026-01-28 16:21:25]   💵 Paper Balance: $1236.84
+[2026-01-28 16:21:25] ✅ Preparing to send 3 unique signals: LINK/USDT:USDT, ULTIMA/USDT:USDT, DOT/USDT:USDT
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1272: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat()
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1455: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat()
+[2026-01-28 16:21:27] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-01-28 17:21:27] ============================================================
+[2026-01-28 17:21:27] 🌍 SCAN - 2026-01-28 17:21:27 UTC
+[2026-01-28 17:21:27] ============================================================
+[2026-01-28 17:21:28] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-01-28 17:21:44] 🚫 Filtered 2 signals for symbols already in trades: DASH/USDT:USDT, ICP/USDT:USDT
+[2026-01-28 17:21:44] 📊 Results: 6 total signals
+[2026-01-28 17:21:44]   🎯 A/A+ Trade Signals: 4
+[2026-01-28 17:21:44]   👀 Watchlist Candidates: 0
+[2026-01-28 17:21:44]   💰 Open Trades: 3/3
+[2026-01-28 17:21:44]   💵 Paper Balance: $1236.84
+[2026-01-28 17:21:44] 🚫 Skipping repeat trade on LINK/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 17:21:44] 🚫 Skipping repeat trade on ULTIMA/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 17:21:44] ✅ Preparing to send 1 unique signals: DOT/USDT:USDT
+[2026-01-28 17:21:45] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-01-28 18:21:45] ============================================================
+[2026-01-28 18:21:45] 🌍 SCAN - 2026-01-28 18:21:45 UTC
+[2026-01-28 18:21:45] ============================================================
+[2026-01-28 18:21:46] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-01-28 18:22:01] 🚫 Filtered 2 signals for symbols already in trades: DASH/USDT:USDT, ICP/USDT:USDT
+[2026-01-28 18:22:01] 📊 Results: 7 total signals
+[2026-01-28 18:22:01]   🎯 A/A+ Trade Signals: 5
+[2026-01-28 18:22:01]   👀 Watchlist Candidates: 0
+[2026-01-28 18:22:01]   💰 Open Trades: 3/3
+[2026-01-28 18:22:01]   💵 Paper Balance: $1236.84
+[2026-01-28 18:22:01] 🚫 Skipping repeat trade on LINK/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 18:22:01] 🚫 Skipping repeat trade on ULTIMA/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 18:22:01] ✅ Preparing to send 1 unique signals: XMR/USDT:USDT
+[2026-01-28 18:22:02] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-01-28 19:22:02] ============================================================
+[2026-01-28 19:22:02] 🌍 SCAN - 2026-01-28 19:22:02 UTC
+[2026-01-28 19:22:02] ============================================================
+[2026-01-28 19:22:04] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-01-28 19:22:25] 🚫 Filtered 2 signals for symbols already in trades: DASH/USDT:USDT, ICP/USDT:USDT
+[2026-01-28 19:22:25] 📊 Results: 8 total signals
+[2026-01-28 19:22:25]   🎯 A/A+ Trade Signals: 6
+[2026-01-28 19:22:25]   👀 Watchlist Candidates: 0
+[2026-01-28 19:22:25]   💰 Open Trades: 3/3
+[2026-01-28 19:22:25]   💵 Paper Balance: $1236.84
+[2026-01-28 19:22:25] 🚫 Skipping repeat trade on LINK/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 19:22:25] 🚫 Skipping repeat trade on ULTIMA/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 19:22:25] ✅ Preparing to send 1 unique signals: XMR/USDT:USDT
+[2026-01-28 19:22:27] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-01-28 20:22:27] ============================================================
+[2026-01-28 20:22:28] 🌍 SCAN - 2026-01-28 20:22:27 UTC
+[2026-01-28 20:22:28] ============================================================
+[2026-01-28 20:22:29] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-01-28 20:22:52] 🚫 Filtered 2 signals for symbols already in trades: DASH/USDT:USDT, ICP/USDT:USDT
+[2026-01-28 20:22:52] 📊 Results: 5 total signals
+[2026-01-28 20:22:52]   🎯 A/A+ Trade Signals: 3
+[2026-01-28 20:22:52]   👀 Watchlist Candidates: 0
+[2026-01-28 20:22:52]   💰 Open Trades: 3/3
+[2026-01-28 20:22:52]   💵 Paper Balance: $1236.84
+[2026-01-28 20:22:52] 🚫 Skipping repeat trade on ULTIMA/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 20:22:52] ✅ Preparing to send 2 unique signals: XMR/USDT:USDT, TRUMPOFFICIAL/USDT:USDT
+[2026-01-28 20:22:54] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-01-28 21:22:54] ============================================================
+[2026-01-28 21:22:56] 🌍 SCAN - 2026-01-28 21:22:55 UTC
+[2026-01-28 21:22:56] ============================================================
+[2026-01-28 21:23:07] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-01-28 21:23:38] 🚫 Filtered 2 signals for symbols already in trades: DASH/USDT:USDT, ICP/USDT:USDT
+[2026-01-28 21:23:38] 📊 Results: 8 total signals
+[2026-01-28 21:23:38]   🎯 A/A+ Trade Signals: 6
+[2026-01-28 21:23:38]   👀 Watchlist Candidates: 0
+[2026-01-28 21:23:38]   💰 Open Trades: 3/3
+[2026-01-28 21:23:38]   💵 Paper Balance: $1236.84
+[2026-01-28 21:23:39] 🚫 Skipping repeat trade on XMR/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 21:23:39] 🚫 Skipping repeat trade on LINK/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 21:23:39] ✅ Preparing to send 1 unique signals: YFI/USDT:USDT
+[2026-01-28 21:23:40] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-01-28 22:23:40] ============================================================
+[2026-01-28 22:23:40] 🌍 SCAN - 2026-01-28 22:23:40 UTC
+[2026-01-28 22:23:40] ============================================================
+[2026-01-28 22:23:41] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-01-28 22:23:57] 🚫 Filtered 2 signals for symbols already in trades: DASH/USDT:USDT, ICP/USDT:USDT
+[2026-01-28 22:23:57] 📊 Results: 8 total signals
+[2026-01-28 22:23:57]   🎯 A/A+ Trade Signals: 6
+[2026-01-28 22:23:57]   👀 Watchlist Candidates: 0
+[2026-01-28 22:23:57]   💰 Open Trades: 3/3
+[2026-01-28 22:23:57]   💵 Paper Balance: $1236.84
+[2026-01-28 22:23:57] 🚫 Skipping repeat trade on YFI/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 22:23:57] 🚫 Skipping repeat trade on XMR/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 22:23:57] 🚫 Skipping repeat trade on LINK/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 22:23:58] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-01-28 23:23:58] ============================================================
+[2026-01-28 23:23:58] 🌍 SCAN - 2026-01-28 23:23:58 UTC
+[2026-01-28 23:23:58] ============================================================
+[2026-01-28 23:23:59] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-01-28 23:24:14] 🚫 Filtered 2 signals for symbols already in trades: DASH/USDT:USDT, ICP/USDT:USDT
+[2026-01-28 23:24:14] 📊 Results: 7 total signals
+[2026-01-28 23:24:14]   🎯 A/A+ Trade Signals: 5
+[2026-01-28 23:24:14]   👀 Watchlist Candidates: 0
+[2026-01-28 23:24:14]   💰 Open Trades: 3/3
+[2026-01-28 23:24:14]   💵 Paper Balance: $1236.84
+[2026-01-28 23:24:14] 🚫 Skipping repeat trade on YFI/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 23:24:14] 🚫 Skipping repeat trade on XMR/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 23:24:14] 🚫 Skipping repeat trade on ULTIMA/USDT:USDT (levels changed, within cooldown window).
+[2026-01-28 23:24:15] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-01-29 00:24:15] ============================================================
+[2026-01-29 00:24:15] 🌍 SCAN - 2026-01-29 00:24:15 UTC
+[2026-01-29 00:24:15] ============================================================
+[2026-01-29 00:24:16] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-01-29 00:24:32] 🚫 Filtered 2 signals for symbols already in trades: DASH/USDT:USDT, ICP/USDT:USDT
+[2026-01-29 00:24:32] 📊 Results: 8 total signals
+[2026-01-29 00:24:32]   🎯 A/A+ Trade Signals: 6
+[2026-01-29 00:24:32]   👀 Watchlist Candidates: 0
+[2026-01-29 00:24:32]   💰 Open Trades: 3/3
+[2026-01-29 00:24:32]   💵 Paper Balance: $1236.84
+[2026-01-29 00:24:32] 🚫 Skipping repeat trade on YFI/USDT:USDT (levels changed, within cooldown window).
+[2026-01-29 00:24:32] 🚫 Skipping repeat trade on XMR/USDT:USDT (levels changed, within cooldown window).
+[2026-01-29 00:24:32] 🚫 Skipping repeat trade on LINK/USDT:USDT (levels changed, within cooldown window).
+[2026-01-29 00:24:34] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-01-29 01:24:34] ============================================================
+[2026-01-29 01:24:34] 🌍 SCAN - 2026-01-29 01:24:34 UTC
+[2026-01-29 01:24:34] ============================================================
+[2026-01-29 01:24:35] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-01-29 01:24:50] 🚫 Filtered 2 signals for symbols already in trades: DASH/USDT:USDT, ICP/USDT:USDT
+[2026-01-29 01:24:50] 📊 Results: 8 total signals
+[2026-01-29 01:24:50]   🎯 A/A+ Trade Signals: 6
+[2026-01-29 01:24:50]   👀 Watchlist Candidates: 0
+[2026-01-29 01:24:50]   💰 Open Trades: 3/3
+[2026-01-29 01:24:50]   💵 Paper Balance: $1236.84
+[2026-01-29 01:24:50] 🚫 Skipping repeat trade on YFI/USDT:USDT (levels changed, within cooldown window).
+[2026-01-29 01:24:50] 🚫 Skipping repeat trade on XMR/USDT:USDT (levels changed, within cooldown window).
+[2026-01-29 01:24:50] 🚫 Skipping repeat trade on LINK/USDT:USDT (levels changed, within cooldown window).
+[2026-01-29 01:24:51] ✅ Scan complete. Next scan in 3600s (60 minutes)
+2026-02-07 01:56:08,480 - __main__ - INFO - ✅ OKX Futures connected
+2026-02-07 01:56:08,484 - __main__ - INFO - 📊 Loading top 10 coins by volume...
+2026-02-07 01:56:08,485 - __main__ - INFO - 📊 Found 257 swap pairs, fetching volumes...
+2026-02-07 01:56:08,709 - __main__ - INFO - ✅ Loaded top 10 coins: BERA, FIL, ICP (Total: 3)
+2026-02-07 01:56:08,709 - __main__ - INFO - 🚀 Bounty Seeker Bot Started
+2026-02-07 01:56:08,709 - __main__ - INFO - 📊 Monitoring 3 symbols (Top 10 by volume)
+2026-02-07 01:56:08,709 - __main__ - INFO - ⏰ Scanning at XX:00 and XX:30 (every 30 minutes)
+2026-02-07 01:56:08,709 - __main__ - INFO - 📢 Discord: Sending status updates + signals
+2026-02-07 01:56:08,712 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 01:56:08,713 - __main__ - INFO - ✅ Bot started - Discord startup notification sent
+2026-02-07 02:00:00,452 - __main__ - INFO - ⏰ Scan time: 07:00:00 UTC (60‑min interval)
+2026-02-07 02:00:00,458 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 02:00:02,124 - __main__ - INFO - 🔍 Scanning markets for reversal opportunities...
+2026-02-07 02:00:02,423 - __main__ - INFO - ✅ Trade closed: #258 stop_loss @ 0.9670 (-1.33%)
+2026-02-07 02:00:02,945 - __main__ - INFO - ✅ Signal found: BERA/USDT:USDT (Score: 50) - Reasons: Price in Upper Golden Pocket (0.618-0.65), RSI Overbought (66.1)
+2026-02-07 02:00:03,722 - __main__ - INFO - ✅ Signal found: FIL/USDT:USDT (Score: 50) - Reasons: Approaching GPS Zone (1.36% away), RSI Oversold (25.0)
+2026-02-07 02:00:04,523 - __main__ - INFO - ✅ Signal found: ICP/USDT:USDT (Score: 65) - Reasons: Approaching GPS Zone (1.98% away), RSI Oversold (35.5)
+2026-02-07 02:00:04,828 - __main__ - INFO - 🎯 Found 3 signals, sending 1 LONG picks...
+2026-02-07 02:00:04,829 - __main__ - ERROR - Failed to send Discord alert: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 02:00:04,832 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/bishop/Desktop/output/workspace-99190f76-187d-40a3-8ab6-30b756622125/mini-services/bounty seeker/bounty_seeker_bot.py", line 1442, in send_top_picks_discord
+    response = requests.post(DISCORD_WEBHOOK, json=payload, timeout=15)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+    ~~~~~~~~~^
+        method=request.method.upper(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        hooks=merge_hooks(request.hooks, self.hooks),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 367, in prepare
+    self.prepare_url(url, params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 438, in prepare_url
+    raise MissingSchema(
+    ...<2 lines>...
+    )
+requests.exceptions.MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+
+2026-02-07 02:00:04,832 - __main__ - INFO - 🚀 Placing REAL order for ICP/USDT:USDT...
+2026-02-07 02:00:04,832 - __main__ - WARNING - Could not set leverage: okx requires "apiKey" credential
+2026-02-07 02:00:04,840 - __main__ - ERROR - ❌ Failed to place REAL order: okx requires "apiKey" credential
+2026-02-07 02:00:04,841 - __main__ - INFO - ✅ Trade executed: #71 ICP/USDT:USDT @ 2.4790
+2026-02-07 02:00:06,328 - __main__ - INFO - ✅ Scan complete: Found 1 signals, sent to Discord
+2026-02-07 02:00:06,336 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 02:00:10,463 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 03:00:00,755 - __main__ - INFO - ⏰ Scan time: 08:00:00 UTC (60‑min interval)
+2026-02-07 03:00:00,758 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 03:00:02,136 - __main__ - INFO - 🔍 Scanning markets for reversal opportunities...
+2026-02-07 03:00:02,136 - __main__ - INFO - 🔄 Updating watchlist...
+2026-02-07 03:00:02,136 - __main__ - INFO - 📊 Loading top 10 coins by volume...
+2026-02-07 03:00:02,138 - __main__ - INFO - 📊 Found 257 swap pairs, fetching volumes...
+2026-02-07 03:00:02,376 - __main__ - INFO - ✅ Loaded top 10 coins: BERA, FIL, ICP (Total: 3)
+2026-02-07 03:00:02,592 - __main__ - INFO - ✅ Trade closed: #259 stop_loss @ 2.4210 (-2.34%)
+2026-02-07 03:00:03,783 - __main__ - INFO - ✅ Signal found: FIL/USDT:USDT (Score: 45) - Reasons: Getting Close to GPS Zone (2.37% away), RSI Oversold (25.9)
+2026-02-07 03:00:04,853 - __main__ - INFO - 🎯 Found 1 signals, sending 1 LONG picks...
+2026-02-07 03:00:04,853 - __main__ - ERROR - Failed to send Discord alert: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 03:00:04,858 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/bishop/Desktop/output/workspace-99190f76-187d-40a3-8ab6-30b756622125/mini-services/bounty seeker/bounty_seeker_bot.py", line 1442, in send_top_picks_discord
+    response = requests.post(DISCORD_WEBHOOK, json=payload, timeout=15)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+    ~~~~~~~~~^
+        method=request.method.upper(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        hooks=merge_hooks(request.hooks, self.hooks),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 367, in prepare
+    self.prepare_url(url, params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 438, in prepare_url
+    raise MissingSchema(
+    ...<2 lines>...
+    )
+requests.exceptions.MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+
+2026-02-07 03:00:04,859 - __main__ - INFO - 🚀 Placing REAL order for FIL/USDT:USDT...
+2026-02-07 03:00:04,859 - __main__ - WARNING - Could not set leverage: okx requires "apiKey" credential
+2026-02-07 03:00:04,867 - __main__ - ERROR - ❌ Failed to place REAL order: okx requires "apiKey" credential
+2026-02-07 03:00:04,868 - __main__ - INFO - ✅ Trade executed: #72 FIL/USDT:USDT @ 0.9510
+2026-02-07 03:00:06,280 - __main__ - INFO - ✅ Scan complete: Found 1 signals, sent to Discord
+2026-02-07 03:00:06,281 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 03:00:10,009 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 04:00:00,693 - __main__ - INFO - ⏰ Scan time: 09:00:00 UTC (60‑min interval)
+2026-02-07 04:00:00,696 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 04:00:02,090 - __main__ - INFO - 🔍 Scanning markets for reversal opportunities...
+2026-02-07 04:00:03,539 - __main__ - INFO - ✅ Signal found: ICP/USDT:USDT (Score: 45) - Reasons: Getting Close to GPS Zone (2.69% away), RSI Oversold (22.6)
+2026-02-07 04:00:03,846 - __main__ - INFO - 🎯 Found 1 signals, sending 1 LONG picks...
+2026-02-07 04:00:03,847 - __main__ - ERROR - Failed to send Discord alert: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 04:00:03,850 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/bishop/Desktop/output/workspace-99190f76-187d-40a3-8ab6-30b756622125/mini-services/bounty seeker/bounty_seeker_bot.py", line 1442, in send_top_picks_discord
+    response = requests.post(DISCORD_WEBHOOK, json=payload, timeout=15)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+    ~~~~~~~~~^
+        method=request.method.upper(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        hooks=merge_hooks(request.hooks, self.hooks),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 367, in prepare
+    self.prepare_url(url, params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 438, in prepare_url
+    raise MissingSchema(
+    ...<2 lines>...
+    )
+requests.exceptions.MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+
+2026-02-07 04:00:03,851 - __main__ - INFO - 🚀 Placing REAL order for ICP/USDT:USDT...
+2026-02-07 04:00:03,851 - __main__ - WARNING - Could not set leverage: okx requires "apiKey" credential
+2026-02-07 04:00:03,860 - __main__ - ERROR - ❌ Failed to place REAL order: okx requires "apiKey" credential
+2026-02-07 04:00:03,863 - __main__ - INFO - ✅ Trade executed: #73 ICP/USDT:USDT @ 2.4370
+2026-02-07 04:00:05,294 - __main__ - INFO - ✅ Scan complete: Found 1 signals, sent to Discord
+2026-02-07 04:00:05,295 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 04:00:10,119 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 05:00:00,253 - __main__ - INFO - ⏰ Scan time: 10:00:00 UTC (60‑min interval)
+2026-02-07 05:00:00,260 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 05:00:01,581 - __main__ - INFO - 🔍 Scanning markets for reversal opportunities...
+2026-02-07 05:00:01,581 - __main__ - INFO - 🔄 Updating watchlist...
+2026-02-07 05:00:01,581 - __main__ - INFO - 📊 Loading top 10 coins by volume...
+2026-02-07 05:00:01,583 - __main__ - INFO - 📊 Found 257 swap pairs, fetching volumes...
+2026-02-07 05:00:01,813 - __main__ - INFO - ✅ Loaded top 10 coins: BERA, FIL, ICP (Total: 3)
+2026-02-07 05:00:02,704 - __main__ - INFO - ✅ Signal found: BERA/USDT:USDT (Score: 45) - Reasons: RSI Extreme Oversold (19.4), SFP Reversal Detected (Sweeping Lows)
+2026-02-07 05:00:03,445 - __main__ - INFO - ✅ Signal found: FIL/USDT:USDT (Score: 42) - Reasons: Getting Close to GPS Zone (2.15% away), RSI Oversold (24.6)
+2026-02-07 05:00:04,489 - __main__ - INFO - 🎯 Found 2 signals, sending 1 LONG picks...
+2026-02-07 05:00:04,490 - __main__ - ERROR - Failed to send Discord alert: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 05:00:04,495 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/bishop/Desktop/output/workspace-99190f76-187d-40a3-8ab6-30b756622125/mini-services/bounty seeker/bounty_seeker_bot.py", line 1442, in send_top_picks_discord
+    response = requests.post(DISCORD_WEBHOOK, json=payload, timeout=15)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+    ~~~~~~~~~^
+        method=request.method.upper(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        hooks=merge_hooks(request.hooks, self.hooks),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 367, in prepare
+    self.prepare_url(url, params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 438, in prepare_url
+    raise MissingSchema(
+    ...<2 lines>...
+    )
+requests.exceptions.MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+
+2026-02-07 05:00:04,495 - __main__ - INFO - 🚀 Placing REAL order for BERA/USDT:USDT...
+2026-02-07 05:00:04,496 - __main__ - WARNING - Could not set leverage: okx requires "apiKey" credential
+2026-02-07 05:00:04,504 - __main__ - ERROR - ❌ Failed to place REAL order: okx requires "apiKey" credential
+2026-02-07 05:00:04,507 - __main__ - INFO - ✅ Trade executed: #74 BERA/USDT:USDT @ 0.4485
+2026-02-07 05:00:05,881 - __main__ - INFO - ✅ Scan complete: Found 1 signals, sent to Discord
+2026-02-07 05:00:05,883 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 05:00:10,567 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 06:00:00,054 - __main__ - INFO - ⏰ Scan time: 11:00:00 UTC (60‑min interval)
+2026-02-07 06:00:00,060 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 06:00:01,620 - __main__ - INFO - 🔍 Scanning markets for reversal opportunities...
+2026-02-07 06:00:02,085 - __main__ - INFO - ✅ Trade closed: #261 stop_loss @ 2.4020 (-1.44%)
+2026-02-07 06:00:03,504 - __main__ - INFO - ✅ Signal found: ICP/USDT:USDT (Score: 50) - Reasons: RSI Oversold (31.5), SFP Reversal Detected (Sweeping Lows)
+2026-02-07 06:00:03,815 - __main__ - INFO - 🎯 Found 1 signals, sending 1 LONG picks...
+2026-02-07 06:00:03,815 - __main__ - ERROR - Failed to send Discord alert: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 06:00:03,819 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/bishop/Desktop/output/workspace-99190f76-187d-40a3-8ab6-30b756622125/mini-services/bounty seeker/bounty_seeker_bot.py", line 1442, in send_top_picks_discord
+    response = requests.post(DISCORD_WEBHOOK, json=payload, timeout=15)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+    ~~~~~~~~~^
+        method=request.method.upper(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        hooks=merge_hooks(request.hooks, self.hooks),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 367, in prepare
+    self.prepare_url(url, params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 438, in prepare_url
+    raise MissingSchema(
+    ...<2 lines>...
+    )
+requests.exceptions.MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+
+2026-02-07 06:00:03,820 - __main__ - INFO - 🚀 Placing REAL order for ICP/USDT:USDT...
+2026-02-07 06:00:03,820 - __main__ - WARNING - Could not set leverage: okx requires "apiKey" credential
+2026-02-07 06:00:03,831 - __main__ - ERROR - ❌ Failed to place REAL order: okx requires "apiKey" credential
+2026-02-07 06:00:03,832 - __main__ - INFO - ✅ Trade executed: #75 ICP/USDT:USDT @ 2.4040
+2026-02-07 06:00:05,253 - __main__ - INFO - ✅ Scan complete: Found 1 signals, sent to Discord
+2026-02-07 06:00:05,254 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 06:00:10,932 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 07:00:00,527 - __main__ - INFO - ⏰ Scan time: 12:00:00 UTC (60‑min interval)
+2026-02-07 07:00:00,534 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 07:00:01,871 - __main__ - INFO - 🔍 Scanning markets for reversal opportunities...
+2026-02-07 07:00:01,872 - __main__ - INFO - 🔄 Updating watchlist...
+2026-02-07 07:00:01,872 - __main__ - INFO - 📊 Loading top 10 coins by volume...
+2026-02-07 07:00:01,881 - __main__ - INFO - 📊 Found 257 swap pairs, fetching volumes...
+2026-02-07 07:00:02,112 - __main__ - INFO - ✅ Loaded top 10 coins: BERA, FIL, ICP (Total: 3)
+2026-02-07 07:00:02,778 - __main__ - INFO - ⛔ Max open trades reached (3/3). Waiting for TP/SL.
+2026-02-07 07:00:04,077 - __main__ - INFO - ⏳ Scan complete: No signals found
+2026-02-07 07:00:04,077 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 07:00:10,770 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 07:45:59,030 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 08:01:57,236 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 08:24:02,203 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 08:41:13,945 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 08:45:52,636 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 09:00:00,076 - __main__ - INFO - ⏰ Scan time: 14:00:00 UTC (60‑min interval)
+2026-02-07 09:00:00,082 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 09:00:02,161 - __main__ - INFO - 🔍 Scanning markets for reversal opportunities...
+2026-02-07 09:00:02,162 - __main__ - INFO - 🔄 Updating watchlist...
+2026-02-07 09:00:02,162 - __main__ - INFO - 📊 Loading top 10 coins by volume...
+2026-02-07 09:00:02,165 - __main__ - INFO - 📊 Found 257 swap pairs, fetching volumes...
+2026-02-07 09:00:02,589 - __main__ - INFO - ✅ Loaded top 10 coins: BERA, FIL, ICP (Total: 3)
+2026-02-07 09:00:03,081 - __main__ - INFO - ✅ Trade closed: #260 take_profit @ 0.9830 (3.36%)
+2026-02-07 09:00:03,801 - __main__ - INFO - ✅ Trade closed: #263 take_profit @ 2.4670 (2.62%)
+2026-02-07 09:00:05,942 - __main__ - INFO - ✅ Signal found: FIL/USDT:USDT (Score: 57) - Reasons: Deviation Zone +1.5 Sigma (Overbought), Getting Close to Upper GPS Zone (2.09% away)
+2026-02-07 09:00:07,378 - __main__ - INFO - ✅ Signal found: ICP/USDT:USDT (Score: 55) - Reasons: Deviation Zone +1.0 Sigma (Slightly Overbought), Near Upper GPS Zone (0.38% away)
+2026-02-07 09:00:07,681 - __main__ - INFO - ℹ️ Signals found but no LONG picks to send to Discord
+2026-02-07 09:00:07,682 - __main__ - INFO - 🚀 Placing REAL order for FIL/USDT:USDT...
+2026-02-07 09:00:07,682 - __main__ - WARNING - Could not set leverage: okx requires "apiKey" credential
+2026-02-07 09:00:07,692 - __main__ - ERROR - ❌ Failed to place REAL order: okx requires "apiKey" credential
+2026-02-07 09:00:07,694 - __main__ - INFO - ✅ Trade executed: #76 FIL/USDT:USDT @ 0.9820
+2026-02-07 09:00:09,660 - __main__ - INFO - ✅ Scan complete: Found 1 signals, sent to Discord
+2026-02-07 09:00:09,661 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 09:00:14,528 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 09:08:59,503 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 09:24:26,888 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 09:37:24,322 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 09:56:43,841 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 10:14:50,879 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 10:41:43,770 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 11:00:02,647 - __main__ - INFO - ⏰ Scan time: 16:00:02 UTC (60‑min interval)
+2026-02-07 11:00:02,650 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 11:00:02,883 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 11:00:03,906 - __main__ - INFO - 🔍 Scanning markets for reversal opportunities...
+2026-02-07 11:00:03,906 - __main__ - INFO - 🔄 Updating watchlist...
+2026-02-07 11:00:03,907 - __main__ - INFO - 📊 Loading top 10 coins by volume...
+2026-02-07 11:00:03,909 - __main__ - INFO - 📊 Found 257 swap pairs, fetching volumes...
+2026-02-07 11:00:04,154 - __main__ - INFO - ✅ Loaded top 10 coins: BERA, FIL, ICP (Total: 3)
+2026-02-07 11:00:04,610 - __main__ - INFO - ✅ Trade closed: #264 stop_loss @ 0.9720 (-1.02%)
+2026-02-07 11:00:05,964 - __main__ - INFO - ✅ Signal found: FIL/USDT:USDT (Score: 43) - Reasons: Deviation Zone +1.5 Sigma (Overbought), Approaching Upper GPS Zone (1.18% away)
+2026-02-07 11:00:06,820 - __main__ - INFO - ✅ Signal found: ICP/USDT:USDT (Score: 42) - Reasons: Getting Close to GPS Zone (2.19% away), RSI Oversold (40.0)
+2026-02-07 11:00:07,129 - __main__ - INFO - ℹ️ Signals found but no LONG picks to send to Discord
+2026-02-07 11:00:07,130 - __main__ - INFO - 🚀 Placing REAL order for FIL/USDT:USDT...
+2026-02-07 11:00:07,130 - __main__ - WARNING - Could not set leverage: okx requires "apiKey" credential
+2026-02-07 11:00:07,141 - __main__ - ERROR - ❌ Failed to place REAL order: okx requires "apiKey" credential
+2026-02-07 11:00:07,142 - __main__ - INFO - ✅ Trade executed: #77 FIL/USDT:USDT @ 0.9730
+2026-02-07 11:00:08,842 - __main__ - INFO - ✅ Scan complete: Found 1 signals, sent to Discord
+2026-02-07 11:00:08,850 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 11:00:13,435 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 11:17:43,917 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 11:26:28,766 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 11:43:49,739 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 11:59:58,679 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 12:00:00,789 - __main__ - INFO - ⏰ Scan time: 17:00:00 UTC (60‑min interval)
+2026-02-07 12:00:00,790 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 12:00:02,518 - __main__ - INFO - 🔍 Scanning markets for reversal opportunities...
+2026-02-07 12:00:02,751 - __main__ - INFO - ✅ Trade closed: #262 stop_loss @ 0.4389 (-2.14%)
+2026-02-07 12:00:02,972 - __main__ - INFO - ✅ Trade closed: #265 stop_loss @ 0.9770 (0.41%)
+2026-02-07 12:00:04,545 - __main__ - INFO - ✅ Signal found: FIL/USDT:USDT (Score: 55) - Reasons: Deviation Zone +1.5 Sigma (Overbought), Approaching Upper GPS Zone (1.31% away)
+2026-02-07 12:00:05,430 - __main__ - INFO - ✅ Signal found: ICP/USDT:USDT (Score: 47) - Reasons: Deviation Zone +1.0 Sigma (Slightly Overbought), Near Upper GPS Zone (0.02% away)
+2026-02-07 12:00:05,742 - __main__ - INFO - ℹ️ Signals found but no LONG picks to send to Discord
+2026-02-07 12:00:05,742 - __main__ - INFO - 🚀 Placing REAL order for FIL/USDT:USDT...
+2026-02-07 12:00:05,742 - __main__ - WARNING - Could not set leverage: okx requires "apiKey" credential
+2026-02-07 12:00:05,752 - __main__ - ERROR - ❌ Failed to place REAL order: okx requires "apiKey" credential
+2026-02-07 12:00:05,753 - __main__ - INFO - ✅ Trade executed: #78 FIL/USDT:USDT @ 0.9770
+2026-02-07 12:00:07,376 - __main__ - INFO - ✅ Scan complete: Found 1 signals, sent to Discord
+2026-02-07 12:00:07,379 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 12:00:11,566 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 12:23:30,623 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 12:48:10,946 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 13:05:20,651 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 13:23:40,884 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 13:45:41,924 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 13:57:49,559 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 14:14:14,649 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 14:29:29,553 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 14:47:09,577 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 15:05:52,728 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 15:14:57,548 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 15:30:29,722 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 15:52:02,578 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 16:08:36,632 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 16:24:53,538 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 16:49:16,387 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 17:05:13,429 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 17:22:30,561 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 17:32:31,462 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 17:54:23,378 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 18:10:57,348 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 18:28:28,293 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 18:54:51,348 - __main__ - ERROR - Failed to analyze SOL/USDT:USDT: okx GET https://www.okx.com/api/v5/market/ticker?instId=SOL-USDT-SWAP
+2026-02-07 19:12:11,264 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 19:52:06,227 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 20:00:00,296 - __main__ - INFO - ⏰ Scan time: 01:00:00 UTC (60‑min interval)
+2026-02-07 20:00:00,299 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 20:00:02,136 - __main__ - INFO - 🔍 Scanning markets for reversal opportunities...
+2026-02-07 20:00:02,136 - __main__ - INFO - 🔄 Updating watchlist...
+2026-02-07 20:00:02,137 - __main__ - INFO - 📊 Loading top 10 coins by volume...
+2026-02-07 20:00:02,139 - __main__ - INFO - 📊 Found 257 swap pairs, fetching volumes...
+2026-02-07 20:00:02,459 - __main__ - INFO - ✅ Loaded top 10 coins: BERA, FIL, ICP (Total: 3)
+2026-02-07 20:00:02,778 - __main__ - INFO - ✅ Trade closed: #266 stop_loss @ 0.9740 (-0.31%)
+2026-02-07 20:00:03,275 - __main__ - INFO - ✅ Signal found: BERA/USDT:USDT (Score: 45) - Reasons: Getting Close to GPS Zone (2.95% away), RSI Oversold (23.8)
+2026-02-07 20:00:04,074 - __main__ - INFO - ✅ Signal found: FIL/USDT:USDT (Score: 52) - Reasons: Deviation Zone +1.5 Sigma (Overbought), Near Upper GPS Zone (0.24% away)
+2026-02-07 20:00:04,847 - __main__ - INFO - ✅ Signal found: ICP/USDT:USDT (Score: 52) - Reasons: Near GPS Zone (0.53% away), RSI Oversold (27.5)
+2026-02-07 20:00:05,148 - __main__ - INFO - ℹ️ Signals found but no LONG picks to send to Discord
+2026-02-07 20:00:05,149 - __main__ - INFO - 🚀 Placing REAL order for FIL/USDT:USDT...
+2026-02-07 20:00:05,149 - __main__ - WARNING - Could not set leverage: okx requires "apiKey" credential
+2026-02-07 20:00:05,159 - __main__ - ERROR - ❌ Failed to place REAL order: okx requires "apiKey" credential
+2026-02-07 20:00:05,161 - __main__ - INFO - ✅ Trade executed: #79 FIL/USDT:USDT @ 0.9740
+2026-02-07 20:00:06,957 - __main__ - INFO - ✅ Scan complete: Found 1 signals, sent to Discord
+2026-02-07 20:00:06,959 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 20:00:12,014 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-07 21:12:35,195 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 21:32:16,061 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 21:52:42,169 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 22:09:36,197 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 22:26:04,023 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 22:49:14,850 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 23:09:20,973 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-07 23:27:42,006 - __main__ - ERROR - Failed to analyze BTC/USDT:USDT: okx GET https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1H&limit=50
+2026-02-08 00:00:00,232 - __main__ - INFO - ⏰ Scan time: 05:00:00 UTC (60‑min interval)
+2026-02-08 00:00:00,246 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 00:00:01,677 - __main__ - INFO - 🔍 Scanning markets for reversal opportunities...
+2026-02-08 00:00:01,677 - __main__ - INFO - 🔄 Updating watchlist...
+2026-02-08 00:00:01,677 - __main__ - INFO - 📊 Loading top 10 coins by volume...
+2026-02-08 00:00:01,679 - __main__ - INFO - 📊 Found 257 swap pairs, fetching volumes...
+2026-02-08 00:00:01,919 - __main__ - INFO - ✅ Loaded top 10 coins: BERA, FIL, ICP (Total: 3)
+2026-02-08 00:00:02,142 - __main__ - INFO - ✅ Trade closed: #267 stop_loss @ 0.9690 (-0.51%)
+2026-02-08 00:00:02,602 - __main__ - INFO - ✅ Signal found: BERA/USDT:USDT (Score: 42) - Reasons: Deviation Zone -1.0 Sigma (Slightly Oversold), RSI Below Midline (44.1)
+2026-02-08 00:00:03,362 - __main__ - INFO - ✅ Signal found: FIL/USDT:USDT (Score: 40) - Reasons: Near GPS Zone (0.39% away), RSI Below Midline (40.0)
+2026-02-08 00:00:04,114 - __main__ - INFO - ✅ Signal found: ICP/USDT:USDT (Score: 47) - Reasons: Approaching GPS Zone (1.13% away), RSI Oversold (32.0)
+2026-02-08 00:00:04,415 - __main__ - INFO - 🎯 Found 3 signals, sending 1 LONG picks...
+2026-02-08 00:00:04,416 - __main__ - ERROR - Failed to send Discord alert: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 00:00:04,421 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/bishop/Desktop/output/workspace-99190f76-187d-40a3-8ab6-30b756622125/mini-services/bounty seeker/bounty_seeker_bot.py", line 1442, in send_top_picks_discord
+    response = requests.post(DISCORD_WEBHOOK, json=payload, timeout=15)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+    ~~~~~~~~~^
+        method=request.method.upper(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        hooks=merge_hooks(request.hooks, self.hooks),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 367, in prepare
+    self.prepare_url(url, params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 438, in prepare_url
+    raise MissingSchema(
+    ...<2 lines>...
+    )
+requests.exceptions.MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+
+2026-02-08 00:00:04,421 - __main__ - INFO - 🚀 Placing REAL order for ICP/USDT:USDT...
+2026-02-08 00:00:04,421 - __main__ - WARNING - Could not set leverage: okx requires "apiKey" credential
+2026-02-08 00:00:04,429 - __main__ - ERROR - ❌ Failed to place REAL order: okx requires "apiKey" credential
+2026-02-08 00:00:04,430 - __main__ - INFO - ✅ Trade executed: #80 ICP/USDT:USDT @ 2.4340
+2026-02-08 00:00:05,852 - __main__ - INFO - ✅ Scan complete: Found 1 signals, sent to Discord
+2026-02-08 00:00:05,855 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 00:00:10,668 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 01:00:00,255 - __main__ - INFO - ⏰ Scan time: 06:00:00 UTC (60‑min interval)
+2026-02-08 01:00:00,259 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 01:00:01,757 - __main__ - INFO - 🔍 Scanning markets for reversal opportunities...
+2026-02-08 01:00:02,429 - __main__ - INFO - ✅ Signal found: BERA/USDT:USDT (Score: 70) - Reasons: Deviation Zone -1.0 Sigma (Slightly Oversold), RSI Oversold (33.3)
+2026-02-08 01:00:03,194 - __main__ - INFO - ✅ Signal found: FIL/USDT:USDT (Score: 50) - Reasons: Approaching GPS Zone (1.01% away), RSI Oversold (26.1)
+2026-02-08 01:00:03,501 - __main__ - INFO - 🎯 Found 2 signals, sending 1 LONG picks...
+2026-02-08 01:00:03,501 - __main__ - ERROR - Failed to send Discord alert: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 01:00:03,505 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/bishop/Desktop/output/workspace-99190f76-187d-40a3-8ab6-30b756622125/mini-services/bounty seeker/bounty_seeker_bot.py", line 1442, in send_top_picks_discord
+    response = requests.post(DISCORD_WEBHOOK, json=payload, timeout=15)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+    ~~~~~~~~~^
+        method=request.method.upper(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        hooks=merge_hooks(request.hooks, self.hooks),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 367, in prepare
+    self.prepare_url(url, params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 438, in prepare_url
+    raise MissingSchema(
+    ...<2 lines>...
+    )
+requests.exceptions.MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+
+2026-02-08 01:00:03,505 - __main__ - INFO - 🚀 Placing REAL order for BERA/USDT:USDT...
+2026-02-08 01:00:03,506 - __main__ - WARNING - Could not set leverage: okx requires "apiKey" credential
+2026-02-08 01:00:03,515 - __main__ - ERROR - ❌ Failed to place REAL order: okx requires "apiKey" credential
+2026-02-08 01:00:03,517 - __main__ - INFO - ✅ Trade executed: #81 BERA/USDT:USDT @ 0.4330
+2026-02-08 01:00:05,085 - __main__ - INFO - ✅ Scan complete: Found 1 signals, sent to Discord
+2026-02-08 01:00:05,087 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 01:00:10,960 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 01:06:00,597 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:07:00,775 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:08:00,994 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:09:00,194 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:10:00,384 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:11:00,582 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:12:00,764 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:13:00,955 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:14:00,166 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:15:00,349 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:16:00,548 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:17:00,767 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:18:00,958 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:19:00,140 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:20:00,318 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:21:00,494 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:22:00,695 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:23:00,887 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:24:00,059 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:25:00,237 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:26:00,433 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:27:00,635 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:28:00,839 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:29:00,006 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:30:00,228 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:31:00,425 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:32:00,629 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:33:00,822 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:34:00,032 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:35:00,240 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:36:00,428 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:37:00,627 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:38:00,808 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:39:00,006 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:40:00,200 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:41:00,401 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:42:00,593 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:43:00,791 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:44:00,993 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:45:00,211 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:46:00,429 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:47:00,628 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:48:00,840 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:49:00,047 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:50:00,231 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:51:00,430 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:52:00,630 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:53:00,836 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:54:00,045 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:55:00,246 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:56:00,442 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:57:00,653 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:58:00,852 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 01:59:00,064 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:00:00,273 - __main__ - INFO - ⏰ Scan time: 07:00:00 UTC (60‑min interval)
+2026-02-08 02:00:00,275 - __main__ - ERROR - Error in main loop: unable to open database file
+2026-02-08 02:00:00,278 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 02:00:05,283 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:00:10,302 - __main__ - ERROR - Error in main loop: unable to open database file
+2026-02-08 02:00:10,303 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 02:01:00,482 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:02:00,695 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:03:00,890 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:04:00,088 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:05:00,297 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:06:00,509 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:07:00,720 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:08:00,924 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:09:00,113 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:10:00,349 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:11:00,572 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:12:00,781 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:13:00,980 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:14:00,161 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:15:00,389 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:16:00,570 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:17:00,762 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:18:00,955 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:19:00,157 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:20:00,586 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:21:00,860 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:22:00,034 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:23:00,261 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:24:00,451 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:25:00,660 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:26:00,856 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:27:00,050 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:28:00,450 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:29:00,789 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:30:00,050 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:31:00,237 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:32:00,472 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:33:00,711 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:34:00,940 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:35:00,212 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:36:00,410 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:37:00,597 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:38:00,795 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:39:00,015 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:40:00,206 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:41:00,404 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:42:00,580 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:43:00,798 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:44:00,001 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:45:00,188 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:46:00,399 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:47:00,592 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:48:00,780 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:49:00,980 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:50:00,200 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:51:00,391 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:52:00,622 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:53:00,819 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:54:01,000 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:55:00,190 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:56:00,384 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:57:00,573 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:58:00,790 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 02:59:00,012 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:00:00,200 - __main__ - INFO - ⏰ Scan time: 08:00:00 UTC (60‑min interval)
+2026-02-08 03:00:00,201 - __main__ - ERROR - Error in main loop: unable to open database file
+2026-02-08 03:00:00,210 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 03:00:05,213 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:00:10,228 - __main__ - ERROR - Error in main loop: unable to open database file
+2026-02-08 03:00:10,229 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 03:01:00,371 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:02:00,526 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:03:00,687 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:04:00,934 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:05:00,122 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:06:00,297 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:07:00,488 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:08:00,686 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:09:00,894 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:10:00,072 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:11:00,277 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:12:00,560 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:13:00,754 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:14:00,961 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:15:00,151 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:16:00,333 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:17:00,517 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:18:00,734 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:19:00,926 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:20:00,161 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:21:00,398 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:22:00,783 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:23:00,005 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:24:00,245 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:25:00,427 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:26:00,663 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:27:00,963 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:28:00,211 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:29:00,425 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:30:00,626 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:31:00,831 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:32:00,017 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:33:00,227 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:34:00,435 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:35:00,631 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:36:00,817 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:37:00,995 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:38:00,187 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:39:00,444 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:40:00,637 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:41:00,843 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:42:00,055 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:43:00,267 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:44:00,504 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:45:00,699 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:46:00,890 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:47:00,125 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:48:00,330 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:49:00,537 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:50:00,736 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:51:00,924 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:52:00,122 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:53:00,321 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:54:00,521 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:55:00,720 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:56:00,934 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:57:00,164 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:58:00,376 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 03:59:00,570 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:00:00,780 - __main__ - INFO - ⏰ Scan time: 09:00:00 UTC (60‑min interval)
+2026-02-08 04:00:00,782 - __main__ - ERROR - Error in main loop: unable to open database file
+2026-02-08 04:00:00,790 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 04:00:05,796 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:00:10,817 - __main__ - ERROR - Error in main loop: unable to open database file
+2026-02-08 04:00:10,819 - __main__ - ERROR - Failed to send status to Discord: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2026-02-08 04:01:00,980 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:02:00,189 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:03:00,390 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:04:00,579 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:05:00,775 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:06:00,991 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:07:00,200 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:08:00,394 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:09:00,591 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:10:00,798 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:11:01,000 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:12:00,215 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:13:00,400 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:14:00,564 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:15:00,740 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:16:00,948 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:17:00,139 - __main__ - ERROR - Failed to write status file: unable to open database file
+2026-02-08 04:18:00,338 - __main__ - ERROR - Failed to write status file: unable to open database file

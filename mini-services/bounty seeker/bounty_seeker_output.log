@@ -1,0 +1,850 @@
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:428: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  ts = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+[2026-02-03 10:20:14] 🚀 BountySeekerV5 initialized
+[2026-02-03 10:20:14] 💰 Paper Trading Balance: $906.30
+[2026-02-03 10:20:14] 📊 Open Trades: 0/3
+[2026-02-03 10:20:14] 📋 Loading MEXC perpetual futures (Top 30 by volume)...
+[2026-02-03 10:20:15] 📊 Fetching all tickers...
+[2026-02-03 10:20:15] 📊 Selected Top 30 pairs by volume:
+[2026-02-03 10:20:15]   #1: BTC/USDT:USDT ($46,811,687,833,958)
+[2026-02-03 10:20:15]   #2: ETH/USDT:USDT ($186,893,522,437)
+[2026-02-03 10:20:15]   #3: NAS100/USDT:USDT ($109,532,097,418)
+[2026-02-03 10:20:15]   #4: US30/USDT:USDT ($31,970,607,110)
+[2026-02-03 10:20:15]   #5: BTC/USD:BTC ($27,602,859,452)
+[2026-02-03 10:20:15]   #6: ZEC/USDT:USDT ($17,997,779,816)
+[2026-02-03 10:20:15]   #7: BCH/USDT:USDT ($16,598,999,829)
+[2026-02-03 10:20:15]   #8: LTC/USDT:USDT ($15,660,342,810)
+[2026-02-03 10:20:15]   #9: SOL/USDT:USDT ($13,896,562,392)
+[2026-02-03 10:20:15]   #10: AAVE/USDT:USDT ($8,557,278,519)
+[2026-02-03 10:20:15] 🎯 Starting Bounty Seeker V5...
+[2026-02-03 10:20:15] 📌 Strategy: Long reversals at bottoms (Deviation VWAP + Liquidation zones + GPS)
+[2026-02-03 10:20:15] 📌 Only A and A+ grade setups
+[2026-02-03 10:20:15] 📌 Paper Trading: $1,000 starting capital
+[2026-02-03 10:20:15] ============================================================
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1522: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  self.log(f"🌍 SCAN - {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} UTC")
+[2026-02-03 10:20:15] 🌍 SCAN - 2026-02-03 10:20:15 UTC
+[2026-02-03 10:20:15] ============================================================
+[2026-02-03 10:20:15] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 10:20:32] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 10:20:32] 📊 Results: 18 total signals
+[2026-02-03 10:20:32]   🎯 A/A+ Trade Signals: 18
+[2026-02-03 10:20:32]   👀 Watchlist Candidates: 0
+[2026-02-03 10:20:32]   💰 Open Trades: 0/3
+[2026-02-03 10:20:32]   💵 Paper Balance: $906.30
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1559: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  current_hour = datetime.utcnow().strftime("%Y-%m-%d-%H")
+[2026-02-03 10:20:32] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 10:20:32] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 10:20:32] 🚫 Skipping repeat trade on ZEC/USDT:USDT (levels changed, within cooldown window).
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1640: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat(),
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1364: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  today = datetime.utcnow().date().isoformat()
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1413: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow()
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1456: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat()
+[2026-02-03 10:20:35] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 11:20:35] ============================================================
+[2026-02-03 11:20:35] 🌍 SCAN - 2026-02-03 11:20:35 UTC
+[2026-02-03 11:20:35] ============================================================
+[2026-02-03 11:20:35] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 11:20:49] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 11:20:49] 📊 Results: 17 total signals
+[2026-02-03 11:20:49]   🎯 A/A+ Trade Signals: 17
+[2026-02-03 11:20:49]   👀 Watchlist Candidates: 0
+[2026-02-03 11:20:49]   💰 Open Trades: 0/3
+[2026-02-03 11:20:49]   💵 Paper Balance: $906.30
+[2026-02-03 11:20:49] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 11:20:49] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 11:20:49] 🚫 Skipping repeat trade on ZEC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 11:20:50] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 12:20:50] ============================================================
+[2026-02-03 12:20:50] 🌍 SCAN - 2026-02-03 12:20:50 UTC
+[2026-02-03 12:20:50] ============================================================
+[2026-02-03 12:20:50] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 12:21:04] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 12:21:04] 📊 Results: 16 total signals
+[2026-02-03 12:21:04]   🎯 A/A+ Trade Signals: 16
+[2026-02-03 12:21:04]   👀 Watchlist Candidates: 0
+[2026-02-03 12:21:04]   💰 Open Trades: 0/3
+[2026-02-03 12:21:04]   💵 Paper Balance: $906.30
+[2026-02-03 12:21:04] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 12:21:04] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 12:21:04] 🚫 Skipping repeat trade on ZEC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 12:21:07] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 13:21:07] ============================================================
+[2026-02-03 13:21:07] 🌍 SCAN - 2026-02-03 13:21:07 UTC
+[2026-02-03 13:21:07] ============================================================
+[2026-02-03 13:21:07] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 13:21:24] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 13:21:24] 📊 Results: 16 total signals
+[2026-02-03 13:21:24]   🎯 A/A+ Trade Signals: 16
+[2026-02-03 13:21:24]   👀 Watchlist Candidates: 0
+[2026-02-03 13:21:24]   💰 Open Trades: 0/3
+[2026-02-03 13:21:24]   💵 Paper Balance: $906.30
+[2026-02-03 13:21:24] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 13:21:24] 🚫 Skipping repeat trade on ZEC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 13:21:24] ✅ Preparing to send 1 unique signals: BTC/USDT:USDT
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1273: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat()
+[2026-02-03 13:21:24] ⚠️ Position size too small: $0.03
+[2026-02-03 13:21:25] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 14:21:25] ============================================================
+[2026-02-03 14:21:25] 🌍 SCAN - 2026-02-03 14:21:25 UTC
+[2026-02-03 14:21:25] ============================================================
+[2026-02-03 14:21:25] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 14:21:42] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 14:21:42] 📊 Results: 15 total signals
+[2026-02-03 14:21:42]   🎯 A/A+ Trade Signals: 15
+[2026-02-03 14:21:42]   👀 Watchlist Candidates: 0
+[2026-02-03 14:21:42]   💰 Open Trades: 0/3
+[2026-02-03 14:21:42]   💵 Paper Balance: $906.30
+[2026-02-03 14:21:42] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 14:21:42] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 14:21:42] 🚫 Skipping repeat trade on ZEC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 14:21:44] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 15:21:44] ============================================================
+[2026-02-03 15:21:44] 🌍 SCAN - 2026-02-03 15:21:44 UTC
+[2026-02-03 15:21:44] ============================================================
+[2026-02-03 15:21:44] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 15:21:59] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 15:21:59] 📊 Results: 20 total signals
+[2026-02-03 15:21:59]   🎯 A/A+ Trade Signals: 20
+[2026-02-03 15:21:59]   👀 Watchlist Candidates: 0
+[2026-02-03 15:21:59]   💰 Open Trades: 0/3
+[2026-02-03 15:21:59]   💵 Paper Balance: $906.30
+[2026-02-03 15:21:59] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 15:21:59] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 15:21:59] ✅ Preparing to send 1 unique signals: BTC/USD:BTC
+[2026-02-03 15:21:59] ⚠️ Position size too small: $0.02
+[2026-02-03 15:22:00] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 16:22:00] ============================================================
+[2026-02-03 16:22:01] 🌍 SCAN - 2026-02-03 16:22:01 UTC
+[2026-02-03 16:22:01] ============================================================
+[2026-02-03 16:22:01] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 16:22:15] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 16:22:15] 📊 Results: 18 total signals
+[2026-02-03 16:22:15]   🎯 A/A+ Trade Signals: 18
+[2026-02-03 16:22:15]   👀 Watchlist Candidates: 0
+[2026-02-03 16:22:15]   💰 Open Trades: 0/3
+[2026-02-03 16:22:15]   💵 Paper Balance: $906.30
+[2026-02-03 16:22:15] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 16:22:15] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 16:22:15] 🚫 Skipping repeat trade on BTC/USD:BTC (levels changed, within cooldown window).
+[2026-02-03 16:22:18] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 17:22:18] ============================================================
+[2026-02-03 17:22:18] 🌍 SCAN - 2026-02-03 17:22:18 UTC
+[2026-02-03 17:22:18] ============================================================
+[2026-02-03 17:22:18] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 17:22:33] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 17:22:33] 📊 Results: 21 total signals
+[2026-02-03 17:22:33]   🎯 A/A+ Trade Signals: 21
+[2026-02-03 17:22:33]   👀 Watchlist Candidates: 0
+[2026-02-03 17:22:33]   💰 Open Trades: 0/3
+[2026-02-03 17:22:33]   💵 Paper Balance: $906.30
+[2026-02-03 17:22:33] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 17:22:33] ✅ Preparing to send 2 unique signals: ETH/USDT:USDT, NAS100/USDT:USDT
+[2026-02-03 17:22:33] ⚠️ Position size too small: $0.52
+[2026-02-03 17:22:33] ⚠️ Position size too small: $0.25
+[2026-02-03 17:22:34] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 18:22:34] ============================================================
+[2026-02-03 18:22:34] 🌍 SCAN - 2026-02-03 18:22:34 UTC
+[2026-02-03 18:22:34] ============================================================
+[2026-02-03 18:22:34] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 18:22:50] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 18:22:50] 📊 Results: 24 total signals
+[2026-02-03 18:22:50]   🎯 A/A+ Trade Signals: 24
+[2026-02-03 18:22:50]   👀 Watchlist Candidates: 0
+[2026-02-03 18:22:50]   💰 Open Trades: 0/3
+[2026-02-03 18:22:50]   💵 Paper Balance: $906.30
+[2026-02-03 18:22:50] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 18:22:50] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 18:22:50] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 18:22:51] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 19:22:51] ============================================================
+[2026-02-03 19:22:51] 🌍 SCAN - 2026-02-03 19:22:51 UTC
+[2026-02-03 19:22:51] ============================================================
+[2026-02-03 19:22:51] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 19:23:06] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 19:23:06] 📊 Results: 22 total signals
+[2026-02-03 19:23:06]   🎯 A/A+ Trade Signals: 22
+[2026-02-03 19:23:06]   👀 Watchlist Candidates: 0
+[2026-02-03 19:23:06]   💰 Open Trades: 0/3
+[2026-02-03 19:23:06]   💵 Paper Balance: $906.30
+[2026-02-03 19:23:06] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 19:23:06] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 19:23:06] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 19:23:07] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 20:23:07] ============================================================
+[2026-02-03 20:23:07] 🌍 SCAN - 2026-02-03 20:23:07 UTC
+[2026-02-03 20:23:07] ============================================================
+[2026-02-03 20:23:07] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 20:23:24] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 20:23:24] 📊 Results: 22 total signals
+[2026-02-03 20:23:24]   🎯 A/A+ Trade Signals: 22
+[2026-02-03 20:23:24]   👀 Watchlist Candidates: 0
+[2026-02-03 20:23:24]   💰 Open Trades: 0/3
+[2026-02-03 20:23:24]   💵 Paper Balance: $906.30
+[2026-02-03 20:23:24] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 20:23:24] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 20:23:24] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 20:23:27] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 21:23:27] ============================================================
+[2026-02-03 21:23:27] 🌍 SCAN - 2026-02-03 21:23:27 UTC
+[2026-02-03 21:23:27] ============================================================
+[2026-02-03 21:23:27] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 21:23:42] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 21:23:42] 📊 Results: 10 total signals
+[2026-02-03 21:23:42]   🎯 A/A+ Trade Signals: 10
+[2026-02-03 21:23:42]   👀 Watchlist Candidates: 0
+[2026-02-03 21:23:42]   💰 Open Trades: 0/3
+[2026-02-03 21:23:42]   💵 Paper Balance: $906.30
+[2026-02-03 21:23:42] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 21:23:42] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 21:23:42] 🚫 Skipping repeat trade on BTC/USD:BTC (levels changed, within cooldown window).
+[2026-02-03 21:23:43] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 22:23:43] ============================================================
+[2026-02-03 22:23:43] 🌍 SCAN - 2026-02-03 22:23:43 UTC
+[2026-02-03 22:23:43] ============================================================
+[2026-02-03 22:23:43] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 22:23:59] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 22:23:59] 📊 Results: 18 total signals
+[2026-02-03 22:23:59]   🎯 A/A+ Trade Signals: 18
+[2026-02-03 22:23:59]   👀 Watchlist Candidates: 0
+[2026-02-03 22:23:59]   💰 Open Trades: 0/3
+[2026-02-03 22:23:59]   💵 Paper Balance: $906.30
+[2026-02-03 22:23:59] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 22:23:59] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 22:23:59] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 22:24:01] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-03 23:24:01] ============================================================
+[2026-02-03 23:24:01] 🌍 SCAN - 2026-02-03 23:24:01 UTC
+[2026-02-03 23:24:01] ============================================================
+[2026-02-03 23:24:01] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-03 23:24:17] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-03 23:24:17] 📊 Results: 21 total signals
+[2026-02-03 23:24:17]   🎯 A/A+ Trade Signals: 21
+[2026-02-03 23:24:17]   👀 Watchlist Candidates: 0
+[2026-02-03 23:24:17]   💰 Open Trades: 0/3
+[2026-02-03 23:24:17]   💵 Paper Balance: $906.30
+[2026-02-03 23:24:17] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 23:24:17] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 23:24:17] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-03 23:24:18] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 00:24:18] ============================================================
+[2026-02-04 00:24:18] 🌍 SCAN - 2026-02-04 00:24:18 UTC
+[2026-02-04 00:24:18] ============================================================
+[2026-02-04 00:24:18] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 00:24:34] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 00:24:34] 📊 Results: 19 total signals
+[2026-02-04 00:24:34]   🎯 A/A+ Trade Signals: 19
+[2026-02-04 00:24:34]   👀 Watchlist Candidates: 0
+[2026-02-04 00:24:34]   💰 Open Trades: 0/3
+[2026-02-04 00:24:34]   💵 Paper Balance: $906.30
+[2026-02-04 00:24:34] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 00:24:34] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 00:24:34] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 00:24:38] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 01:24:38] ============================================================
+[2026-02-04 01:24:38] 🌍 SCAN - 2026-02-04 01:24:38 UTC
+[2026-02-04 01:24:38] ============================================================
+[2026-02-04 01:24:38] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 01:24:54] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 01:24:54] 📊 Results: 15 total signals
+[2026-02-04 01:24:54]   🎯 A/A+ Trade Signals: 15
+[2026-02-04 01:24:54]   👀 Watchlist Candidates: 0
+[2026-02-04 01:24:54]   💰 Open Trades: 0/3
+[2026-02-04 01:24:54]   💵 Paper Balance: $906.30
+[2026-02-04 01:24:54] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 01:24:54] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 01:24:54] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 01:24:56] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 02:24:56] ============================================================
+[2026-02-04 02:24:56] 🌍 SCAN - 2026-02-04 02:24:56 UTC
+[2026-02-04 02:24:56] ============================================================
+[2026-02-04 02:24:56] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 02:25:11] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 02:25:11] 📊 Results: 16 total signals
+[2026-02-04 02:25:11]   🎯 A/A+ Trade Signals: 16
+[2026-02-04 02:25:11]   👀 Watchlist Candidates: 0
+[2026-02-04 02:25:11]   💰 Open Trades: 0/3
+[2026-02-04 02:25:11]   💵 Paper Balance: $906.30
+[2026-02-04 02:25:11] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 02:25:11] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 02:25:11] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 02:25:12] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 03:25:12] ============================================================
+[2026-02-04 03:25:12] 🌍 SCAN - 2026-02-04 03:25:12 UTC
+[2026-02-04 03:25:12] ============================================================
+[2026-02-04 03:25:12] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 03:25:27] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 03:25:27] 📊 Results: 15 total signals
+[2026-02-04 03:25:27]   🎯 A/A+ Trade Signals: 15
+[2026-02-04 03:25:27]   👀 Watchlist Candidates: 0
+[2026-02-04 03:25:27]   💰 Open Trades: 0/3
+[2026-02-04 03:25:27]   💵 Paper Balance: $906.30
+[2026-02-04 03:25:27] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 03:25:27] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 03:25:27] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 03:25:28] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 04:25:29] ============================================================
+[2026-02-04 04:25:29] 🌍 SCAN - 2026-02-04 04:25:29 UTC
+[2026-02-04 04:25:29] ============================================================
+[2026-02-04 04:25:29] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 04:25:44] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 04:25:44] 📊 Results: 11 total signals
+[2026-02-04 04:25:44]   🎯 A/A+ Trade Signals: 11
+[2026-02-04 04:25:44]   👀 Watchlist Candidates: 0
+[2026-02-04 04:25:44]   💰 Open Trades: 0/3
+[2026-02-04 04:25:44]   💵 Paper Balance: $906.30
+[2026-02-04 04:25:44] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 04:25:44] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 04:25:44] ✅ Preparing to send 1 unique signals: ZEC/USDT:USDT
+[2026-02-04 04:25:44] ⚠️ Position size too small: $1.41
+[2026-02-04 04:25:47] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 05:25:47] ============================================================
+[2026-02-04 05:25:47] 🌍 SCAN - 2026-02-04 05:25:47 UTC
+[2026-02-04 05:25:47] ============================================================
+[2026-02-04 05:25:47] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 05:26:03] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 05:26:03] 📊 Results: 13 total signals
+[2026-02-04 05:26:03]   🎯 A/A+ Trade Signals: 13
+[2026-02-04 05:26:03]   👀 Watchlist Candidates: 0
+[2026-02-04 05:26:03]   💰 Open Trades: 0/3
+[2026-02-04 05:26:03]   💵 Paper Balance: $906.30
+[2026-02-04 05:26:03] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 05:26:03] 🚫 Skipping repeat trade on BTC/USD:BTC (levels changed, within cooldown window).
+[2026-02-04 05:26:03] ✅ Preparing to send 1 unique signals: NAS100/USDT:USDT
+[2026-02-04 05:26:03] ⚠️ Position size too small: $0.18
+[2026-02-04 05:26:04] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 06:26:04] ============================================================
+[2026-02-04 06:26:04] 🌍 SCAN - 2026-02-04 06:26:04 UTC
+[2026-02-04 06:26:04] ============================================================
+[2026-02-04 06:26:04] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 06:26:18] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 06:26:18] 📊 Results: 15 total signals
+[2026-02-04 06:26:18]   🎯 A/A+ Trade Signals: 15
+[2026-02-04 06:26:18]   👀 Watchlist Candidates: 0
+[2026-02-04 06:26:18]   💰 Open Trades: 0/3
+[2026-02-04 06:26:18]   💵 Paper Balance: $906.30
+[2026-02-04 06:26:18] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 06:26:18] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 06:26:18] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 06:26:20] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 07:26:20] ============================================================
+[2026-02-04 07:26:20] 🌍 SCAN - 2026-02-04 07:26:20 UTC
+[2026-02-04 07:26:20] ============================================================
+[2026-02-04 07:26:20] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 07:26:36] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 07:26:36] 📊 Results: 11 total signals
+[2026-02-04 07:26:36]   🎯 A/A+ Trade Signals: 11
+[2026-02-04 07:26:36]   👀 Watchlist Candidates: 0
+[2026-02-04 07:26:36]   💰 Open Trades: 0/3
+[2026-02-04 07:26:36]   💵 Paper Balance: $906.30
+[2026-02-04 07:26:36] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 07:26:36] 🚫 Skipping repeat trade on BTC/USD:BTC (levels changed, within cooldown window).
+[2026-02-04 07:26:36] 🚫 Skipping repeat trade on ZEC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 07:26:38] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 08:26:38] ============================================================
+[2026-02-04 08:26:38] 🌍 SCAN - 2026-02-04 08:26:38 UTC
+[2026-02-04 08:26:38] ============================================================
+[2026-02-04 08:26:38] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 08:26:54] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 08:26:54] 📊 Results: 13 total signals
+[2026-02-04 08:26:54]   🎯 A/A+ Trade Signals: 13
+[2026-02-04 08:26:54]   👀 Watchlist Candidates: 0
+[2026-02-04 08:26:54]   💰 Open Trades: 0/3
+[2026-02-04 08:26:54]   💵 Paper Balance: $906.30
+[2026-02-04 08:26:54] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 08:26:54] 🚫 Skipping repeat trade on BTC/USD:BTC (levels changed, within cooldown window).
+[2026-02-04 08:26:54] 🚫 Skipping repeat trade on ZEC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 08:26:56] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 09:26:57] ============================================================
+[2026-02-04 09:26:57] 🌍 SCAN - 2026-02-04 09:26:57 UTC
+[2026-02-04 09:26:57] ============================================================
+[2026-02-04 09:26:57] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 09:27:11] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 09:27:11] 📊 Results: 14 total signals
+[2026-02-04 09:27:11]   🎯 A/A+ Trade Signals: 14
+[2026-02-04 09:27:11]   👀 Watchlist Candidates: 0
+[2026-02-04 09:27:11]   💰 Open Trades: 0/3
+[2026-02-04 09:27:11]   💵 Paper Balance: $906.30
+[2026-02-04 09:27:11] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 09:27:11] 🚫 Skipping repeat trade on ZEC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 09:27:11] ✅ Preparing to send 1 unique signals: SOL/USDT:USDT
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:920: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  datetime.utcnow().isoformat(),
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:942: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "entry_time": datetime.utcnow().isoformat()
+[2026-02-04 09:27:11] ✅ Opened paper trade: SOL/USDT:USDT LONG @ $96.880000
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:968: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat()
+[2026-02-04 09:27:14] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 10:27:14] ============================================================
+[2026-02-04 10:27:14] 🌍 SCAN - 2026-02-04 10:27:14 UTC
+[2026-02-04 10:27:14] ============================================================
+[2026-02-04 10:27:14] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 10:27:29] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 10:27:29] 🚫 Filtered 1 signals for symbols already in trades: SOL/USDT:USDT
+[2026-02-04 10:27:29] 📊 Results: 14 total signals
+[2026-02-04 10:27:29]   🎯 A/A+ Trade Signals: 13
+[2026-02-04 10:27:29]   👀 Watchlist Candidates: 0
+[2026-02-04 10:27:29]   💰 Open Trades: 1/3
+[2026-02-04 10:27:29]   💵 Paper Balance: $906.30
+[2026-02-04 10:27:29] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 10:27:29] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 10:27:29] ✅ Preparing to send 1 unique signals: NAS100/USDT:USDT
+[2026-02-04 10:27:29] ⚠️ Position size too small: $0.17
+[2026-02-04 10:27:30] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 11:27:30] ============================================================
+[2026-02-04 11:27:30] 🌍 SCAN - 2026-02-04 11:27:30 UTC
+[2026-02-04 11:27:30] ============================================================
+[2026-02-04 11:27:30] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 11:27:44] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 11:27:44] 🚫 Filtered 1 signals for symbols already in trades: SOL/USDT:USDT
+[2026-02-04 11:27:44] 📊 Results: 16 total signals
+[2026-02-04 11:27:44]   🎯 A/A+ Trade Signals: 15
+[2026-02-04 11:27:44]   👀 Watchlist Candidates: 0
+[2026-02-04 11:27:44]   💰 Open Trades: 1/3
+[2026-02-04 11:27:44]   💵 Paper Balance: $906.30
+[2026-02-04 11:27:44] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 11:27:44] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 11:27:44] ✅ Preparing to send 1 unique signals: NAS100/USDT:USDT
+[2026-02-04 11:27:44] ⚠️ Position size too small: $0.15
+[2026-02-04 11:27:46] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 12:27:46] ============================================================
+[2026-02-04 12:27:46] 🌍 SCAN - 2026-02-04 12:27:46 UTC
+[2026-02-04 12:27:46] ============================================================
+[2026-02-04 12:27:46] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 12:28:01] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 12:28:01] 🚫 Filtered 1 signals for symbols already in trades: SOL/USDT:USDT
+[2026-02-04 12:28:01] 📊 Results: 16 total signals
+[2026-02-04 12:28:01]   🎯 A/A+ Trade Signals: 15
+[2026-02-04 12:28:01]   👀 Watchlist Candidates: 0
+[2026-02-04 12:28:01]   💰 Open Trades: 1/3
+[2026-02-04 12:28:01]   💵 Paper Balance: $906.30
+[2026-02-04 12:28:01] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 12:28:01] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 12:28:01] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 12:28:04] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 13:28:04] ============================================================
+[2026-02-04 13:28:04] 🌍 SCAN - 2026-02-04 13:28:04 UTC
+[2026-02-04 13:28:04] ============================================================
+[2026-02-04 13:28:04] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 13:28:19] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 13:28:19] 🚫 Filtered 1 signals for symbols already in trades: SOL/USDT:USDT
+[2026-02-04 13:28:19] 📊 Results: 17 total signals
+[2026-02-04 13:28:19]   🎯 A/A+ Trade Signals: 16
+[2026-02-04 13:28:19]   👀 Watchlist Candidates: 0
+[2026-02-04 13:28:19]   💰 Open Trades: 1/3
+[2026-02-04 13:28:19]   💵 Paper Balance: $906.30
+[2026-02-04 13:28:19] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 13:28:19] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 13:28:19] ✅ Preparing to send 1 unique signals: BTC/USDT:USDT
+[2026-02-04 13:28:19] ⚠️ Position size too small: $0.04
+[2026-02-04 13:28:20] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 14:28:20] ============================================================
+[2026-02-04 14:28:20] 🌍 SCAN - 2026-02-04 14:28:20 UTC
+[2026-02-04 14:28:20] ============================================================
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1071: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat()
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1031: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  datetime.utcnow().isoformat(),
+/Users/bishop/Desktop/bots/bounty seeker/bounty_seeker_v5.py:1120: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat()
+[2026-02-04 14:28:23] 🔔 Trade closed: SOL/USDT:USDT - Stop Loss @ $95.393571 | PnL: $-2.81 (-23.01%)
+[2026-02-04 14:28:23] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 14:28:38] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 14:28:38] 📊 Results: 19 total signals
+[2026-02-04 14:28:38]   🎯 A/A+ Trade Signals: 19
+[2026-02-04 14:28:38]   👀 Watchlist Candidates: 0
+[2026-02-04 14:28:38]   💰 Open Trades: 0/3
+[2026-02-04 14:28:38]   💵 Paper Balance: $903.49
+[2026-02-04 14:28:38] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 14:28:38] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 14:28:38] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 14:28:39] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 15:28:39] ============================================================
+[2026-02-04 15:28:39] 🌍 SCAN - 2026-02-04 15:28:39 UTC
+[2026-02-04 15:28:39] ============================================================
+[2026-02-04 15:28:39] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 15:28:55] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 15:28:55] 📊 Results: 22 total signals
+[2026-02-04 15:28:55]   🎯 A/A+ Trade Signals: 22
+[2026-02-04 15:28:55]   👀 Watchlist Candidates: 0
+[2026-02-04 15:28:55]   💰 Open Trades: 0/3
+[2026-02-04 15:28:55]   💵 Paper Balance: $903.49
+[2026-02-04 15:28:55] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 15:28:55] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 15:28:55] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 15:28:56] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 16:28:56] ============================================================
+[2026-02-04 16:28:56] 🌍 SCAN - 2026-02-04 16:28:56 UTC
+[2026-02-04 16:28:56] ============================================================
+[2026-02-04 16:28:56] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 16:29:12] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 16:29:12] 📊 Results: 22 total signals
+[2026-02-04 16:29:12]   🎯 A/A+ Trade Signals: 22
+[2026-02-04 16:29:12]   👀 Watchlist Candidates: 0
+[2026-02-04 16:29:12]   💰 Open Trades: 0/3
+[2026-02-04 16:29:12]   💵 Paper Balance: $903.49
+[2026-02-04 16:29:12] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 16:29:12] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 16:29:12] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 16:29:15] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 17:29:15] ============================================================
+[2026-02-04 17:29:15] 🌍 SCAN - 2026-02-04 17:29:15 UTC
+[2026-02-04 17:29:15] ============================================================
+[2026-02-04 17:29:15] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 17:29:30] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 17:29:30] 📊 Results: 25 total signals
+[2026-02-04 17:29:30]   🎯 A/A+ Trade Signals: 25
+[2026-02-04 17:29:30]   👀 Watchlist Candidates: 0
+[2026-02-04 17:29:30]   💰 Open Trades: 0/3
+[2026-02-04 17:29:30]   💵 Paper Balance: $903.49
+[2026-02-04 17:29:30] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 17:29:30] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 17:29:30] ✅ Preparing to send 1 unique signals: ETH/USDT:USDT
+[2026-02-04 17:29:30] ⚠️ Position size too small: $0.83
+[2026-02-04 17:29:31] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 18:29:31] ============================================================
+[2026-02-04 18:29:31] 🌍 SCAN - 2026-02-04 18:29:31 UTC
+[2026-02-04 18:29:31] ============================================================
+[2026-02-04 18:29:31] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 18:29:47] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 18:29:47] 📊 Results: 23 total signals
+[2026-02-04 18:29:47]   🎯 A/A+ Trade Signals: 23
+[2026-02-04 18:29:47]   👀 Watchlist Candidates: 0
+[2026-02-04 18:29:47]   💰 Open Trades: 0/3
+[2026-02-04 18:29:47]   💵 Paper Balance: $903.49
+[2026-02-04 18:29:47] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 18:29:47] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 18:29:47] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 18:29:49] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 19:29:49] ============================================================
+[2026-02-04 19:29:49] 🌍 SCAN - 2026-02-04 19:29:49 UTC
+[2026-02-04 19:29:49] ============================================================
+[2026-02-04 19:29:49] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 19:30:04] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 19:30:04] 📊 Results: 23 total signals
+[2026-02-04 19:30:04]   🎯 A/A+ Trade Signals: 23
+[2026-02-04 19:30:04]   👀 Watchlist Candidates: 0
+[2026-02-04 19:30:04]   💰 Open Trades: 0/3
+[2026-02-04 19:30:04]   💵 Paper Balance: $903.49
+[2026-02-04 19:30:04] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 19:30:04] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 19:30:04] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 19:30:06] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 20:30:06] ============================================================
+[2026-02-04 20:30:06] 🌍 SCAN - 2026-02-04 20:30:06 UTC
+[2026-02-04 20:30:06] ============================================================
+[2026-02-04 20:30:06] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 20:30:20] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 20:30:20] 📊 Results: 18 total signals
+[2026-02-04 20:30:20]   🎯 A/A+ Trade Signals: 18
+[2026-02-04 20:30:20]   👀 Watchlist Candidates: 0
+[2026-02-04 20:30:20]   💰 Open Trades: 0/3
+[2026-02-04 20:30:20]   💵 Paper Balance: $903.49
+[2026-02-04 20:30:20] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 20:30:20] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 20:30:20] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 20:30:23] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 21:30:23] ============================================================
+[2026-02-04 21:30:23] 🌍 SCAN - 2026-02-04 21:30:23 UTC
+[2026-02-04 21:30:23] ============================================================
+[2026-02-04 21:30:23] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 21:30:38] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 21:30:38] 📊 Results: 21 total signals
+[2026-02-04 21:30:38]   🎯 A/A+ Trade Signals: 21
+[2026-02-04 21:30:38]   👀 Watchlist Candidates: 0
+[2026-02-04 21:30:38]   💰 Open Trades: 0/3
+[2026-02-04 21:30:38]   💵 Paper Balance: $903.49
+[2026-02-04 21:30:38] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 21:30:38] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 21:30:38] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 21:30:39] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 22:30:39] ============================================================
+[2026-02-04 22:30:39] 🌍 SCAN - 2026-02-04 22:30:39 UTC
+[2026-02-04 22:30:39] ============================================================
+[2026-02-04 22:30:39] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 22:31:02] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 22:31:02] 📊 Results: 18 total signals
+[2026-02-04 22:31:02]   🎯 A/A+ Trade Signals: 18
+[2026-02-04 22:31:02]   👀 Watchlist Candidates: 0
+[2026-02-04 22:31:02]   💰 Open Trades: 0/3
+[2026-02-04 22:31:02]   💵 Paper Balance: $903.49
+[2026-02-04 22:31:02] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 22:31:02] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 22:31:02] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 22:31:03] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-04 23:31:03] ============================================================
+[2026-02-04 23:31:03] 🌍 SCAN - 2026-02-04 23:31:03 UTC
+[2026-02-04 23:31:03] ============================================================
+[2026-02-04 23:31:03] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-04 23:31:18] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-04 23:31:18] 📊 Results: 21 total signals
+[2026-02-04 23:31:18]   🎯 A/A+ Trade Signals: 21
+[2026-02-04 23:31:18]   👀 Watchlist Candidates: 0
+[2026-02-04 23:31:18]   💰 Open Trades: 0/3
+[2026-02-04 23:31:18]   💵 Paper Balance: $903.49
+[2026-02-04 23:31:18] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 23:31:18] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 23:31:18] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-04 23:31:20] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 00:31:20] ============================================================
+[2026-02-05 00:31:20] 🌍 SCAN - 2026-02-05 00:31:20 UTC
+[2026-02-05 00:31:20] ============================================================
+[2026-02-05 00:31:20] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 00:31:35] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 00:31:35] 📊 Results: 21 total signals
+[2026-02-05 00:31:35]   🎯 A/A+ Trade Signals: 21
+[2026-02-05 00:31:35]   👀 Watchlist Candidates: 0
+[2026-02-05 00:31:35]   💰 Open Trades: 0/3
+[2026-02-05 00:31:35]   💵 Paper Balance: $903.49
+[2026-02-05 00:31:35] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 00:31:35] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 00:31:35] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 00:31:39] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 01:31:39] ============================================================
+[2026-02-05 01:31:39] 🌍 SCAN - 2026-02-05 01:31:39 UTC
+[2026-02-05 01:31:39] ============================================================
+[2026-02-05 01:31:39] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 01:31:53] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 01:31:53] 📊 Results: 20 total signals
+[2026-02-05 01:31:53]   🎯 A/A+ Trade Signals: 20
+[2026-02-05 01:31:53]   👀 Watchlist Candidates: 0
+[2026-02-05 01:31:53]   💰 Open Trades: 0/3
+[2026-02-05 01:31:53]   💵 Paper Balance: $903.49
+[2026-02-05 01:31:53] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 01:31:53] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 01:31:53] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 01:31:54] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 02:31:54] ============================================================
+[2026-02-05 02:31:54] 🌍 SCAN - 2026-02-05 02:31:54 UTC
+[2026-02-05 02:31:54] ============================================================
+[2026-02-05 02:31:54] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 02:32:09] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 02:32:09] 📊 Results: 22 total signals
+[2026-02-05 02:32:09]   🎯 A/A+ Trade Signals: 22
+[2026-02-05 02:32:09]   👀 Watchlist Candidates: 0
+[2026-02-05 02:32:09]   💰 Open Trades: 0/3
+[2026-02-05 02:32:09]   💵 Paper Balance: $903.49
+[2026-02-05 02:32:09] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 02:32:09] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 02:32:09] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 02:32:13] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 03:32:13] ============================================================
+[2026-02-05 03:32:13] 🌍 SCAN - 2026-02-05 03:32:13 UTC
+[2026-02-05 03:32:13] ============================================================
+[2026-02-05 03:32:13] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 03:32:28] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 03:32:28] 📊 Results: 23 total signals
+[2026-02-05 03:32:28]   🎯 A/A+ Trade Signals: 23
+[2026-02-05 03:32:28]   👀 Watchlist Candidates: 0
+[2026-02-05 03:32:28]   💰 Open Trades: 0/3
+[2026-02-05 03:32:28]   💵 Paper Balance: $903.49
+[2026-02-05 03:32:28] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 03:32:28] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 03:32:28] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 03:32:30] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 04:32:30] ============================================================
+[2026-02-05 04:32:30] 🌍 SCAN - 2026-02-05 04:32:30 UTC
+[2026-02-05 04:32:30] ============================================================
+[2026-02-05 04:32:30] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 04:32:44] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 04:32:44] 📊 Results: 24 total signals
+[2026-02-05 04:32:44]   🎯 A/A+ Trade Signals: 24
+[2026-02-05 04:32:44]   👀 Watchlist Candidates: 0
+[2026-02-05 04:32:44]   💰 Open Trades: 0/3
+[2026-02-05 04:32:44]   💵 Paper Balance: $903.49
+[2026-02-05 04:32:44] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 04:32:44] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 04:32:44] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 04:32:47] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 05:32:48] ============================================================
+[2026-02-05 05:32:48] 🌍 SCAN - 2026-02-05 05:32:48 UTC
+[2026-02-05 05:32:48] ============================================================
+[2026-02-05 05:32:48] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 05:33:03] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 05:33:03] 📊 Results: 24 total signals
+[2026-02-05 05:33:03]   🎯 A/A+ Trade Signals: 24
+[2026-02-05 05:33:03]   👀 Watchlist Candidates: 0
+[2026-02-05 05:33:03]   💰 Open Trades: 0/3
+[2026-02-05 05:33:03]   💵 Paper Balance: $903.49
+[2026-02-05 05:33:03] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 05:33:03] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 05:33:03] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 05:33:04] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 06:33:04] ============================================================
+[2026-02-05 06:33:04] 🌍 SCAN - 2026-02-05 06:33:04 UTC
+[2026-02-05 06:33:04] ============================================================
+[2026-02-05 06:33:04] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 06:33:19] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 06:33:19] 📊 Results: 24 total signals
+[2026-02-05 06:33:19]   🎯 A/A+ Trade Signals: 24
+[2026-02-05 06:33:19]   👀 Watchlist Candidates: 0
+[2026-02-05 06:33:19]   💰 Open Trades: 0/3
+[2026-02-05 06:33:19]   💵 Paper Balance: $903.49
+[2026-02-05 06:33:19] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 06:33:19] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 06:33:19] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 06:33:21] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 07:33:21] ============================================================
+[2026-02-05 07:33:21] 🌍 SCAN - 2026-02-05 07:33:21 UTC
+[2026-02-05 07:33:21] ============================================================
+[2026-02-05 07:33:21] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 07:33:35] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 07:33:35] 📊 Results: 24 total signals
+[2026-02-05 07:33:35]   🎯 A/A+ Trade Signals: 24
+[2026-02-05 07:33:35]   👀 Watchlist Candidates: 0
+[2026-02-05 07:33:35]   💰 Open Trades: 0/3
+[2026-02-05 07:33:35]   💵 Paper Balance: $903.49
+[2026-02-05 07:33:35] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 07:33:35] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 07:33:35] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 07:33:36] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 08:43:19] ============================================================
+[2026-02-05 08:43:19] 🌍 SCAN - 2026-02-05 08:43:19 UTC
+[2026-02-05 08:43:19] ============================================================
+[2026-02-05 08:43:19] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 08:43:34] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 08:43:34] 📊 Results: 23 total signals
+[2026-02-05 08:43:34]   🎯 A/A+ Trade Signals: 23
+[2026-02-05 08:43:34]   👀 Watchlist Candidates: 0
+[2026-02-05 08:43:34]   💰 Open Trades: 0/3
+[2026-02-05 08:43:34]   💵 Paper Balance: $903.49
+[2026-02-05 08:43:34] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 08:43:34] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 08:43:34] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 08:43:36] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 09:43:36] ============================================================
+[2026-02-05 09:43:36] 🌍 SCAN - 2026-02-05 09:43:36 UTC
+[2026-02-05 09:43:36] ============================================================
+[2026-02-05 09:43:36] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 09:43:52] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 09:43:52] 📊 Results: 22 total signals
+[2026-02-05 09:43:52]   🎯 A/A+ Trade Signals: 22
+[2026-02-05 09:43:52]   👀 Watchlist Candidates: 0
+[2026-02-05 09:43:52]   💰 Open Trades: 0/3
+[2026-02-05 09:43:52]   💵 Paper Balance: $903.49
+[2026-02-05 09:43:52] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 09:43:52] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 09:43:52] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 09:43:53] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 10:43:54] ============================================================
+[2026-02-05 10:43:54] 🌍 SCAN - 2026-02-05 10:43:54 UTC
+[2026-02-05 10:43:54] ============================================================
+[2026-02-05 10:43:54] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 10:44:08] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 10:44:08] 📊 Results: 24 total signals
+[2026-02-05 10:44:08]   🎯 A/A+ Trade Signals: 24
+[2026-02-05 10:44:08]   👀 Watchlist Candidates: 0
+[2026-02-05 10:44:08]   💰 Open Trades: 0/3
+[2026-02-05 10:44:08]   💵 Paper Balance: $903.49
+[2026-02-05 10:44:08] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 10:44:08] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 10:44:08] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 10:44:10] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 11:44:10] ============================================================
+[2026-02-05 11:44:10] 🌍 SCAN - 2026-02-05 11:44:10 UTC
+[2026-02-05 11:44:10] ============================================================
+[2026-02-05 11:44:10] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 11:44:24] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 11:44:24] 📊 Results: 26 total signals
+[2026-02-05 11:44:24]   🎯 A/A+ Trade Signals: 26
+[2026-02-05 11:44:24]   👀 Watchlist Candidates: 0
+[2026-02-05 11:44:24]   💰 Open Trades: 0/3
+[2026-02-05 11:44:24]   💵 Paper Balance: $903.49
+[2026-02-05 11:44:24] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 11:44:24] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 11:44:24] ✅ Preparing to send 1 unique signals: NAS100/USDT:USDT
+[2026-02-05 11:44:24] ⚠️ Position size too small: $0.26
+[2026-02-05 11:44:25] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 12:44:25] ============================================================
+[2026-02-05 12:44:25] 🌍 SCAN - 2026-02-05 12:44:25 UTC
+[2026-02-05 12:44:25] ============================================================
+[2026-02-05 12:44:25] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 12:44:41] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 12:44:41] 📊 Results: 26 total signals
+[2026-02-05 12:44:41]   🎯 A/A+ Trade Signals: 26
+[2026-02-05 12:44:41]   👀 Watchlist Candidates: 0
+[2026-02-05 12:44:41]   💰 Open Trades: 0/3
+[2026-02-05 12:44:41]   💵 Paper Balance: $903.49
+[2026-02-05 12:44:41] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 12:44:41] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 12:44:41] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 12:44:43] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 13:44:43] ============================================================
+[2026-02-05 13:44:43] 🌍 SCAN - 2026-02-05 13:44:43 UTC
+[2026-02-05 13:44:43] ============================================================
+[2026-02-05 13:44:43] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 13:45:03] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 13:45:03] 📊 Results: 26 total signals
+[2026-02-05 13:45:03]   🎯 A/A+ Trade Signals: 26
+[2026-02-05 13:45:03]   👀 Watchlist Candidates: 0
+[2026-02-05 13:45:03]   💰 Open Trades: 0/3
+[2026-02-05 13:45:03]   💵 Paper Balance: $903.49
+[2026-02-05 13:45:03] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 13:45:03] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 13:45:03] ✅ Preparing to send 1 unique signals: BTC/USDT:USDT
+[2026-02-05 13:45:03] ⚠️ Position size too small: $0.02
+[2026-02-05 13:45:04] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 14:45:05] ============================================================
+[2026-02-05 14:45:05] 🌍 SCAN - 2026-02-05 14:45:05 UTC
+[2026-02-05 14:45:05] ============================================================
+[2026-02-05 14:45:05] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 14:45:20] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 14:45:20] 📊 Results: 25 total signals
+[2026-02-05 14:45:20]   🎯 A/A+ Trade Signals: 25
+[2026-02-05 14:45:20]   👀 Watchlist Candidates: 0
+[2026-02-05 14:45:20]   💰 Open Trades: 0/3
+[2026-02-05 14:45:20]   💵 Paper Balance: $903.49
+[2026-02-05 14:45:20] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 14:45:20] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 14:45:20] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 14:45:21] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 15:45:21] ============================================================
+[2026-02-05 15:45:21] 🌍 SCAN - 2026-02-05 15:45:21 UTC
+[2026-02-05 15:45:21] ============================================================
+[2026-02-05 15:45:21] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 15:45:36] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 15:45:36] 📊 Results: 26 total signals
+[2026-02-05 15:45:36]   🎯 A/A+ Trade Signals: 26
+[2026-02-05 15:45:36]   👀 Watchlist Candidates: 0
+[2026-02-05 15:45:36]   💰 Open Trades: 0/3
+[2026-02-05 15:45:36]   💵 Paper Balance: $903.49
+[2026-02-05 15:45:36] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 15:45:36] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 15:45:36] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 15:45:38] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 16:45:38] ============================================================
+[2026-02-05 16:45:38] 🌍 SCAN - 2026-02-05 16:45:38 UTC
+[2026-02-05 16:45:38] ============================================================
+[2026-02-05 16:45:38] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 16:45:52] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 16:45:52] 📊 Results: 26 total signals
+[2026-02-05 16:45:52]   🎯 A/A+ Trade Signals: 26
+[2026-02-05 16:45:52]   👀 Watchlist Candidates: 0
+[2026-02-05 16:45:52]   💰 Open Trades: 0/3
+[2026-02-05 16:45:52]   💵 Paper Balance: $903.49
+[2026-02-05 16:45:52] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 16:45:52] 🚫 Skipping repeat trade on ETH/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 16:45:52] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 16:45:56] ✅ Scan complete. Next scan in 3600s (60 minutes)
+[2026-02-05 17:45:56] ============================================================
+[2026-02-05 17:45:56] 🌍 SCAN - 2026-02-05 17:45:56 UTC
+[2026-02-05 17:45:56] ============================================================
+[2026-02-05 17:45:56] 🔍 Scanning 30 MEXC pairs for bottoms...
+[2026-02-05 17:46:11] ✅ Scan complete: 30/30 pairs scanned, 0 errors
+[2026-02-05 17:46:11] 📊 Results: 26 total signals
+[2026-02-05 17:46:11]   🎯 A/A+ Trade Signals: 26
+[2026-02-05 17:46:11]   👀 Watchlist Candidates: 0
+[2026-02-05 17:46:11]   💰 Open Trades: 0/3
+[2026-02-05 17:46:11]   💵 Paper Balance: $903.49
+[2026-02-05 17:46:11] 🚫 Skipping repeat trade on BTC/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 17:46:11] 🚫 Skipping repeat trade on NAS100/USDT:USDT (levels changed, within cooldown window).
+[2026-02-05 17:46:11] ✅ Preparing to send 1 unique signals: ETH/USDT:USDT
+[2026-02-05 17:46:11] ⚠️ Position size too small: $0.24
+[2026-02-05 17:46:12] ✅ Scan complete. Next scan in 3600s (60 minutes)
