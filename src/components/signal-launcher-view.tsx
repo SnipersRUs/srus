@@ -29,7 +29,7 @@ export function SignalLauncherView() {
   const address = account?.address || null
   const [generatedPost, setGeneratedPost] = useState('')
   const [copied, setCopied] = useState(false)
-  
+
   const [formData, setFormData] = useState<SignalFormData>({
     name: '',
     symbol: '',
@@ -55,7 +55,7 @@ export function SignalLauncherView() {
   const generatePost = () => {
     const symbol = formData.symbol || generateSymbol()
     const name = formData.name || `Signal: ${formData.asset} ${formData.direction === 'bull' ? '$' + formData.targetPrice : 'Drop'} ${formData.targetDate ? 'By ' + new Date(formData.targetDate).toLocaleDateString('en-US', { month: 'short', year: '2-digit' }) : ''}`
-    
+
     let post = `!clawnch\n`
     post += `name: ${name}\n`
     post += `symbol: ${symbol}\n`
@@ -63,7 +63,7 @@ export function SignalLauncherView() {
     post += `description: ${formData.confidence}% confidence - ${formData.description}\n`
     if (formData.image) post += `image: ${formData.image}\n`
     if (formData.website) post += `website: ${formData.website}\n`
-    
+
     setGeneratedPost(post)
   }
 
@@ -98,7 +98,7 @@ export function SignalLauncherView() {
           <div className="flex items-start gap-3">
             <Info className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" />
             <div className="space-y-2">
-              <p className="text-sm text-gray-300">
+              <p className="text-sm text-muted-foreground">
                 Launch signal tokens that other agents can trade. Earn <span className="text-orange-400 font-bold">80% of trading fees</span> when others trade on your predictions.
               </p>
               <div className="flex flex-wrap gap-2">
@@ -121,7 +121,7 @@ export function SignalLauncherView() {
       </Card>
 
       {/* Signal Form */}
-      <Card className="border-white/10 bg-white/5">
+      <Card className="border-border bg-card">
         <CardHeader className="p-5 pb-3">
           <CardTitle className="text-lg font-bold flex items-center gap-2">
             <Rocket className="w-5 h-5 text-orange-500" />
@@ -132,12 +132,12 @@ export function SignalLauncherView() {
           {/* Asset & Direction */}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1.5">Asset</label>
-              <Select 
-                value={formData.asset} 
+              <label className="block text-xs font-medium text-muted-foreground mb-1.5">Asset</label>
+              <Select
+                value={formData.asset}
                 onValueChange={(v) => setFormData({ ...formData, asset: v })}
               >
-                <SelectTrigger className="bg-white/5 border-white/10">
+                <SelectTrigger className="bg-muted border-border">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -149,14 +149,14 @@ export function SignalLauncherView() {
                 </SelectContent>
               </Select>
             </div>
-            
+
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1.5">Direction</label>
+              <label className="block text-xs font-medium text-muted-foreground mb-1.5">Direction</label>
               <div className="flex gap-2">
                 <Button
                   type="button"
                   variant={formData.direction === 'bull' ? 'default' : 'outline'}
-                  className={`flex-1 ${formData.direction === 'bull' ? 'bg-emerald-500 hover:bg-emerald-600' : 'border-white/10'}`}
+                  className={`flex-1 ${formData.direction === 'bull' ? 'bg-emerald-500 hover:bg-emerald-600' : 'border-border'}`}
                   onClick={() => setFormData({ ...formData, direction: 'bull' })}
                 >
                   <TrendingUp className="w-4 h-4 mr-1" />
@@ -165,7 +165,7 @@ export function SignalLauncherView() {
                 <Button
                   type="button"
                   variant={formData.direction === 'bear' ? 'default' : 'outline'}
-                  className={`flex-1 ${formData.direction === 'bear' ? 'bg-red-500 hover:bg-red-600' : 'border-white/10'}`}
+                  className={`flex-1 ${formData.direction === 'bear' ? 'bg-red-500 hover:bg-red-600' : 'border-border'}`}
                   onClick={() => setFormData({ ...formData, direction: 'bear' })}
                 >
                   <TrendingDown className="w-4 h-4 mr-1" />
@@ -178,30 +178,30 @@ export function SignalLauncherView() {
           {/* Target Price & Date */}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1.5">Target Price ($)</label>
+              <label className="block text-xs font-medium text-muted-foreground mb-1.5">Target Price ($)</label>
               <Input
                 type="text"
                 placeholder="100000"
                 value={formData.targetPrice}
                 onChange={(e) => setFormData({ ...formData, targetPrice: e.target.value })}
-                className="bg-white/5 border-white/10"
+                className="bg-muted border-border"
               />
             </div>
-            
+
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1.5">Target Date</label>
+              <label className="block text-xs font-medium text-muted-foreground mb-1.5">Target Date</label>
               <Input
                 type="date"
                 value={formData.targetDate}
                 onChange={(e) => setFormData({ ...formData, targetDate: e.target.value })}
-                className="bg-white/5 border-white/10"
+                className="bg-muted border-border"
               />
             </div>
           </div>
 
           {/* Confidence */}
           <div>
-            <label className="block text-xs font-medium text-gray-400 mb-1.5">
+            <label className="block text-xs font-medium text-muted-foreground mb-1.5">
               Confidence: <span className="text-orange-400 font-bold">{formData.confidence}%</span>
             </label>
             <input
@@ -210,9 +210,9 @@ export function SignalLauncherView() {
               max="100"
               value={formData.confidence}
               onChange={(e) => setFormData({ ...formData, confidence: parseInt(e.target.value) })}
-              className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-orange-500"
+              className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-orange-500"
             />
-            <div className="flex justify-between text-[10px] text-gray-500 mt-1">
+            <div className="flex justify-between text-[10px] text-muted-foreground mt-1">
               <span>Speculative</span>
               <span>High Conviction</span>
             </div>
@@ -220,48 +220,48 @@ export function SignalLauncherView() {
 
           {/* Wallet */}
           <div>
-            <label className="block text-xs font-medium text-gray-400 mb-1.5">Wallet Address (for fees)</label>
+            <label className="block text-xs font-medium text-muted-foreground mb-1.5">Wallet Address (for fees)</label>
             <Input
               type="text"
               placeholder="0x..."
               value={formData.wallet || address || ''}
               onChange={(e) => setFormData({ ...formData, wallet: e.target.value })}
-              className="bg-white/5 border-white/10 font-mono text-sm"
+              className="bg-muted border-border font-mono text-sm"
             />
           </div>
 
           {/* Description */}
           <div>
-            <label className="block text-xs font-medium text-gray-400 mb-1.5">Signal Description</label>
+            <label className="block text-xs font-medium text-muted-foreground mb-1.5">Signal Description</label>
             <Textarea
               placeholder="Explain your prediction reasoning..."
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-              className="bg-white/5 border-white/10 min-h-[100px]"
+              className="bg-muted border-border min-h-[100px]"
             />
           </div>
 
           {/* Optional Fields */}
           <div className="grid grid-cols-1 gap-3">
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1.5">Image URL (optional)</label>
+              <label className="block text-xs font-medium text-muted-foreground mb-1.5">Image URL (optional)</label>
               <Input
                 type="text"
                 placeholder="https://iili.io/xxxxx.jpg"
                 value={formData.image}
                 onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                className="bg-white/5 border-white/10"
+                className="bg-muted border-border"
               />
             </div>
-            
+
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1.5">Website (optional)</label>
+              <label className="block text-xs font-medium text-muted-foreground mb-1.5">Website (optional)</label>
               <Input
                 type="text"
                 placeholder="https://your-site.com/signal"
                 value={formData.website}
                 onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                className="bg-white/5 border-white/10"
+                className="bg-muted border-border"
               />
             </div>
           </div>
@@ -288,7 +288,7 @@ export function SignalLauncherView() {
           </CardHeader>
           <CardContent className="p-5 pt-0 space-y-4">
             <div className="relative">
-              <pre className="bg-gray-900 text-green-400 p-4 rounded-xl overflow-x-auto text-sm font-mono whitespace-pre-wrap">
+              <pre className="bg-muted text-emerald-400 p-4 rounded-xl overflow-x-auto text-sm font-mono whitespace-pre-wrap">
                 {generatedPost}
               </pre>
               <Button
@@ -300,21 +300,21 @@ export function SignalLauncherView() {
                 {copied ? 'Copied!' : 'Copy'}
               </Button>
             </div>
-            
+
             <div className="space-y-3">
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-muted-foreground">
                 Copy the text above and post it to <strong>Moltx</strong> to launch your signal token:
               </p>
-              
+
               <Button
                 onClick={openMoltx}
-                className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/20"
+                className="w-full bg-muted hover:bg-muted/80 text-foreground border border-border"
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 Open Moltx.io
               </Button>
-              
-              <div className="text-xs text-gray-500 space-y-1">
+
+              <div className="text-xs text-muted-foreground space-y-1">
                 <p>1. Click "Copy" to copy the formatted post</p>
                 <p>2. Click "Open Moltx.io" and create a new post</p>
                 <p>3. Paste the content and submit</p>
@@ -326,12 +326,12 @@ export function SignalLauncherView() {
       )}
 
       {/* Tips Card */}
-      <Card className="border-white/10 bg-white/5">
+      <Card className="border-border bg-card">
         <CardHeader className="p-5 pb-3">
-          <CardTitle className="text-sm font-bold text-gray-400">Tips for Great Signals</CardTitle>
+          <CardTitle className="text-sm font-bold text-muted-foreground">Tips for Great Signals</CardTitle>
         </CardHeader>
         <CardContent className="p-5 pt-0">
-          <ul className="space-y-2 text-sm text-gray-400">
+          <ul className="space-y-2 text-sm text-muted-foreground">
             <li className="flex items-start gap-2">
               <span className="text-orange-400">•</span>
               Be specific with price targets and dates

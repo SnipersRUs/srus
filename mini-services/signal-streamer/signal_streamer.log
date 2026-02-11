@@ -1,0 +1,129 @@
+2026-02-10 17:10:53,576 - __main__ - INFO - 🚀 Starting SRUS Signal Streamer...
+2026-02-10 17:10:53,576 - __main__ - INFO - 📊 Monitoring: BTCUSDT, ETHUSDT, SOLUSDT, XRPUSDT, ADAUSDT, LINKUSDT, AVAXUSDT, DOGEUSDT
+2026-02-10 17:10:53,577 - __main__ - INFO - 🎯 Webhook: http://localhost:3000/api/webhook/tradingview
+2026-02-10 17:10:54,451 - __main__ - ERROR - ❌ Failed to connect to Binance: server rejected WebSocket connection: HTTP 451
+2026-02-10 17:10:54,451 - __main__ - ERROR - ❌ Fatal error: server rejected WebSocket connection: HTTP 451
+2026-02-10 17:11:11,421 - __main__ - INFO - 🚀 Starting SRUS Signal Streamer...
+2026-02-10 17:11:11,421 - __main__ - INFO - 📊 Monitoring: BTCUSDT, ETHUSDT, SOLUSDT, XRPUSDT, ADAUSDT, LINKUSDT, AVAXUSDT, DOGEUSDT
+2026-02-10 17:11:11,421 - __main__ - INFO - 🎯 Webhook: http://localhost:3000/api/webhook/tradingview
+2026-02-10 17:11:11,803 - __main__ - INFO - ✅ Connected to Binance WebSocket
+2026-02-10 17:11:11,803 - __main__ - INFO - 📡 Subscribed to 8 symbols
+2026-02-10 17:15:38,096 - __main__ - INFO - ============================================================
+2026-02-10 17:15:38,096 - __main__ - INFO - 🚀 SRUS Signal Streamer Starting...
+2026-02-10 17:15:38,096 - __main__ - INFO - 📊 Indicators: Tactical Deviation + GPS Pro
+2026-02-10 17:15:38,096 - __main__ - INFO - ⏱️  Scan Timer: Every 15 minutes
+2026-02-10 17:15:38,096 - __main__ - INFO - 🎯 Min Score: 55/100
+2026-02-10 17:15:38,096 - __main__ - INFO - ============================================================
+2026-02-10 17:15:38,472 - __main__ - INFO - ✅ Connected to Binance WebSocket
+2026-02-10 17:15:38,472 - __main__ - INFO - 📡 Monitoring 8 symbols
+2026-02-10 17:15:38,473 - __main__ - INFO - ⏱️  Scan interval: 15 minutes
+2026-02-10 17:30:40,579 - __main__ - INFO - ✅ SIGNAL SENT: XRP SHORT (Score: 85)
+2026-02-10 17:30:40,580 - __main__ - INFO - 🚨 A+ SIGNAL: XRPUSDT SHORT @ 1.40
+2026-02-10 17:45:43,295 - __main__ - INFO - ✅ SIGNAL SENT: DOGE LONG (Score: 79)
+2026-02-10 17:45:43,296 - __main__ - INFO - 🚨 A SIGNAL: DOGEUSDT LONG @ 0.09
+2026-02-10 17:45:52,173 - __main__ - INFO - ✅ SIGNAL SENT: LINK LONG (Score: 80)
+2026-02-10 17:45:52,174 - __main__ - INFO - 🚨 A SIGNAL: LINKUSDT LONG @ 8.55
+2026-02-10 18:16:01,956 - __main__ - INFO - ✅ SIGNAL SENT: SOL SHORT (Score: 76)
+2026-02-10 18:16:01,971 - __main__ - INFO - 🚨 A SIGNAL: SOLUSDT SHORT @ 82.53
+2026-02-10 19:01:05,622 - __main__ - INFO - ✅ SIGNAL SENT: XRP LONG (Score: 85)
+2026-02-10 19:01:05,628 - __main__ - INFO - 🚨 A+ SIGNAL: XRPUSDT LONG @ 1.40
+2026-02-10 19:16:05,682 - __main__ - INFO - ✅ SIGNAL SENT: XRP LONG (Score: 85)
+2026-02-10 19:16:05,684 - __main__ - INFO - 🚨 A+ SIGNAL: XRPUSDT LONG @ 1.40
+2026-02-10 19:16:30,714 - __main__ - INFO - ✅ SIGNAL SENT: ADA LONG (Score: 79)
+2026-02-10 19:16:30,716 - __main__ - INFO - 🚨 A SIGNAL: ADAUSDT LONG @ 0.26
+2026-02-10 19:46:05,376 - __main__ - INFO - ✅ SIGNAL SENT: SOL LONG (Score: 85)
+2026-02-10 19:46:05,377 - __main__ - INFO - 🚨 A+ SIGNAL: SOLUSDT LONG @ 83.35
+2026-02-10 20:15:51,272 - __main__ - INFO - ✅ SIGNAL SENT: BTC SHORT (Score: 79)
+2026-02-10 20:15:51,274 - __main__ - INFO - 🚨 A SIGNAL: BTCUSDT SHORT @ 69255.58
+2026-02-10 21:01:14,063 - __main__ - INFO - ✅ SIGNAL SENT: SOL SHORT (Score: 85)
+2026-02-10 21:01:14,065 - __main__ - INFO - 🚨 A+ SIGNAL: SOLUSDT SHORT @ 83.85
+2026-02-10 22:00:59,586 - __main__ - INFO - ✅ SIGNAL SENT: ETH LONG (Score: 85)
+2026-02-10 22:00:59,588 - __main__ - INFO - 🚨 A+ SIGNAL: ETHUSDT LONG @ 2018.27
+2026-02-10 23:30:59,164 - __main__ - INFO - ✅ SIGNAL SENT: BTC LONG (Score: 85)
+2026-02-10 23:30:59,167 - __main__ - INFO - 🚨 A+ SIGNAL: BTCUSDT LONG @ 67578.20
+2026-02-10 23:31:02,910 - __main__ - INFO - ✅ SIGNAL SENT: ETH LONG (Score: 85)
+2026-02-10 23:31:02,911 - __main__ - INFO - 🚨 A+ SIGNAL: ETHUSDT LONG @ 1982.99
+2026-02-10 23:32:49,378 - __main__ - INFO - ✅ SIGNAL SENT: ADA LONG (Score: 85)
+2026-02-10 23:32:49,380 - __main__ - INFO - 🚨 A+ SIGNAL: ADAUSDT LONG @ 0.26
+2026-02-11 01:31:04,506 - __main__ - INFO - ✅ SIGNAL SENT: BTC LONG (Score: 85)
+2026-02-11 01:31:04,508 - __main__ - INFO - 🚨 A+ SIGNAL: BTCUSDT LONG @ 67079.41
+2026-02-11 02:01:05,449 - __main__ - INFO - ✅ SIGNAL SENT: BTC SHORT (Score: 82)
+2026-02-11 02:01:05,451 - __main__ - INFO - 🚨 A SIGNAL: BTCUSDT SHORT @ 66849.71
+2026-02-11 02:01:50,694 - __main__ - INFO - ✅ SIGNAL SENT: SOL LONG (Score: 77)
+2026-02-11 02:01:50,695 - __main__ - INFO - 🚨 A SIGNAL: SOLUSDT LONG @ 80.83
+2026-02-11 03:16:11,879 - __main__ - INFO - ✅ SIGNAL SENT: BTC LONG (Score: 85)
+2026-02-11 03:16:11,880 - __main__ - INFO - 🚨 A+ SIGNAL: BTCUSDT LONG @ 66873.31
+2026-02-11 04:01:45,131 - __main__ - INFO - ✅ SIGNAL SENT: XRP SHORT (Score: 76)
+2026-02-11 04:01:45,132 - __main__ - INFO - 🚨 A SIGNAL: XRPUSDT SHORT @ 1.37
+2026-02-11 04:21:46,907 - __main__ - INFO - ✅ SIGNAL SENT: AVAX LONG (Score: 85)
+2026-02-11 04:21:46,908 - __main__ - INFO - 🚨 A+ SIGNAL: AVAXUSDT LONG @ 8.52
+2026-02-11 05:01:21,754 - __main__ - INFO - ✅ SIGNAL SENT: BTC LONG (Score: 85)
+2026-02-11 05:01:21,755 - __main__ - INFO - 🚨 A+ SIGNAL: BTCUSDT LONG @ 66804.03
+2026-02-11 05:34:18,287 - __main__ - INFO - ✅ SIGNAL SENT: ADA LONG (Score: 85)
+2026-02-11 05:34:18,288 - __main__ - INFO - 🚨 A+ SIGNAL: ADAUSDT LONG @ 0.25
+2026-02-11 05:52:29,176 - __main__ - INFO - ✅ SIGNAL SENT: AVAX SHORT (Score: 77)
+2026-02-11 05:52:29,177 - __main__ - INFO - 🚨 A SIGNAL: AVAXUSDT SHORT @ 8.51
+2026-02-11 06:33:01,668 - __main__ - INFO - ✅ SIGNAL SENT: SOL SHORT (Score: 77)
+2026-02-11 06:33:01,671 - __main__ - INFO - 🚨 A SIGNAL: SOLUSDT SHORT @ 81.38
+2026-02-11 07:01:40,192 - __main__ - INFO - ✅ SIGNAL SENT: BTC SHORT (Score: 83)
+2026-02-11 07:01:40,195 - __main__ - INFO - 🚨 A SIGNAL: BTCUSDT SHORT @ 67079.52
+2026-02-11 07:07:58,011 - __main__ - INFO - ✅ SIGNAL SENT: AVAX LONG (Score: 85)
+2026-02-11 07:07:58,012 - __main__ - INFO - 🚨 A+ SIGNAL: AVAXUSDT LONG @ 8.58
+2026-02-11 07:46:43,719 - __main__ - INFO - ✅ SIGNAL SENT: BTC LONG (Score: 83)
+2026-02-11 07:46:43,721 - __main__ - INFO - 🚨 A SIGNAL: BTCUSDT LONG @ 67049.94
+2026-02-11 08:01:44,249 - __main__ - INFO - ✅ SIGNAL SENT: ETH SHORT (Score: 75)
+2026-02-11 08:01:44,251 - __main__ - INFO - 🚨 A SIGNAL: ETHUSDT SHORT @ 1953.92
+2026-02-11 08:01:49,233 - __main__ - INFO - ✅ SIGNAL SENT: BTC SHORT (Score: 83)
+2026-02-11 08:01:49,234 - __main__ - INFO - 🚨 A SIGNAL: BTCUSDT SHORT @ 67168.59
+2026-02-11 08:33:18,391 - __main__ - INFO - ✅ SIGNAL SENT: SOL SHORT (Score: 77)
+2026-02-11 08:33:18,395 - __main__ - INFO - 🚨 A SIGNAL: SOLUSDT SHORT @ 81.60
+2026-02-11 09:03:19,717 - __main__ - INFO - ✅ SIGNAL SENT: DOGE SHORT (Score: 83)
+2026-02-11 09:03:19,719 - __main__ - INFO - 🚨 A SIGNAL: DOGEUSDT SHORT @ 0.09
+2026-02-11 09:51:12,336 - __main__ - INFO - ✅ SIGNAL SENT: ADA LONG (Score: 85)
+2026-02-11 09:51:12,339 - __main__ - INFO - 🚨 A+ SIGNAL: ADAUSDT LONG @ 0.25
+2026-02-11 09:53:26,942 - __main__ - INFO - ✅ SIGNAL SENT: AVAX LONG (Score: 82)
+2026-02-11 09:53:26,944 - __main__ - INFO - 🚨 A SIGNAL: AVAXUSDT LONG @ 8.60
+2026-02-11 10:06:15,142 - __main__ - INFO - ✅ SIGNAL SENT: ADA SHORT (Score: 85)
+2026-02-11 10:06:15,144 - __main__ - INFO - 🚨 A+ SIGNAL: ADAUSDT SHORT @ 0.25
+2026-02-11 10:48:24,373 - __main__ - INFO - ✅ SIGNAL SENT: SOL LONG (Score: 85)
+2026-02-11 10:48:24,376 - __main__ - INFO - 🚨 A+ SIGNAL: SOLUSDT LONG @ 79.83
+2026-02-11 11:36:40,335 - __main__ - INFO - ✅ SIGNAL SENT: ADA LONG (Score: 75)
+2026-02-11 11:36:40,341 - __main__ - INFO - 🚨 A SIGNAL: ADAUSDT LONG @ 0.25
+2026-02-11 11:46:55,809 - __main__ - INFO - ✅ SIGNAL SENT: BTC SHORT (Score: 85)
+2026-02-11 11:46:55,812 - __main__ - INFO - 🚨 A+ SIGNAL: BTCUSDT SHORT @ 66264.84
+2026-02-11 12:06:50,520 - __main__ - INFO - ✅ SIGNAL SENT: ADA LONG (Score: 77)
+2026-02-11 12:06:50,522 - __main__ - INFO - 🚨 A SIGNAL: ADAUSDT LONG @ 0.25
+2026-02-11 12:16:56,871 - __main__ - INFO - ✅ SIGNAL SENT: BTC SHORT (Score: 85)
+2026-02-11 12:16:56,872 - __main__ - INFO - 🚨 A+ SIGNAL: BTCUSDT SHORT @ 66416.29
+2026-02-11 12:31:55,658 - __main__ - INFO - ✅ SIGNAL SENT: ETH SHORT (Score: 79)
+2026-02-11 12:31:55,660 - __main__ - INFO - 🚨 A SIGNAL: ETHUSDT SHORT @ 1937.50
+2026-02-11 12:31:57,793 - __main__ - INFO - ✅ SIGNAL SENT: BTC SHORT (Score: 78)
+2026-02-11 12:31:57,793 - __main__ - INFO - 🚨 A SIGNAL: BTCUSDT SHORT @ 66806.67
+2026-02-11 12:48:29,639 - __main__ - INFO - ✅ SIGNAL SENT: SOL SHORT (Score: 84)
+2026-02-11 12:48:29,640 - __main__ - INFO - 🚨 A SIGNAL: SOLUSDT SHORT @ 79.34
+2026-02-11 13:16:59,700 - __main__ - INFO - ✅ SIGNAL SENT: BTC SHORT (Score: 77)
+2026-02-11 13:16:59,702 - __main__ - INFO - 🚨 A SIGNAL: BTCUSDT SHORT @ 66714.29
+2026-02-11 13:46:58,485 - __main__ - INFO - ✅ SIGNAL SENT: ETH SHORT (Score: 85)
+2026-02-11 13:46:58,487 - __main__ - INFO - 🚨 A+ SIGNAL: ETHUSDT SHORT @ 1946.93
+2026-02-11 14:02:01,085 - __main__ - INFO - ✅ SIGNAL SENT: BTC LONG (Score: 75)
+2026-02-11 14:02:01,088 - __main__ - INFO - 🚨 A SIGNAL: BTCUSDT LONG @ 67182.68
+2026-02-11 14:03:34,038 - __main__ - INFO - ✅ SIGNAL SENT: DOGE LONG (Score: 85)
+2026-02-11 14:03:34,121 - __main__ - INFO - 🚨 A+ SIGNAL: DOGEUSDT LONG @ 0.09
+2026-02-11 15:02:00,192 - __main__ - INFO - ✅ SIGNAL SENT: ETH SHORT (Score: 77)
+2026-02-11 15:02:00,197 - __main__ - INFO - 🚨 A SIGNAL: ETHUSDT SHORT @ 1954.01
+2026-02-11 15:08:00,310 - __main__ - INFO - ✅ SIGNAL SENT: ADA LONG (Score: 85)
+2026-02-11 15:08:00,312 - __main__ - INFO - 🚨 A+ SIGNAL: ADAUSDT LONG @ 0.26
+2026-02-11 15:18:41,424 - __main__ - INFO - ✅ SIGNAL SENT: SOL LONG (Score: 77)
+2026-02-11 15:18:41,432 - __main__ - INFO - 🚨 A SIGNAL: SOLUSDT LONG @ 79.63
+2026-02-11 15:33:42,460 - __main__ - INFO - ✅ SIGNAL SENT: SOL SHORT (Score: 79)
+2026-02-11 15:33:42,466 - __main__ - INFO - 🚨 A SIGNAL: SOLUSDT SHORT @ 79.23
+2026-02-11 15:47:17,796 - __main__ - INFO - ✅ SIGNAL SENT: XRP LONG (Score: 83)
+2026-02-11 15:47:17,799 - __main__ - INFO - 🚨 A SIGNAL: XRPUSDT LONG @ 1.38
+2026-02-11 16:03:42,603 - __main__ - INFO - ✅ SIGNAL SENT: SOL SHORT (Score: 85)
+2026-02-11 16:03:42,605 - __main__ - INFO - 🚨 A+ SIGNAL: SOLUSDT SHORT @ 79.82
+2026-02-11 16:48:45,964 - __main__ - INFO - ✅ SIGNAL SENT: SOL SHORT (Score: 85)
+2026-02-11 16:48:45,968 - __main__ - INFO - 🚨 A+ SIGNAL: SOLUSDT SHORT @ 80.46
+2026-02-11 17:55:44,524 - __main__ - INFO - ✅ SIGNAL SENT: AVAX LONG (Score: 84)
+2026-02-11 17:55:44,530 - __main__ - INFO - 🚨 A SIGNAL: AVAXUSDT LONG @ 8.67
+2026-02-11 18:04:23,934 - __main__ - INFO - ✅ SIGNAL SENT: DOGE LONG (Score: 85)
+2026-02-11 18:04:23,945 - __main__ - INFO - 🚨 A+ SIGNAL: DOGEUSDT LONG @ 0.09

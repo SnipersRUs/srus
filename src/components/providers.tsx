@@ -3,10 +3,17 @@
 import React from 'react'
 import {
     RainbowKitProvider,
-    getDefaultConfig,
     darkTheme,
+    connectorsForWallets,
 } from '@rainbow-me/rainbowkit'
-import { WagmiProvider, http } from 'wagmi'
+import {
+    metaMaskWallet,
+    walletConnectWallet,
+    coinbaseWallet,
+    rainbowWallet,
+    injectedWallet,
+} from '@rainbow-me/rainbowkit/wallets'
+import { WagmiProvider, createConfig, http } from 'wagmi'
 import {
     base,
     baseSepolia,
@@ -17,13 +24,33 @@ import {
 } from "@tanstack/react-query"
 import '@rainbow-me/rainbowkit/styles.css'
 
-const config = getDefaultConfig({
-    appName: 'Zoid',
-    projectId: '3fcc6b446fe38351502476b70f074213', // Public project ID for Zoid development
+const connectors = connectorsForWallets(
+    [
+        {
+            groupName: 'Popular',
+            wallets: [
+                injectedWallet,
+                metaMaskWallet,
+                rainbowWallet,
+                coinbaseWallet,
+                walletConnectWallet,
+            ],
+        },
+    ],
+    {
+        appName: 'Zoid',
+        projectId: 'b56e18d47c72ab683b10814fe9495694', // Updated Project ID
+    }
+)
+
+const config = createConfig({
+    connectors,
     chains: [base, baseSepolia],
+    transports: {
+        [base.id]: http(),
+        [baseSepolia.id]: http(),
+    },
     ssr: true,
-    // Disable auto-connect for security - users must manually connect
-    storage: undefined,
 })
 
 const queryClient = new QueryClient()

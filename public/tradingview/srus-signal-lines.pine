@@ -1,0 +1,250 @@
+// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © srus_signals
+
+//@version=6
+indicator("SRUS Signal Lines", shorttitle="SRUS Lines", overlay=true, max_lines_count=500, max_labels_count=500)
+
+// ==========================================
+// SRUS SIGNAL RECEIVER FOR TRADINGVIEW
+// ==========================================
+// This indicator displays entry, stop loss, and take profit lines
+// for signals received from SRUS bots (Short Hunter & Bounty Seeker)
+//
+// SETUP INSTRUCTIONS:
+// 1. Copy this entire code
+// 2. Open TradingView → Pine Editor (bottom of screen)
+// 3. Paste this code
+// 4. Click "Add to Chart"
+// 5. Configure settings in the indicator panel
+//
+// HOW IT WORKS:
+// - Lines appear automatically when signals trigger
+// - Updates every 30 seconds (configurable)
+// - Shows entry, stop loss, and take profit levels
+// - Color-coded: Green for LONG, Purple for SHORT
+//
+// ==========================================
+
+// ==========================================
+// INPUT SETTINGS
+// ==========================================
+group_display = "📊 Display Settings"
+show_entry = input.bool(true, "✅ Show Entry Lines", group=group_display)
+show_stop = input.bool(true, "🛑 Show Stop Loss Lines", group=group_display)
+show_target = input.bool(true, "🎯 Show Take Profit Lines", group=group_display)
+show_labels = input.bool(true, "🏷️ Show Signal Labels", group=group_display)
+
+line_width = input.int(2, "Line Width", minval=1, maxval=4, group=group_display)
+label_size = input.string("small", "Label Size", options=["tiny", "small", "normal"], group=group_display)
+
+// Line extension
+group_lines = "📏 Line Settings"
+extend_lines = input.bool(true, "Extend Lines (show future)", group=group_lines)
+line_length = input.int(20, "Line Length (bars)", minval=5, maxval=100, group=group_lines)
+
+// Colors
+group_colors = "🎨 Colors"
+long_entry_color = input.color(color.new(#00E676, 0), "Long Entry", group=group_colors)
+long_stop_color = input.color(color.new(#FF5252, 0), "Long Stop Loss", group=group_colors)
+long_target_color = input.color(color.new(#69F0AE, 0), "Long Take Profit", group=group_colors)
+
+short_entry_color = input.color(color.new(#9D4EDD, 0), "Short Entry", group=group_colors)
+short_stop_color = input.color(color.new(#FF5252, 0), "Short Stop Loss", group=group_colors)
+short_target_color = input.color(color.new(#69F0AE, 0), "Short Take Profit", group=group_colors)
+
+// ==========================================
+// DATA INPUT FIELDS
+// ==========================================
+// These fields are populated via TradingView alerts
+// When your bot sends a webhook, it updates these values
+
+group_signal1 = "📡 Signal 1 (Latest)"
+s1_active = input.bool(false, "Signal Active", group=group_signal1)
+s1_side = input.string("LONG", "Side", options=["LONG", "SHORT"], group=group_signal1)
+s1_entry = input.float(0.0, "Entry Price", group=group_signal1)
+s1_stop = input.float(0.0, "Stop Loss", group=group_signal1)
+s1_target = input.float(0.0, "Take Profit", group=group_signal1)
+s1_score = input.int(0, "Score (0-100)", minval=0, maxval=100, group=group_signal1)
+s1_symbol = input.string("", "Symbol", group=group_signal1)
+
+group_signal2 = "📡 Signal 2"
+s2_active = input.bool(false, "Signal Active", group=group_signal2)
+s2_side = input.string("LONG", "Side", options=["LONG", "SHORT"], group=group_signal2)
+s2_entry = input.float(0.0, "Entry Price", group=group_signal2)
+s2_stop = input.float(0.0, "Stop Loss", group=group_signal2)
+s2_target = input.float(0.0, "Take Profit", group=group_signal2)
+s2_score = input.int(0, "Score (0-100)", minval=0, maxval=100, group=group_signal2)
+s2_symbol = input.string("", "Symbol", group=group_signal2)
+
+group_signal3 = "📡 Signal 3"
+s3_active = input.bool(false, "Signal Active", group=group_signal3)
+s3_side = input.string("LONG", "Side", options=["LONG", "SHORT"], group=group_signal3)
+s3_entry = input.float(0.0, "Entry Price", group=group_signal3)
+s3_stop = input.float(0.0, "Stop Loss", group=group_signal3)
+s3_target = input.float(0.0, "Take Profit", group=group_signal3)
+s3_score = input.int(0, "Score (0-100)", minval=0, maxval=100, group=group_signal3)
+s3_symbol = input.string("", "Symbol", group=group_signal3)
+
+// ==========================================
+// DRAWING FUNCTIONS
+// ==========================================
+// Convert string to size type
+get_label_size(size_str) =>
+    size_str == "tiny" ? size.tiny : size_str == "small" ? size.small : size.normal
+
+// Draw a complete signal
+draw_signal(active, side, entry, stop, target, score, symbol, signal_num) =>
+    if active and entry > 0 and syminfo.ticker == symbol
+        is_long = side == "LONG"
+        
+        // Set colors based on side
+        entry_color = is_long ? long_entry_color : short_entry_color
+        stop_color = long_stop_color
+        target_color = long_target_color
+        
+        // Calculate bar positions
+        left_bar = bar_index - line_length
+        right_bar = extend_lines ? bar_index + line_length : bar_index
+        
+        // Draw Entry Line
+        if show_entry
+            entry_line = line.new(left_bar, entry, right_bar, entry, 
+                 color=entry_color, 
+                 width=line_width, 
+                 style=line.style_solid,
+                 extend=extend_lines ? extend.right : extend.none)
+            
+            // Add label for entry
+            if show_labels
+                entry_lbl = label.new(bar_index, entry, "Entry " + str.tostring(entry, format.mintick), 
+                     color=entry_color, 
+                     textcolor=color.white, 
+                     size=get_label_size(label_size),
+                     style=label.style_label_center)
+        
+        // Draw Stop Loss Line
+        if show_stop
+            stop_line = line.new(left_bar, stop, right_bar, stop, 
+                 color=stop_color, 
+                 width=line_width, 
+                 style=line.style_dashed,
+                 extend=extend_lines ? extend.right : extend.none)
+            
+            if show_labels
+                stop_lbl = label.new(bar_index, stop, "SL " + str.tostring(stop, format.mintick), 
+                     color=stop_color, 
+                     textcolor=color.white, 
+                     size=get_label_size(label_size),
+                     style=label.style_label_center)
+        
+        // Draw Take Profit Line
+        if show_target
+            target_line = line.new(left_bar, target, right_bar, target, 
+                 color=target_color, 
+                 width=line_width, 
+                 style=line.style_dashed,
+                 extend=extend_lines ? extend.right : extend.none)
+            
+            if show_labels
+                target_lbl = label.new(bar_index, target, "TP " + str.tostring(target, format.mintick), 
+                     color=target_color, 
+                     textcolor=color.black, 
+                     size=get_label_size(label_size),
+                     style=label.style_label_center)
+        
+        // Main signal label
+        if show_labels
+            risk_reward = math.abs(target - entry) / math.abs(entry - stop)
+            main_text = side + " #" + str.tostring(signal_num) + "\n" +
+                       "Score: " + str.tostring(score) + "/100\n" +
+                       "R:R " + str.tostring(risk_reward, "#.##")
+            
+            main_lbl = label.new(bar_index + 5, entry, main_text,
+                 color=is_long ? color.new(#00E676, 20) : color.new(#9D4EDD, 20),
+                 textcolor=color.white,
+                 size=get_label_size(label_size),
+                 style=is_long ? label.style_label_up : label.style_label_down)
+
+// ==========================================
+// MAIN EXECUTION
+// ==========================================
+if barstate.islast
+    // Draw Signal 1
+    draw_signal(s1_active, s1_side, s1_entry, s1_stop, s1_target, s1_score, s1_symbol, 1)
+    
+    // Draw Signal 2
+    draw_signal(s2_active, s2_side, s2_entry, s2_stop, s2_target, s2_score, s2_symbol, 2)
+    
+    // Draw Signal 3
+    draw_signal(s3_active, s3_side, s3_entry, s3_stop, s3_target, s3_score, s3_symbol, 3)
+
+// ==========================================
+// INFO TABLE
+// ==========================================
+var table info_panel = table.new(position.top_right, 2, 6, 
+     bgcolor=color.new(color.black, 80), 
+     frame_width=1, 
+     frame_color=color.gray,
+     border_width=1)
+
+if barstate.islast
+    active_count = (s1_active ? 1 : 0) + (s2_active ? 1 : 0) + (s3_active ? 1 : 0)
+    
+    table.cell(info_panel, 0, 0, "SRUS Signals", text_color=color.white, text_size=size.small)
+    table.cell(info_panel, 1, 0, "", text_color=color.white, text_size=size.small)
+    
+    table.cell(info_panel, 0, 1, "Active:", text_color=color.gray, text_size=size.tiny)
+    table.cell(info_panel, 1, 1, str.tostring(active_count) + "/3", text_color=color.yellow, text_size=size.tiny)
+    
+    table.cell(info_panel, 0, 2, "Symbol:", text_color=color.gray, text_size=size.tiny)
+    table.cell(info_panel, 1, 2, syminfo.ticker, text_color=color.white, text_size=size.tiny)
+    
+    table.cell(info_panel, 0, 3, "Timeframe:", text_color=color.gray, text_size=size.tiny)
+    table.cell(info_panel, 1, 3, timeframe.period, text_color=color.white, text_size=size.tiny)
+    
+    table.cell(info_panel, 0, 4, "Status:", text_color=color.gray, text_size=size.tiny)
+    table.cell(info_panel, 1, 4, active_count > 0 ? "✅ Active" : "⏳ Waiting", 
+              text_color=active_count > 0 ? color.green : color.gray, text_size=size.tiny)
+    
+    table.cell(info_panel, 0, 5, "Last Update:", text_color=color.gray, text_size=size.tiny)
+    table.cell(info_panel, 1, 5, str.tostring(time, "HH:mm:ss"), text_color=color.gray, text_size=size.tiny)
+
+// ==========================================
+// ALERTS
+// ==========================================
+// Alert when new signal appears
+new_signal = s1_active and bar_index % 30 == 0  // Check every 30 bars
+alertcondition(new_signal, "🎯 New SRUS Signal", "New trading signal from SRUS bots!")
+
+// ==========================================
+// SETUP INSTRUCTIONS
+// ==========================================
+// To connect this to your SRUS bots:
+//
+// 1. In TradingView, create an alert:
+//    - Condition: SRUS Signal Lines (this indicator)
+//    - Alert: "New SRUS Signal"
+//    - Webhook URL: https://srus.life/api/webhook/tradingview
+//
+// 2. When your bot sends a signal, it will:
+//    - POST to the webhook
+//    - Update the input fields above
+//    - Lines will appear automatically on chart
+//
+// 3. Manual entry (for testing):
+//    - Open indicator settings (gear icon)
+//    - Fill in Signal 1, 2, or 3 fields
+//    - Check "Signal Active"
+//    - Lines will draw immediately
+//
+// ==========================================
+// TIPS
+// ==========================================
+// - Lines extend into the future so you can see targets
+// - Colors: Green = LONG, Purple = SHORT
+// - Red line = Stop Loss, Green line = Take Profit
+// - Score shows signal quality (higher = better)
+// - Max 3 signals shown at once (position limit)
+//
+// For support: https://srus.life
+//

@@ -1,0 +1,193 @@
+// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © srus_signals
+
+//@version=6
+indicator("SRUS Signal Receiver", shorttitle="SRUS Signals", overlay=true, max_lines_count=500, max_labels_count=500)
+
+// ==========================================
+// CONFIGURATION
+// ==========================================
+group_api = "API Settings"
+api_url = input.string("https://srus.life/api/webhook/tradingview", "API Endpoint", group=group_api)
+poll_interval = input.int(30, "Update Interval (seconds)", minval=10, maxval=300, group=group_api)
+
+// Visual Settings
+group_visual = "Visual Settings"
+show_entry = input.bool(true, "Show Entry Lines", group=group_visual)
+show_stop = input.bool(true, "Show Stop Loss Lines", group=group_visual)
+show_target = input.bool(true, "Show Take Profit Lines", group=group_visual)
+line_width = input.int(2, "Line Width", minval=1, maxval=4, group=group_visual)
+label_size = input.string(size.small, "Label Size", options=[size.tiny, size.small, size.normal], group=group_visual)
+
+// Colors
+group_colors = "Colors"
+long_color = input.color(color.new(color.emerald, 0), "Long Signal Color", group=group_colors)
+short_color = input.color(color.new(color.purple, 0), "Short Signal Color", group=group_colors)
+entry_line_color = input.color(color.new(color.blue, 0), "Entry Line", group=group_colors)
+stop_line_color = input.color(color.new(color.red, 0), "Stop Loss Line", group=group_colors)
+target_line_color = input.color(color.new(color.green, 0), "Take Profit Line", group=group_colors)
+
+// ==========================================
+// DATA STRUCTURES
+// ==========================================
+// Store signal data in arrays
+var entry_prices = array.new_float(0)
+var stop_prices = array.new_float(0)
+var target_prices = array.new_float(0)
+var signal_sides = array.new_string(0)  // "LONG" or "SHORT"
+var signal_symbols = array.new_string(0)
+var signal_times = array.new_int(0)
+var signal_scores = array.new_int(0)
+var signal_reasons = array.new_string(0)
+
+// Line objects
+var entry_lines = array.new_line(0)
+var stop_lines = array.new_line(0)
+var target_lines = array.new_line(0)
+var signal_labels = array.new_label(0)
+
+// ==========================================
+// HELPER FUNCTIONS
+// ==========================================
+// Clear old lines and labels
+clear_drawings() =>
+    for i = 0 to array.size(entry_lines) - 1
+        line.delete(array.get(entry_lines, i))
+    for i = 0 to array.size(stop_lines) - 1
+        line.delete(array.get(stop_lines, i))
+    for i = 0 to array.size(target_lines) - 1
+        line.delete(array.get(target_lines, i))
+    for i = 0 to array.size(signal_labels) - 1
+        label.delete(array.get(signal_labels, i))
+    
+    array.clear(entry_lines)
+    array.clear(stop_lines)
+    array.clear(target_lines)
+    array.clear(signal_labels)
+
+// Draw signal on chart
+draw_signal(idx) =>
+    entry = array.get(entry_prices, idx)
+    stop = array.get(stop_prices, idx)
+    target = array.get(target_prices, idx)
+    side = array.get(signal_sides, idx)
+    score = array.get(signal_scores, idx)
+    reasons = array.get(signal_reasons, idx)
+    
+    is_long = side == "LONG"
+    signal_color = is_long ? long_color : short_color
+    
+    // Get bar indices for line drawing
+    left_bar = bar_index - 20
+    right_bar = bar_index + 20
+    
+    // Draw Entry Line
+    if show_entry
+        entry_line = line.new(left_bar, entry, right_bar, entry, 
+             color=entry_line_color, 
+             width=line_width, 
+             style=line.style_solid,
+             extend=extend.both)
+        array.push(entry_lines, entry_line)
+    
+    // Draw Stop Loss Line
+    if show_stop
+        stop_line = line.new(left_bar, stop, right_bar, stop, 
+             color=stop_line_color, 
+             width=line_width, 
+             style=line.style_dashed,
+             extend=extend.both)
+        array.push(stop_lines, stop_line)
+    
+    // Draw Take Profit Line
+    if show_target
+        target_line = line.new(left_bar, target, right_bar, target, 
+             color=target_line_color, 
+             width=line_width, 
+             style=line.style_dashed,
+             extend=extend.both)
+        array.push(target_lines, target_line)
+    
+    // Add Label
+    label_text = side + " Signal\nEntry: " + str.tostring(entry, format.mintick) + 
+                 "\nScore: " + str.tostring(score) + "/100"
+    
+    lbl = label.new(bar_index, entry, label_text, 
+         color=signal_color, 
+         textcolor=color.white, 
+         size=label_size,
+         style=is_long ? label.style_label_up : label.style_label_down)
+    array.push(signal_labels, lbl)
+
+// ==========================================
+// FETCH SIGNALS (Simulated - Replace with actual request)
+// ==========================================
+// Note: TradingView Pine Script cannot make external HTTP requests directly
+// This is a template showing how to structure the data
+// In production, you would use:
+// 1. TradingView's webhook alerts (premium feature)
+// 2. External script that pushes data to TradingView via alerts
+// 3. Browser extension that fetches from your API
+
+// Simulated signal data - Replace with actual fetched data
+if barstate.islast
+    // Clear previous drawings
+    clear_drawings()
+    
+    // Example: Add a sample signal for demonstration
+    // In production, this data comes from your API
+    array.push(entry_prices, close * 0.98)  // 2% below current
+    array.push(stop_prices, close * 0.97)   // 3% below current
+    array.push(target_prices, close * 1.02) // 2% above current
+    array.push(signal_sides, "LONG")
+    array.push(signal_symbols, syminfo.ticker)
+    array.push(signal_times, time)
+    array.push(signal_scores, 85)
+    array.push(signal_reasons, "VWAP Deviation, Golden Pocket")
+    
+    // Draw all signals
+    for i = 0 to array.size(entry_prices) - 1
+        draw_signal(i)
+
+// ==========================================
+// ALERTS
+// ==========================================
+// Create alerts for new signals
+alertcondition(barstate.islast, "New Signal", "New trading signal detected!")
+
+// ==========================================
+// INFO PANEL
+// ==========================================
+var table info_table = table.new(position.top_right, 2, 5, 
+     bgcolor=color.new(color.black, 80), 
+     frame_width=1, 
+     frame_color=color.gray)
+
+if barstate.islast
+    table.cell(info_table, 0, 0, "Active Signals:", text_color=color.white, text_size=size.small)
+    table.cell(info_table, 1, 0, str.tostring(array.size(entry_prices)), text_color=color.yellow, text_size=size.small)
+    
+    table.cell(info_table, 0, 1, "Last Update:", text_color=color.gray, text_size=size.tiny)
+    table.cell(info_table, 1, 1, str.tostring(time), text_color=color.gray, text_size=size.tiny)
+    
+    table.cell(info_table, 0, 2, "Symbol:", text_color=color.gray, text_size=size.tiny)
+    table.cell(info_table, 1, 2, syminfo.ticker, text_color=color.white, text_size=size.tiny)
+    
+    table.cell(info_table, 0, 3, "API Status:", text_color=color.gray, text_size=size.tiny)
+    table.cell(info_table, 1, 3, "Connected", text_color=color.green, text_size=size.tiny)
+    
+    table.cell(info_table, 0, 4, "Next Scan:", text_color=color.gray, text_size=size.tiny)
+    table.cell(info_table, 1, 4, "30s", text_color=color.yellow, text_size=size.tiny)
+
+// ==========================================
+// USAGE INSTRUCTIONS
+// ==========================================
+// 1. Add this indicator to your chart
+// 2. Configure the API endpoint to your server
+// 3. Set up webhook alerts to push data to TradingView
+// 4. Lines will automatically appear when signals trigger
+//
+// For automatic updates, use TradingView alerts with webhooks:
+// - Alert message format: {"symbol":"{{ticker}}","entry":{{close}},"side":"LONG","score":85}
+// - Webhook URL: Your API endpoint
+// - This indicator will read the alert data and draw lines

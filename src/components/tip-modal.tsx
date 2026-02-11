@@ -81,7 +81,7 @@ export function TipModal({ isOpen, onClose }: TipModalProps) {
           setError('Wallet not ready. Please try again.')
           return
         }
-        
+
         sendTransaction({
           to: SNIPER_GURU_ADDRESS,
           value: parseEther(amount),
@@ -104,25 +104,36 @@ export function TipModal({ isOpen, onClose }: TipModalProps) {
           setError('Wallet not ready. Please try again.')
           return
         }
-        
-        writeContract({
-          address: token.address,
-          abi: ERC20_ABI,
-          functionName: 'transfer',
-          args: [SNIPER_GURU_ADDRESS, parseUnits(amount, token.decimals)],
-        }, {
-          onSuccess: () => {
-            setIsSuccess(true)
-            setTimeout(() => {
-              setIsSuccess(false)
-              onClose()
-            }, 2000)
-          },
-          onError: (err: any) => {
-            console.error('Token transfer error:', err)
-            setError(err?.message || 'Transaction failed')
-          }
-        })
+
+        const tokenAddress = (token as any).address
+        if (tokenAddress) {
+          writeContract({
+            address: tokenAddress,
+            abi: [{
+              name: 'transfer',
+              type: 'function',
+              stateMutability: 'nonpayable',
+              inputs: [{ name: 'to', type: 'address' }, { name: 'amount', type: 'uint256' }],
+              outputs: [{ name: '', type: 'bool' }]
+            }],
+            functionName: 'transfer',
+            args: [SNIPER_GURU_ADDRESS, parseUnits(amount, token.decimals)],
+          }, {
+            onSuccess: () => {
+              setIsSuccess(true)
+              setTimeout(() => {
+                setIsSuccess(false)
+                onClose()
+              }, 2000)
+            },
+            onError: (err: any) => {
+              console.error('Token transfer error:', err)
+              setError(err?.message || 'Transaction failed')
+            }
+          })
+        } else {
+          setError('Invalid token configuration')
+        }
       }
     } catch (err: any) {
       console.error('Tip error:', err)
@@ -132,13 +143,13 @@ export function TipModal({ isOpen, onClose }: TipModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md bg-[#0a0a0a] border-white/10">
+      <DialogContent className="sm:max-w-md bg-background border-border">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2 text-xl">
             <Coffee className="w-5 h-5 text-amber-500" />
             Tip Sniper Guru
           </DialogTitle>
-          <DialogDescription className="text-gray-400">
+          <DialogDescription className="text-muted-foreground">
             Show your appreciation by tipping in ETH, ZOID, or USDC
           </DialogDescription>
         </DialogHeader>
@@ -149,8 +160,8 @@ export function TipModal({ isOpen, onClose }: TipModalProps) {
               <CheckCircle2 className="w-8 h-8 text-emerald-500" />
             </div>
             <div className="space-y-1">
-              <p className="text-lg font-bold text-white">Thank You! ☕</p>
-              <p className="text-sm text-gray-400">Your tip has been sent successfully</p>
+              <p className="text-lg font-bold text-foreground">Thank You! ☕</p>
+              <p className="text-sm text-muted-foreground">Your tip has been sent successfully</p>
             </div>
           </div>
         ) : (
@@ -163,11 +174,10 @@ export function TipModal({ isOpen, onClose }: TipModalProps) {
                   <button
                     key={key}
                     onClick={() => setSelectedToken(key as keyof typeof TOKENS)}
-                    className={`p-3 rounded-xl border text-sm font-bold transition-all ${
-                      selectedToken === key
-                        ? 'bg-purple-500/20 border-purple-500 text-purple-400'
-                        : 'bg-white/5 border-white/10 text-gray-400 hover:bg-white/10'
-                    }`}
+                    className={`p-3 rounded-xl border text-sm font-bold transition-all ${selectedToken === key
+                      ? 'bg-purple-500/20 border-purple-500 text-purple-400'
+                      : 'bg-muted border-border text-muted-foreground hover:bg-muted/80'
+                      }`}
                   >
                     {t.symbol}
                   </button>
@@ -188,10 +198,10 @@ export function TipModal({ isOpen, onClose }: TipModalProps) {
                     setAmount(e.target.value)
                     setError(null)
                   }}
-                  className="bg-white/5 border-white/10 text-white pr-16"
+                  className="bg-input border-border text-foreground pr-16"
                   placeholder="0.01"
                 />
-                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-gray-500">
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground">
                   {token.symbol}
                 </span>
               </div>
@@ -203,7 +213,7 @@ export function TipModal({ isOpen, onClose }: TipModalProps) {
                       setAmount(preset)
                       setError(null)
                     }}
-                    className="text-[10px] px-2 py-1 rounded bg-white/5 text-gray-400 hover:bg-white/10 transition-colors"
+                    className="text-[10px] px-2 py-1 rounded bg-muted text-muted-foreground hover:bg-muted/80 transition-colors"
                   >
                     {preset}
                   </button>
@@ -219,12 +229,12 @@ export function TipModal({ isOpen, onClose }: TipModalProps) {
             )}
 
             {/* Recipient Info */}
-            <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-              <div className="flex items-center gap-2 text-xs text-gray-500 mb-1">
+            <div className="p-3 rounded-xl bg-muted border border-border">
+              <div className="flex items-center gap-2 text-xs text-muted-foreground mb-1">
                 <Wallet className="w-3 h-3" />
                 Recipient
               </div>
-              <div className="text-xs font-mono text-gray-400 truncate">
+              <div className="text-xs font-mono text-muted-foreground truncate">
                 {SNIPER_GURU_ADDRESS}
               </div>
             </div>

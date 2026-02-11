@@ -80,87 +80,46 @@ export function SignalsView() {
         }
     }, [lastUpdate])
 
-    // Fetch bot scan status from data files
+    // Fetch GLOBAL scan status from server - same for all users worldwide
     useEffect(() => {
-        const fetchBotStatus = async () => {
+        const fetchGlobalScanStatus = async () => {
             try {
-                // Fetch Short Hunter status
-                const shResponse = await fetch('/data/active_trades.json')
-                if (shResponse.ok) {
-                    const shData = await shResponse.json()
-                    // Short Hunter scans every 15 minutes
-                    const lastScan = new Date()
-                    const nextScan = new Date(lastScan.getTime() + 15 * 60 * 1000)
-
+                const response = await fetch('/api/scan-status')
+                if (response.ok) {
+                    const data = await response.json()
+                    
+                    // Update bot scan status with server time (global for all users)
                     setBotScanStatus(prev => ({
-                        ...prev,
                         shortHunter: {
                             ...prev.shortHunter,
-                            lastScan,
-                            nextScan
-                        }
-                    }))
-                }
-
-                // Fetch Bounty Seeker status
-                const bsResponse = await fetch('/data/bounty_seeker_status.json')
-                if (bsResponse.ok) {
-                    const bsData = await bsResponse.json()
-                    const lastScan = bsData.last_scan_time ? new Date(bsData.last_scan_time) : new Date()
-                    const nextScan = bsData.next_scan_time ? new Date(bsData.next_scan_time) : new Date(lastScan.getTime() + 60 * 60 * 1000)
-
-                    setBotScanStatus(prev => ({
-                        ...prev,
+                            lastScan: new Date(data.shortHunter.lastScan),
+                            nextScan: new Date(data.shortHunter.nextScan),
+                            isScanning: data.shortHunter.isScanning
+                        },
                         bountySeeker: {
                             ...prev.bountySeeker,
-                            lastScan,
-                            nextScan
+                            lastScan: new Date(data.bountySeeker.lastScan),
+                            nextScan: new Date(data.bountySeeker.nextScan),
+                            isScanning: data.bountySeeker.isScanning
                         }
+                    }))
+                    
+                    // Update Sniper Guru stats
+                    setSniperGuruStats(prev => ({
+                        ...prev,
+                        lastScanTime: new Date(data.sniperGuru.lastScan),
+                        nextScanTime: new Date(data.sniperGuru.nextScan)
                     }))
                 }
             } catch (error) {
-                console.log('Bot status fetch error')
+                console.log('Global scan status fetch error')
             }
         }
 
-        fetchBotStatus()
-        const interval = setInterval(fetchBotStatus, 30000) // Update every 30 seconds
+        fetchGlobalScanStatus()
+        // Update every 5 seconds to keep countdown smooth
+        const interval = setInterval(fetchGlobalScanStatus, 5000)
         return () => clearInterval(interval)
-    }, [])
-
-    // Countdown timer for next scans
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setBotScanStatus(prev => {
-                const now = new Date()
-
-                // Update Short Hunter countdown
-                let shNextScan = prev.shortHunter.nextScan
-                if (shNextScan && shNextScan.getTime() <= now.getTime()) {
-                    shNextScan = new Date(now.getTime() + prev.shortHunter.scanInterval * 60 * 1000)
-                }
-
-                // Update Bounty Seeker countdown
-                let bsNextScan = prev.bountySeeker.nextScan
-                if (bsNextScan && bsNextScan.getTime() <= now.getTime()) {
-                    bsNextScan = new Date(now.getTime() + prev.bountySeeker.scanInterval * 60 * 1000)
-                }
-
-                return {
-                    ...prev,
-                    shortHunter: {
-                        ...prev.shortHunter,
-                        nextScan: shNextScan
-                    },
-                    bountySeeker: {
-                        ...prev.bountySeeker,
-                        nextScan: bsNextScan
-                    }
-                }
-            })
-        }, 1000)
-
-        return () => clearInterval(timer)
     }, [])
 
     // Sniper Guru active trades state
@@ -586,7 +545,7 @@ export function SignalsView() {
             {/* Stats Overview */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div className="p-4 rounded-2xl bg-muted/50 border border-border">
-                    <div className="text-2xl font-bold">{allTrades.length}</div>
+                    <div className="text-2xl font-bold">{hunterTrades.length + seekerTrades.length + realtimeTrades.length}</div>
                     <div className="text-xs text-muted-foreground uppercase tracking-wider">Total</div>
                 </div>
                 <div className="p-4 rounded-2xl bg-muted/50 border border-border">

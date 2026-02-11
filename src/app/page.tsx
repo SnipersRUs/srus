@@ -14,6 +14,10 @@ import { TradingInfoView } from '@/components/trading-info-view'
 import { AlertsDropdown } from '@/components/alerts-dropdown'
 import { TipModal } from '@/components/tip-modal'
 import { SignalLauncherView } from '@/components/signal-launcher-view'
+import { SignalsView } from '@/components/signals-view'
+import { BotsView } from '@/components/bots-view'
+import { ThemeToggle } from '@/components/theme-toggle'
+import { RiskCalculator } from '@/components/risk-calculator'
 
 // Nav Button Component
 function NavButton({ active, onClick, icon, label }: { active: boolean; onClick: () => void; icon: React.ReactNode; label: string }) {
@@ -21,8 +25,8 @@ function NavButton({ active, onClick, icon, label }: { active: boolean; onClick:
     <button
       onClick={onClick}
       className={`flex flex-col items-center gap-1 py-2 px-4 rounded-xl transition-all duration-200 ${active
-        ? 'text-white bg-white/10'
-        : 'text-gray-500 hover:text-gray-300'
+        ? 'text-foreground bg-accent'
+        : 'text-muted-foreground hover:text-foreground'
         }`}
     >
       <div className={`${active ? 'text-purple-400' : ''}`}>
@@ -38,14 +42,14 @@ function DiscordRedirectModal({ isOpen, onClose, plan }: { isOpen: boolean; onCl
   if (!isOpen) return null
 
   const discordInviteUrl = "https://discord.gg/8v3zw8829K" // SRUS Discord - Instant Access
-  
+
   // Fallback values if plan is null/undefined
   const planName = plan?.name || 'Pass'
   const planDuration = plan?.duration || '24 hours'
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-      <div className="relative w-full max-w-md rounded-3xl bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] border border-purple-500/30 p-8 text-center overflow-hidden">
+      <div className="relative w-full max-w-md rounded-3xl bg-card border border-border p-8 text-center overflow-hidden">
         {/* Glow effect */}
         <div className="absolute inset-0 bg-purple-500/5 blur-3xl" />
 
@@ -59,21 +63,21 @@ function DiscordRedirectModal({ isOpen, onClose, plan }: { isOpen: boolean; onCl
             Payment Successful!
           </h3>
 
-          <p className="text-gray-400 mb-2">
+          <p className="text-muted-foreground mb-2">
             Welcome to <span className="text-purple-400 font-bold">ZOID Alpha</span>
           </p>
 
-          <div className="p-4 rounded-2xl bg-purple-500/10 border border-purple-500/20 mb-6">
-            <p className="text-sm text-gray-300 mb-2">
+          <div className="p-4 rounded-2xl bg-muted border border-border mb-6">
+            <p className="text-sm text-muted-foreground mb-2">
               <span className="text-emerald-400 font-bold">✓</span> {planName} Pass Activated
             </p>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-muted-foreground">
               Duration: {planDuration}
             </p>
           </div>
 
           <div className="space-y-4">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-muted-foreground">
               Join our Discord server to access your bots:
             </p>
 
@@ -88,20 +92,20 @@ function DiscordRedirectModal({ isOpen, onClose, plan }: { isOpen: boolean; onCl
               <ExternalLink className="w-4 h-4" />
             </a>
 
-            <div className="text-xs text-gray-500 space-y-1">
+            <div className="text-xs text-muted-foreground space-y-1">
               <p>• Auto-assigned trial role on join</p>
               <p>• Access to Bounty Seeker & Short Hunter</p>
               <p>• Role expires after {planDuration}</p>
             </div>
 
-            <p className="text-[10px] text-gray-600 mt-4">
+            <p className="text-[10px] text-muted-foreground mt-4">
               ⚠️ All passes are non-refundable
             </p>
           </div>
 
           <button
             onClick={onClose}
-            className="mt-6 text-xs text-gray-500 hover:text-gray-300 transition-colors"
+            className="mt-6 text-xs text-muted-foreground hover:text-foreground transition-colors"
           >
             Close
           </button>
@@ -114,8 +118,6 @@ function DiscordRedirectModal({ isOpen, onClose, plan }: { isOpen: boolean; onCl
 // Account View Component
 function AccountView({ plan, onExtend, walletAddress }: { plan: any; onExtend: () => void; walletAddress: string | null }) {
   const [timeLeft, setTimeLeft] = useState<string>('Calculated...')
-  const [discordUrl, setDiscordUrl] = useState<string | null>(null)
-  const [isVerifying, setIsVerifying] = useState(false)
 
   useEffect(() => {
     if (!plan || !plan.purchaseTime) {
@@ -148,31 +150,6 @@ function AccountView({ plan, onExtend, walletAddress }: { plan: any; onExtend: (
     return () => clearInterval(interval)
   }, [plan])
 
-  // Verify Discord access on component mount
-  useEffect(() => {
-    if (walletAddress && plan) {
-      verifyDiscordAccess()
-    }
-  }, [walletAddress, plan])
-
-  const verifyDiscordAccess = async () => {
-    if (!walletAddress) return
-    
-    setIsVerifying(true)
-    try {
-      const response = await fetch(`/api/verify-discord?wallet=${walletAddress}`)
-      const data = await response.json()
-      
-      if (data.verified && data.discordInviteUrl) {
-        setDiscordUrl(data.discordInviteUrl)
-      }
-    } catch (error) {
-      console.error('Failed to verify Discord access:', error)
-    } finally {
-      setIsVerifying(false)
-    }
-  }
-
   // Expiration date display
   const expirationDate = plan && plan.purchaseTime
     ? new Date(plan.purchaseTime + (plan.durationHours * 60 * 60 * 1000)).toLocaleDateString()
@@ -184,10 +161,10 @@ function AccountView({ plan, onExtend, walletAddress }: { plan: any; onExtend: (
         <h2 className="text-2xl font-black tracking-tight flex items-center gap-2">
           Account Status
         </h2>
-        <p className="text-gray-500 text-sm">Manage your subscription and settings</p>
+        <p className="text-muted-foreground text-sm">Manage your subscription and settings</p>
       </div>
 
-      <Card className="border-white/10 bg-white/5">
+      <Card className="border-border bg-card">
         <CardHeader className="p-5 pb-3">
           <div className="flex items-center gap-2">
             <User className="w-5 h-5 text-purple-500" />
@@ -198,18 +175,18 @@ function AccountView({ plan, onExtend, walletAddress }: { plan: any; onExtend: (
           <div className="p-4 rounded-xl bg-purple-500/10 border border-purple-500/20">
             <div className="flex justify-between items-start mb-2">
               <div>
-                <div className="text-sm font-bold text-white mb-1">
+                <div className="text-sm font-bold text-foreground mb-1">
                   {plan ? plan.name : 'Free Tier'}
                 </div>
                 <div className="flex items-center gap-2">
-                  <Badge variant="outline" className={`text-[10px] ${plan ? 'border-emerald-500 text-emerald-500' : 'border-gray-500 text-gray-500'}`}>
+                  <Badge variant="outline" className={`text-[10px] ${plan ? 'border-emerald-500 text-emerald-500' : 'border-muted-foreground text-muted-foreground'}`}>
                     {plan ? 'ACTIVE' : 'INACTIVE'}
                   </Badge>
                 </div>
               </div>
               {plan && (
                 <div className="text-right">
-                  <div className="text-[10px] text-gray-400 uppercase tracking-wider">Expires</div>
+                  <div className="text-[10px] text-muted-foreground uppercase tracking-wider">Expires</div>
                   <div className="font-mono text-sm text-purple-400">{expirationDate}</div>
                 </div>
               )}
@@ -217,34 +194,37 @@ function AccountView({ plan, onExtend, walletAddress }: { plan: any; onExtend: (
 
             <div className="mt-4 pt-4 border-t border-purple-500/20">
               <div className="flex justify-between items-center">
-                <span className="text-xs text-gray-400">Time Remaining:</span>
-                <span className="font-mono text-sm text-white font-bold">{timeLeft}</span>
+                <span className="text-xs text-muted-foreground">Time Remaining:</span>
+                <span className="font-mono text-sm text-foreground font-bold">{timeLeft}</span>
               </div>
             </div>
           </div>
 
           <Button
             onClick={onExtend}
-            className="w-full bg-white text-black hover:bg-white/90 font-bold"
+            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
           >
             {plan ? 'Extend Access' : 'Purchase Access'}
           </Button>
         </CardContent>
       </Card>
 
-      <Card className="border-white/10 bg-white/5">
+      <Card className="border-border bg-card">
         <CardHeader className="p-5 pb-3">
           <div className="flex items-center gap-2">
             <Wallet className="w-5 h-5 text-blue-500" />
             <CardTitle className="text-lg font-bold">Connected Wallet</CardTitle>
           </div>
         </CardHeader>
-        <CardContent className="p-5 pt-0 text-sm text-gray-400 break-all font-mono">
+        <CardContent className="p-5 pt-0 text-sm text-muted-foreground break-all font-mono">
           <ConnectButton showBalance={false} accountStatus="address" />
         </CardContent>
       </Card>
 
-      {/* Discord Access Card - Only show if user has an active plan */}
+      {/* Risk Calculator */}
+      <RiskCalculator />
+
+      {/* Community Access Card - Only show if user has an active plan */}
       {plan && plan.purchaseTime && timeLeft !== 'Expired' && (
         <Card className="border-[#5865F2]/30 bg-[#5865F2]/5">
           <CardHeader className="p-5 pb-3">
@@ -252,49 +232,29 @@ function AccountView({ plan, onExtend, walletAddress }: { plan: any; onExtend: (
               <div className="w-8 h-8 rounded-lg bg-[#5865F2] flex items-center justify-center">
                 <MessageCircle className="w-4 h-4 text-white" />
               </div>
-              <CardTitle className="text-lg font-bold">Discord Access</CardTitle>
+              <CardTitle className="text-lg font-bold">Community Access</CardTitle>
             </div>
           </CardHeader>
           <CardContent className="p-5 pt-0 space-y-4">
-            <p className="text-sm text-gray-400">
-              Join our Discord server to access your trading bots. Your wallet has been verified for bot access.
+            <p className="text-sm text-muted-foreground">
+              Join our community for support, discussion, and more alpha. This is optional - you can see all signals directly in this app!
             </p>
-            
-            {isVerifying ? (
-              <div className="flex items-center justify-center gap-2 p-3 rounded-xl bg-[#5865F2]/20 text-[#5865F2]">
-                <div className="w-4 h-4 border-2 border-[#5865F2] border-t-transparent rounded-full animate-spin" />
-                Verifying access...
-              </div>
-            ) : discordUrl ? (
-              <a
-                href={discordUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full p-3 rounded-xl bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold transition-all"
-              >
-                <MessageCircle className="w-5 h-5" />
-                Join Discord Server
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            ) : (
-              <div className="p-3 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-sm">
-                ⚠️ Discord link unavailable. Please contact support if you closed the initial popup.
-              </div>
-            )}
-            
-            <div className="text-xs text-gray-500 space-y-1">
-              <p>✓ Auto-assigned role on join</p>
-              <p>✓ Access to Short Hunter & Bounty Seeker</p>
+
+            <a
+              href="https://discord.gg/8v3zw8829K"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full p-3 rounded-xl bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold transition-all"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Join Discord Server
+              <ExternalLink className="w-4 h-4" />
+            </a>
+
+            <div className="text-xs text-muted-foreground space-y-1">
               <p>✓ Exclusive trading community</p>
-            </div>
-            
-            <div className="pt-2 border-t border-[#5865F2]/20">
-              <p className="text-[10px] text-gray-500">
-                🔒 This link is tied to your wallet: {walletAddress?.slice(0, 6)}...{walletAddress?.slice(-4)}
-              </p>
-              <p className="text-[10px] text-gray-600 mt-1">
-                Sharing this link will not grant access to others. Each user must pay from their own wallet.
-              </p>
+              <p>✓ Direct support from team</p>
+              <p>✓ Share setups with other members</p>
             </div>
           </CardContent>
         </Card>
@@ -377,12 +337,12 @@ function ZoidApp() {
       txHash,
       walletAddress: address
     }
-    
+
     setPurchasedPlan(planData)
-    
-    // Show Discord username input modal
+
+    // Close payment modal and switch to signals tab (Skip Discord linking)
     setPaymentModalOpen(false)
-    setDiscordInputModalOpen(true)
+    setActiveTab('signals')
   }
 
   const handleDiscordUsernameSubmit = async () => {
@@ -390,7 +350,7 @@ function ZoidApp() {
       console.log('Missing username')
       return
     }
-    
+
     if (!purchasedPlan || !purchasedPlan.txHash) {
       console.log('Missing purchasedPlan or txHash:', purchasedPlan)
       // Still allow user to continue to Discord even without verification
@@ -411,9 +371,9 @@ function ZoidApp() {
       setDiscordModalOpen(true)
       return
     }
-    
+
     setIsVerifyingDiscord(true)
-    
+
     try {
       // Send Discord username + txHash to API
       const response = await fetch('/api/verify-discord', {
@@ -425,10 +385,10 @@ function ZoidApp() {
           discordUsername: discordUsername.trim(),
         }),
       })
-      
+
       const data = await response.json()
       console.log('API response:', data)
-      
+
       // Store Discord username with plan regardless of API response
       const updatedPlan = {
         ...purchasedPlan,
@@ -437,11 +397,11 @@ function ZoidApp() {
       }
       setPurchasedPlan(updatedPlan)
       localStorage.setItem('zoid_purchased_plan', JSON.stringify(updatedPlan))
-      
+
       // Close input modal and show Discord invite
       setDiscordInputModalOpen(false)
       setDiscordModalOpen(true)
-      
+
       if (!data.success) {
         console.log('API verification warning:', data.error)
       }
@@ -464,16 +424,20 @@ function ZoidApp() {
 
   // Render content based on active tab
   const renderContent = () => {
+    // Check if plan is active
+    const isPlanActive = !!purchasedPlan
+
     switch (activeTab) {
       case 'analysis':
         return <TradingInfoView />
       case 'signals':
+        return isPlanActive ? <SignalsView /> : renderPaywall()
       case 'public-signals':
         return <SignalLauncherView />
       case 'account':
-        return <AccountView plan={purchasedPlan} onExtend={() => setPaymentModalOpen(true)} walletAddress={address} />
+        return <AccountView plan={purchasedPlan} onExtend={() => setPaymentModalOpen(true)} walletAddress={address ?? null} />
       default:
-        return <SignalLauncherView />
+        return isPlanActive ? <SignalsView /> : renderPaywall()
     }
   }
 
@@ -484,7 +448,7 @@ function ZoidApp() {
         <h2 className="text-2xl font-black tracking-tight mb-2">
           Unlock Bot Access
         </h2>
-        <p className="text-gray-500 text-sm">
+        <p className="text-muted-foreground text-sm">
           Get instant access to AI trading bots via Discord
         </p>
       </div>
@@ -497,7 +461,7 @@ function ZoidApp() {
           </div>
           <div className="flex-1">
             <div className="font-bold text-lg text-orange-400 mb-2">🚀 Launch Your Own Signals</div>
-            <div className="text-sm text-gray-300 mb-4">
+            <div className="text-sm text-muted-foreground mb-4">
               Create tradeable prediction tokens and earn <span className="text-orange-400 font-bold">80% of trading fees</span> when others trade on your calls. Completely free - no subscription required!
             </div>
             <div className="flex flex-wrap gap-2 mb-4">
@@ -529,13 +493,13 @@ function ZoidApp() {
             ZOID ALPHA
           </h3>
 
-          <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+          <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
             Get real-time signals from Short Hunter & Bounty Seeker bots via Discord.
             Instant access after payment.
           </p>
 
           <div className="space-y-3">
-            <div className="flex items-center justify-center gap-2 text-xs text-gray-500 mb-4">
+            <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
               Short Hunter Bot
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 ml-2" />
@@ -551,7 +515,7 @@ function ZoidApp() {
               Get Access
             </Button>
 
-            <p className="text-xs text-gray-600">
+            <p className="text-xs text-muted-foreground">
               Starting from $3.00 • Non-refundable
             </p>
           </div>
@@ -560,62 +524,62 @@ function ZoidApp() {
 
       {/* What You Get */}
       <div className="space-y-3">
-        <h4 className="text-xs font-black tracking-widest text-gray-500 uppercase text-center mb-4">
+        <h4 className="text-xs font-black tracking-widest text-muted-foreground uppercase text-center mb-4">
           What You Get
         </h4>
 
-        <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+        <div className="p-4 rounded-2xl bg-card border border-border">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
               <Zap className="w-5 h-5 text-purple-400" />
             </div>
             <div>
               <div className="font-bold text-sm">Short Hunter Bot</div>
-              <div className="text-xs text-gray-500">Scans every 45 min for short opportunities</div>
+              <div className="text-xs text-muted-foreground">Scans every 45 min for short opportunities</div>
             </div>
           </div>
         </div>
 
-        <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+        <div className="p-4 rounded-2xl bg-card border border-border">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center">
               <TrendingUp className="w-5 h-5 text-emerald-400" />
             </div>
             <div>
               <div className="font-bold text-sm">Bounty Seeker Bot</div>
-              <div className="text-xs text-gray-500">Scans every 30 min for long opportunities</div>
+              <div className="text-xs text-muted-foreground">Scans every 30 min for long opportunities</div>
             </div>
           </div>
         </div>
 
-        <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+        <div className="p-4 rounded-2xl bg-card border border-border">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center">
               <Target className="w-5 h-5 text-blue-400" />
             </div>
             <div>
               <div className="font-bold text-sm">Sniper Guru Scanner</div>
-              <div className="text-xs text-gray-500">Real-time setup alerts (80+ score only)</div>
+              <div className="text-xs text-muted-foreground">Real-time setup alerts (80+ score only)</div>
             </div>
           </div>
         </div>
 
-        <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+        <div className="p-4 rounded-2xl bg-card border border-border">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-[#5865F2]/20 flex items-center justify-center">
               <MessageCircle className="w-5 h-5 text-[#5865F2]" />
             </div>
             <div>
               <div className="font-bold text-sm">Discord Community</div>
-              <div className="text-xs text-gray-500">Trade with other snipers, get support</div>
+              <div className="text-xs text-muted-foreground">Trade with other snipers, get support</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* How It Works */}
-      <div className="mt-8 p-6 rounded-2xl bg-white/5 border border-white/10">
-        <h4 className="text-xs font-black tracking-widest text-gray-500 uppercase text-center mb-4">
+      <div className="mt-8 p-6 rounded-2xl bg-card border border-border">
+        <h4 className="text-xs font-black tracking-widest text-muted-foreground uppercase text-center mb-4">
           How It Works
         </h4>
         <div className="space-y-4">
@@ -625,7 +589,7 @@ function ZoidApp() {
             </div>
             <div>
               <div className="text-sm font-bold">Pay</div>
-              <div className="text-xs text-gray-500">Choose your pass duration</div>
+              <div className="text-xs text-muted-foreground">Choose your pass duration</div>
             </div>
           </div>
           <div className="flex items-start gap-3">
@@ -633,8 +597,8 @@ function ZoidApp() {
               <span className="text-xs font-bold text-purple-400">2</span>
             </div>
             <div>
-              <div className="text-sm font-bold">Join Discord</div>
-              <div className="text-xs text-gray-500">Get instant invite link after payment</div>
+              <div className="text-sm font-bold">Unlock Access</div>
+              <div className="text-xs text-muted-foreground">Instant access to signals directly in this app</div>
             </div>
           </div>
           <div className="flex items-start gap-3">
@@ -642,8 +606,8 @@ function ZoidApp() {
               <span className="text-xs font-bold text-purple-400">3</span>
             </div>
             <div>
-              <div className="text-sm font-bold">Auto-Assigned Role</div>
-              <div className="text-xs text-gray-500">Bot gives you access automatically</div>
+              <div className="text-sm font-bold">Trade</div>
+              <div className="text-xs text-muted-foreground">View real-time signals in the dashboard</div>
             </div>
           </div>
           <div className="flex items-start gap-3">
@@ -651,8 +615,8 @@ function ZoidApp() {
               <span className="text-xs font-bold text-purple-400">4</span>
             </div>
             <div>
-              <div className="text-sm font-bold">Trade</div>
-              <div className="text-xs text-gray-500">Start receiving signals in Discord</div>
+              <div className="text-sm font-bold">Community (Optional)</div>
+              <div className="text-xs text-muted-foreground">Join Discord for support & chat</div>
             </div>
           </div>
         </div>
@@ -660,7 +624,7 @@ function ZoidApp() {
 
       {/* Non-refundable notice */}
       <div className="mt-6 text-center">
-        <p className="text-[10px] text-gray-600">
+        <p className="text-[10px] text-muted-foreground">
           ⚠️ All passes are non-refundable • Access expires after duration
         </p>
       </div>
@@ -668,18 +632,18 @@ function ZoidApp() {
   )
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#050505] text-white selection:bg-purple-500/30">
+    <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-purple-500/30">
       <PaymentModal
         isOpen={packetModalOpen}
         onClose={() => setPaymentModalOpen(false)}
         onSuccess={handlePaymentSuccess}
-        walletAddress={address || null}
+        walletAddress={address ? (address as string) : null}
       />
 
       {/* Discord Username Input Modal */}
       {discordInputModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-          <div className="relative w-full max-w-md rounded-3xl bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] border border-purple-500/30 p-8 text-center overflow-hidden">
+          <div className="relative w-full max-w-md rounded-3xl bg-card border border-border p-8 text-center overflow-hidden">
             <div className="absolute inset-0 bg-purple-500/5 blur-3xl" />
             <div className="relative">
               <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-[#5865F2] to-[#4752C4] flex items-center justify-center mb-6 shadow-lg shadow-[#5865F2]/25">
@@ -688,7 +652,7 @@ function ZoidApp() {
               <h3 className="text-2xl font-black tracking-tighter mb-3">
                 Link Your Discord
               </h3>
-              <p className="text-gray-400 mb-6">
+              <p className="text-muted-foreground mb-6">
                 Enter your Discord username to get automatic role assignment
               </p>
               <div className="space-y-4">
@@ -697,9 +661,9 @@ function ZoidApp() {
                   value={discordUsername}
                   onChange={(e) => setDiscordUsername(e.target.value)}
                   placeholder="username#1234 or username"
-                  className="w-full p-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:border-purple-500 focus:outline-none"
+                  className="w-full p-4 rounded-2xl bg-muted border border-border text-foreground placeholder:text-muted-foreground focus:border-purple-500 focus:outline-none"
                 />
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-muted-foreground">
                   This links your payment to your Discord account for automatic role assignment
                 </p>
                 <Button
@@ -737,7 +701,7 @@ function ZoidApp() {
       />
 
       {/* Modern Trading App Header */}
-      <header className="sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/[0.08]">
+      <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
@@ -748,18 +712,30 @@ function ZoidApp() {
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-lg tracking-tight leading-none">ZOID</span>
-              <span className="text-[10px] text-gray-500 uppercase tracking-wider">Alpha</span>
+              <span className="text-[10px] text-muted-foreground uppercase tracking-wider">Alpha</span>
             </div>
           </div>
 
           {/* Right Side Actions */}
           <div className="flex items-center gap-2">
+            {/* Buy ZOID Button */}
+            <a
+              href="https://srus.life/zoid"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted hover:bg-muted/80 border border-border transition-colors mr-1"
+            >
+              <img src="/logo.png" alt="ZOID" className="w-4 h-4 object-contain" />
+              <span className="text-xs font-bold text-foreground">
+                Buy ZOID
+              </span>
+            </a>
             {isConnected && (
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setTipModalOpen(true)}
-                className="text-gray-400 hover:text-amber-400 hover:bg-amber-500/10 h-9 px-3"
+                className="text-muted-foreground hover:text-amber-400 hover:bg-amber-500/10 h-9 px-3"
               >
                 <span className="mr-1.5">☕</span>
                 <span className="text-xs font-medium">Tip</span>
@@ -767,6 +743,8 @@ function ZoidApp() {
             )}
 
             {isConnected && <AlertsDropdown />}
+
+            <ThemeToggle />
 
             <div className="ml-2">
               <ConnectButton
@@ -788,12 +766,12 @@ function ZoidApp() {
           </main>
 
           {/* Back button for public signals */}
-          <nav className="fixed bottom-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-xl border-t border-white/[0.08] px-6 pb-safe pt-2">
+          <nav className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-t border-border px-6 pb-safe pt-2">
             <div className="container mx-auto max-w-md flex items-center justify-center py-2">
               <Button
                 onClick={() => setActiveTab('signals')}
                 variant="ghost"
-                className="text-gray-400 hover:text-white"
+                className="text-muted-foreground hover:text-foreground"
               >
                 ← Back to Home
               </Button>
@@ -808,7 +786,7 @@ function ZoidApp() {
             </div>
             <div className="space-y-2">
               <h2 className="text-3xl font-black tracking-tighter">ZOID ALPHA</h2>
-              <p className="text-gray-400">
+              <p className="text-muted-foreground">
                 AI-powered trading bots. Connect your wallet to get access.
               </p>
             </div>
@@ -821,7 +799,7 @@ function ZoidApp() {
                 </div>
                 <div className="flex-1">
                   <div className="font-bold text-sm text-orange-400 mb-1">🚀 Launch Your Own Signals</div>
-                  <div className="text-xs text-gray-400 mb-3">
+                  <div className="text-xs text-muted-foreground mb-3">
                     Create tradeable prediction tokens that other agents can trade. Earn 80% of trading fees when others trade on your calls!
                   </div>
                   <Button
@@ -838,32 +816,27 @@ function ZoidApp() {
               {({ openConnectModal }) => (
                 <Button
                   onClick={openConnectModal}
-                  className="w-full bg-white text-black hover:bg-white/90 rounded-full font-bold h-12 text-lg"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full font-bold h-12 text-lg"
                 >
                   Connect Wallet
                 </Button>
               )}
             </ConnectButton.Custom>
 
-            <p className="text-xs text-gray-600">
+            <p className="text-xs text-muted-foreground">
               Secure connection via RainbowKit
             </p>
           </div>
         </main>
-      ) : !purchasedPlan ? (
-        /* CONNECTED BUT NO PLAN - Show paywall */
-        <main className="flex-1 container mx-auto w-full px-4 py-6">
-          {renderPaywall()}
-        </main>
       ) : (
-        /* CONNECTED WITH PLAN - Show tabs and content */
+        /* CONNECTED - Show tabs and content (Signals FREE, others require plan) */
         <>
           <main className="flex-1 container mx-auto w-full px-4 py-6">
             {renderContent()}
           </main>
 
-          {/* Tab Navigation - ONLY SHOW WHEN PAID */}
-          <nav className="fixed bottom-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-xl border-t border-white/[0.08] px-6 pb-safe pt-2">
+          {/* Tab Navigation - Always show, but some tabs require plan */}
+          <nav className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-t border-border px-6 pb-safe pt-2">
             <div className="container mx-auto max-w-md flex items-center justify-center gap-6 py-2">
               <NavButton
                 active={activeTab === 'signals'}
@@ -873,7 +846,7 @@ function ZoidApp() {
               />
               <NavButton
                 active={activeTab === 'analysis'}
-                onClick={() => setActiveTab('analysis')}
+                onClick={() => purchasedPlan ? setActiveTab('analysis') : setPaymentModalOpen(true)}
                 icon={<BrainCircuit className="w-5 h-5" />}
                 label="Strategies"
               />
@@ -901,7 +874,7 @@ export default function Home() {
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
 
-  if (!mounted) return <div className="min-h-screen bg-[#050505]" />
+  if (!mounted) return <div className="min-h-screen bg-background" />
 
   return <ZoidApp />
 }

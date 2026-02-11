@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Web3Provider } from "@/components/providers";
+import { Web3ProviderWrapper } from "@/components/web3-provider-wrapper";
 import { WebSocketProvider } from "@/components/websocket-provider";
 
 const geistSans = Geist({
@@ -46,20 +46,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
+          enableSystem={false}
           disableTransitionOnChange
         >
-          <Web3Provider>
+          <Web3ProviderWrapper>
             <WebSocketProvider>
               {children}
               <Toaster />
             </WebSocketProvider>
-          </Web3Provider>
+          </Web3ProviderWrapper>
         </ThemeProvider>
       </body>
     </html>

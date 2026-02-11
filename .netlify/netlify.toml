@@ -18,6 +18,7 @@ commandOrigin = "config"
 command = "npm run build"
 
 [build.environment]
+NODE_VERSION = "20"
 
 [build.processing]
 
