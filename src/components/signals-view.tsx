@@ -268,17 +268,24 @@ export function SignalsView() {
         return () => clearInterval(interval)
     }, [livePrices])
 
-    // Filter trades by bot source
-    const hunterTrades = allTrades.filter(t => t.source === 'shortHunter')
-    const seekerTrades = allTrades.filter(t => t.source === 'bountySeeker')
-    const realtimeTrades = allTrades.filter(t => t.source === 'tradingview')
+    // Filter trades by bot source and freshness (last 4 hours)
+    const fourHoursAgo = new Date(Date.now() - 4 * 60 * 60 * 1000)
+    
+    const isTradeFresh = (trade: any) => {
+        const tradeTime = new Date(trade.entry_time || trade.timestamp)
+        return tradeTime > fourHoursAgo
+    }
+    
+    const hunterTrades = allTrades.filter(t => t.source === 'shortHunter' && isTradeFresh(t))
+    const seekerTrades = allTrades.filter(t => t.source === 'bountySeeker' && isTradeFresh(t))
+    const realtimeTrades = allTrades.filter(t => t.source === 'tradingview' && isTradeFresh(t))
 
     const getFilteredTrades = () => {
         switch (activeTab) {
             case 'bounty-seeker': return seekerTrades
             case 'short-hunter': return hunterTrades
             case 'sniper-guru': return realtimeTrades // Will show Sniper Guru's trades
-            default: return allTrades
+            default: return [...hunterTrades, ...seekerTrades, ...realtimeTrades]
         }
     }
 
@@ -435,6 +442,10 @@ export function SignalsView() {
         const entryTime = new Date(trade.entry_time)
         const timeAgo = Math.floor((Date.now() - entryTime.getTime()) / (1000 * 60))
         const timeDisplay = timeAgo < 60 ? `${timeAgo}m ago` : `${Math.floor(timeAgo / 60)}h ago`
+        
+        // Check if signal is getting stale (over 2 hours old)
+        const isGettingStale = timeAgo > 120 // 2 hours in minutes
+        const isStale = timeAgo > 240 // 4 hours in minutes
 
         // Determine bot name and color
         let botName = 'Signal'
@@ -479,7 +490,9 @@ export function SignalsView() {
                                     <Badge variant="outline" className={`text-xs ${isShort ? 'border-purple-500/30 text-purple-400' : 'border-emerald-500/30 text-emerald-400'}`}>
                                         {trade.side}
                                     </Badge>
-                                    <span className="text-xs text-muted-foreground">{timeDisplay}</span>
+                                    <span className={`text-xs ${isStale ? 'text-red-400 font-bold' : isGettingStale ? 'text-amber-400' : 'text-muted-foreground'}`}>
+                                        {timeDisplay} {isStale && '(EXPIRED)'}
+                                    </span>
                                 </div>
                             </div>
                         </div>
