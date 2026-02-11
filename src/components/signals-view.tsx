@@ -40,14 +40,14 @@ export function SignalsView() {
     // Bot scan status
     const [botScanStatus, setBotScanStatus] = useState({
         shortHunter: {
-            lastScan: null as Date | null,
-            nextScan: null as Date | null,
+            lastScan: null as Date | string | null,
+            nextScan: null as Date | string | null,
             isScanning: false,
             scanInterval: 15 // minutes
         },
         bountySeeker: {
-            lastScan: null as Date | null,
-            nextScan: null as Date | null,
+            lastScan: null as Date | string | null,
+            nextScan: null as Date | string | null,
             isScanning: false,
             scanInterval: 60 // minutes
         }
@@ -92,14 +92,14 @@ export function SignalsView() {
                     setBotScanStatus(prev => ({
                         shortHunter: {
                             ...prev.shortHunter,
-                            lastScan: new Date(data.shortHunter.lastScan),
-                            nextScan: new Date(data.shortHunter.nextScan),
+                            lastScan: data.shortHunter.lastScan,
+                            nextScan: data.shortHunter.nextScan,
                             isScanning: data.shortHunter.isScanning
                         },
                         bountySeeker: {
                             ...prev.bountySeeker,
-                            lastScan: new Date(data.bountySeeker.lastScan),
-                            nextScan: new Date(data.bountySeeker.nextScan),
+                            lastScan: data.bountySeeker.lastScan,
+                            nextScan: data.bountySeeker.nextScan,
                             isScanning: data.bountySeeker.isScanning
                         }
                     }))
@@ -107,8 +107,8 @@ export function SignalsView() {
                     // Update Sniper Guru stats
                     setSniperGuruStats(prev => ({
                         ...prev,
-                        lastScanTime: new Date(data.sniperGuru.lastScan),
-                        nextScanTime: new Date(data.sniperGuru.nextScan)
+                        lastScanTime: data.sniperGuru.lastScan,
+                        nextScanTime: data.sniperGuru.nextScan
                     }))
                 }
             } catch (error) {
@@ -327,10 +327,11 @@ export function SignalsView() {
     }
 
     // Format countdown timer
-    const formatCountdown = (targetDate: Date | null) => {
+    const formatCountdown = (targetDate: Date | string | null) => {
         if (!targetDate) return '--:--'
         const now = new Date()
-        const diff = targetDate.getTime() - now.getTime()
+        const target = typeof targetDate === 'string' ? new Date(targetDate) : targetDate
+        const diff = target.getTime() - now.getTime()
         if (diff <= 0) return 'Scanning...'
         const minutes = Math.floor(diff / 60000)
         const seconds = Math.floor((diff % 60000) / 1000)
@@ -699,7 +700,7 @@ export function SignalsView() {
                             </span>
                         </div>
                         <div className="flex items-center justify-between text-[10px] text-muted-foreground">
-                            <span>Last scan: {botScanStatus.bountySeeker.lastScan ? botScanStatus.bountySeeker.lastScan.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Never'}</span>
+                            <span>Last scan: {botScanStatus.bountySeeker.lastScan ? new Date(botScanStatus.bountySeeker.lastScan).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Never'}</span>
                             <span>Every 60 min</span>
                         </div>
                     </div>
@@ -728,7 +729,7 @@ export function SignalsView() {
                             </span>
                         </div>
                         <div className="flex items-center justify-between text-[10px] text-muted-foreground">
-                            <span>Last scan: {botScanStatus.shortHunter.lastScan ? botScanStatus.shortHunter.lastScan.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Never'}</span>
+                            <span>Last scan: {botScanStatus.shortHunter.lastScan ? new Date(botScanStatus.shortHunter.lastScan).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Never'}</span>
                             <span>Every 15 min</span>
                         </div>
                     </div>

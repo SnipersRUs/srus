@@ -1,5 +1,6 @@
-// Server-side scan scheduler - runs independently of user sessions
+// Server-side scan scheduler - calculates scan times on-demand
 // This ensures all users see the same scan times globally
+// Works in serverless environments (no setInterval needed)
 
 const SCAN_SCHEDULE = {
   shortHunter: {
@@ -43,7 +44,7 @@ const SCAN_SCHEDULE = {
   },
   sniperGuru: {
     intervalMinutes: 45,
-    // Fixed schedule: scans every 45 minutes (00, 45, 30, 15 pattern)
+    // Fixed schedule: scans every 45 minutes
     getNextScan: () => {
       const now = new Date()
       const currentMinute = now.getMinutes()
@@ -73,61 +74,42 @@ const SCAN_SCHEDULE = {
   }
 }
 
-// Global scan status that persists across all users
-let globalScanStatus = {
-  shortHunter: {
-    lastScan: SCAN_SCHEDULE.shortHunter.getLastScan(),
-    nextScan: SCAN_SCHEDULE.shortHunter.getNextScan(),
-    isScanning: false
-  },
-  bountySeeker: {
-    lastScan: SCAN_SCHEDULE.bountySeeker.getLastScan(),
-    nextScan: SCAN_SCHEDULE.bountySeeker.getNextScan(),
-    isScanning: false
-  },
-  sniperGuru: {
-    lastScan: SCAN_SCHEDULE.sniperGuru.getLastScan(),
-    nextScan: SCAN_SCHEDULE.sniperGuru.getNextScan(),
-    isScanning: false
-  }
-}
-
-// Update scan status every second
-setInterval(() => {
+export function getGlobalScanStatus() {
   const now = new Date()
   
-  // Check each bot
-  Object.keys(SCAN_SCHEDULE).forEach(botKey => {
-    const bot = botKey as keyof typeof SCAN_SCHEDULE
-    const schedule = SCAN_SCHEDULE[bot]
-    
-    // If we've passed the next scan time, update it
-    if (now >= globalScanStatus[bot].nextScan) {
-      globalScanStatus[bot].lastScan = globalScanStatus[bot].nextScan
-      globalScanStatus[bot].nextScan = schedule.getNextScan()
-      globalScanStatus[bot].isScanning = false
-    }
-    
-    // Check if we should be scanning (within 30 seconds of scan time)
-    const timeToNextScan = globalScanStatus[bot].nextScan.getTime() - now.getTime()
-    if (timeToNextScan <= 30000 && timeToNextScan > 0) {
-      globalScanStatus[bot].isScanning = true
-    }
-  })
-}, 1000)
-
-export function getGlobalScanStatus() {
+  // Calculate scan status on-demand (no state persistence needed)
+  const shortHunterNext = SCAN_SCHEDULE.shortHunter.getNextScan()
+  const bountySeekerNext = SCAN_SCHEDULE.bountySeeker.getNextScan()
+  const sniperGuruNext = SCAN_SCHEDULE.sniperGuru.getNextScan()
+  
+  // Check if currently scanning (within 30 seconds of scan time)
+  const isScanningShort = shortHunterNext.getTime() - now.getTime() <= 30000 && shortHunterNext.getTime() - now.getTime() > 0
+  const isScanningBounty = bountySeekerNext.getTime() - now.getTime() <= 30000 && bountySeekerNext.getTime() - now.getTime() > 0
+  const isScanningSniper = sniperGuruNext.getTime() - now.getTime() <= 30000 && sniperGuruNext.getTime() - now.getTime() > 0
+  
   return {
-    shortHunter: { ...globalScanStatus.shortHunter },
-    bountySeeker: { ...globalScanStatus.bountySeeker },
-    sniperGuru: { ...globalScanStatus.sniperGuru },
-    serverTime: new Date().toISOString()
+    shortHunter: {
+      lastScan: SCAN_SCHEDULE.shortHunter.getLastScan().toISOString(),
+      nextScan: shortHunterNext.toISOString(),
+      isScanning: isScanningShort
+    },
+    bountySeeker: {
+      lastScan: SCAN_SCHEDULE.bountySeeker.getLastScan().toISOString(),
+      nextScan: bountySeekerNext.toISOString(),
+      isScanning: isScanningBounty
+    },
+    sniperGuru: {
+      lastScan: SCAN_SCHEDULE.sniperGuru.getLastScan().toISOString(),
+      nextScan: sniperGuruNext.toISOString(),
+      isScanning: isScanningSniper
+    },
+    serverTime: now.toISOString()
   }
 }
 
 export function getTimeUntilNextScan(bot: keyof typeof SCAN_SCHEDULE): number {
   const now = new Date()
-  const nextScan = globalScanStatus[bot].nextScan
+  const nextScan = SCAN_SCHEDULE[bot].getNextScan()
   return Math.max(0, nextScan.getTime() - now.getTime())
 }
 
