@@ -1,0 +1,19 @@
+[
+  {
+    "symbol": "SOL",
+    "side": "SHORT",
+    "entry_price": 80.46,
+    "stop_loss": 82.47149999999999,
+    "take_profit": 75.63239999999999,
+    "timeframe": "15m",
+    "reasons": [
+      "📊 VWAP Deviation: +3.41σ",
+      "🎯 Confluence Score: 85/100",
+      "📈 Grade: A+"
+    ],
+    "score": 85,
+    "timestamp": "2026-02-11T21:48:45.925Z",
+    "source": "tradingview",
+    "indicator": "Tactical Deviation + GPS Pro"
+  }
+]

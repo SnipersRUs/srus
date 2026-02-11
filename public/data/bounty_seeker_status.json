@@ -1,172 +1,18 @@
 {
   "status": "ACTIVE",
   "exchange": "okx",
-  "watchlist_size": 3,
-  "signal_count": 72,
-  "last_scan_time": "2026-02-08T06:00:00.255096+00:00",
-  "next_scan_time": "2026-02-08T06:30:00+00:00",
-  "open_trades": [
-    {
-      "id": 268,
-      "trade_number": 80,
-      "symbol": "ICP/USDT:USDT",
-      "entry_price": 2.434,
-      "stop_loss": 2.40966,
-      "take_profit": 2.49485,
-      "entry_time": "2026-02-08T05:00:04.114138+00:00",
-      "direction": "LONG"
-    },
-    {
-      "id": 269,
-      "trade_number": 81,
-      "symbol": "BERA/USDT:USDT",
-      "entry_price": 0.433,
-      "stop_loss": 0.42867,
-      "take_profit": 0.44382499999999997,
-      "entry_time": "2026-02-08T06:00:02.429790+00:00",
-      "direction": "LONG"
-    }
-  ],
+  "watchlist_size": 0,
+  "signal_count": 0,
+  "last_scan_time": null,
+  "next_scan_time": null,
+  "open_trades": [],
   "signals": [],
-  "last_signals": [
-    {
-      "symbol": "BERA/USDT:USDT",
-      "direction": "LONG",
-      "entry_price": 0.433,
-      "stop_loss": 0.42867,
-      "take_profit": 0.44382499999999997,
-      "confidence_score": 70,
-      "reasons": [
-        "Deviation Zone -1.0 Sigma (Slightly Oversold)",
-        "RSI Oversold (33.3)",
-        "SFP Reversal Detected (Sweeping Lows)"
-      ],
-      "rsi": 33.333333333333414,
-      "deviation": -1.1532077259414408,
-      "in_gps_zone": false,
-      "timestamp": "2026-02-08T06:00:02.429790+00:00",
-      "tradingview_link": "https://www.tradingview.com/chart/?symbol=BERA/USDT"
-    }
-  ],
-  "watchlist_candidates": [
-    {
-      "symbol": "FIL/USDT:USDT",
-      "price": 0.963,
-      "distance": 0.20768431983385274,
-      "reasons": [
-        "Near GPS (Short) 0.48%",
-        "Near Support 0.21%",
-        "Lower Range 10.5%"
-      ]
-    },
-    {
-      "symbol": "BERA/USDT:USDT",
-      "price": 0.4332,
-      "distance": 0.46168051708216673,
-      "reasons": [
-        "Near Support 0.46%",
-        "Lower Range 6.5%"
-      ]
-    },
-    {
-      "symbol": "ICP/USDT:USDT",
-      "price": 2.424,
-      "distance": 0.6084983498349761,
-      "reasons": [
-        "Near GPS (Short) 0.61%",
-        "Near Support 0.62%",
-        "Lower Range 17.6%"
-      ]
-    }
-  ],
-  "trending_coins": [
-    {
-      "symbol": "F/USDT:USDT",
-      "change_pct": 12.886424731182796,
-      "volume": 31924159.0
-    },
-    {
-      "symbol": "BREV/USDT:USDT",
-      "change_pct": 11.391541609822646,
-      "volume": 342218682.0
-    },
-    {
-      "symbol": "RESOLV/USDT:USDT",
-      "change_pct": 11.150353178607467,
-      "volume": 37233746.0
-    },
-    {
-      "symbol": "MAGIC/USDT:USDT",
-      "change_pct": 5.908195727920012,
-      "volume": 350895580.0
-    },
-    {
-      "symbol": "PIPPIN/USDT:USDT",
-      "change_pct": 4.998619165976249,
-      "volume": 10665029.0
-    }
-  ],
-  "spotlight": {
-    "symbol": "TRIA/USDT:USDT",
-    "change_pct": -28.674904132935662,
-    "volume": 20088769.0,
-    "reason": "Top 24h mover"
-  },
-  "top_gainers": [
-    {
-      "symbol": "F/USDT:USDT",
-      "change_pct": 12.886424731182796,
-      "volume": 31924159.0
-    },
-    {
-      "symbol": "BREV/USDT:USDT",
-      "change_pct": 11.391541609822646,
-      "volume": 342218682.0
-    },
-    {
-      "symbol": "RESOLV/USDT:USDT",
-      "change_pct": 11.150353178607467,
-      "volume": 37233746.0
-    },
-    {
-      "symbol": "MAGIC/USDT:USDT",
-      "change_pct": 5.908195727920012,
-      "volume": 350895580.0
-    },
-    {
-      "symbol": "PIPPIN/USDT:USDT",
-      "change_pct": 4.998619165976249,
-      "volume": 10665029.0
-    }
-  ],
+  "last_signals": [],
+  "watchlist_candidates": [],
+  "trending_coins": [],
+  "spotlight": null,
+  "top_gainers": [],
   "top_losers": [],
-  "market_analysis": [
-    {
-      "symbol": "BTC",
-      "price": 69064.2,
-      "change_24h": -1.6186494398188047,
-      "trend": "BEARISH",
-      "rsi": 52.8,
-      "narrative": "BTC is in a bearish downtrend, struggling to reclaim support. Momentum is neutral (RSI 52.8), allowing for trend continuation. However, volume is low, suggesting caution as the move lacks conviction.",
-      "timestamp": "2026-02-08T01:05:00.510216"
-    },
-    {
-      "symbol": "ETH",
-      "price": 2079.02,
-      "change_24h": -0.3871400507881749,
-      "trend": "BULLISH",
-      "rsi": 61.44,
-      "narrative": "ETH is maintaining a bullish structure above key moving averages. Momentum is neutral (RSI 61.4), allowing for trend continuation. However, volume is low, suggesting caution as the move lacks conviction.",
-      "timestamp": "2026-02-08T01:05:00.972104"
-    },
-    {
-      "symbol": "SOL",
-      "price": 86.93,
-      "change_24h": -1.1147764759413037,
-      "trend": "BEARISH",
-      "rsi": 49.71,
-      "narrative": "SOL is in a bearish downtrend, struggling to reclaim support. Momentum is neutral (RSI 49.7), allowing for trend continuation. However, volume is low, suggesting caution as the move lacks conviction.",
-      "timestamp": "2026-02-08T01:05:01.452225"
-    }
-  ]
+  "market_analysis": [],
+  "last_reset": "2026-02-11T16:35:00"
 }

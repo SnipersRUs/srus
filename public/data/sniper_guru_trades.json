@@ -1,0 +1,38 @@
+{
+  "trades": [
+    {
+      "id": "sh-JELLYJELLYUSDT-2026-02-07T03:37:53.000809",
+      "symbol": "JELLYJELLYUSDT",
+      "side": "SHORT",
+      "entry_price": 0.05875,
+      "stop_loss": 0.059337499999999994,
+      "take_profit": 0.056987499999999996,
+      "score": 85,
+      "source": "shortHunter",
+      "entry_time": "2026-02-07T03:37:53.000809",
+      "reasons": [
+        "Price at GPS Resistance Zone (0.06)",
+        "Deviation +3 Sigma Zone (Overextended)",
+        "15m Abnormal Volume Spike (Potential Reversal)"
+      ],
+      "status": "active",
+      "sniper_entry_time": "2026-02-11T16:36:35.496213"
+    }
+  ],
+  "balance": 10000,
+  "equity": 10000,
+  "stats": {
+    "total_trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0,
+    "total_pnl": 0,
+    "avg_trade_pnl": 0,
+    "max_drawdown": 0,
+    "start_date": "2026-02-11T16:35:00",
+    "leverage": 10,
+    "position_size_pct": 10
+  },
+  "lastUpdated": "2026-02-11T17:07:09.530096",
+  "starting_balance": 10000
+}
